@@ -2,7 +2,7 @@
 title: "Local Lagrangian Floer Homology of Quasi-Minimally Degenerate Intersections"
 collection: publications
 permalink: /publication/local_lag
-date: 2023-10-01
+date: 2023-07-05
 venue: 'arXiv'
 paperurl: 'https://arxiv.org/abs/2109.03679'
 ---
