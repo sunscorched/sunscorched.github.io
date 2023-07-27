@@ -2,6 +2,7 @@
 title: "The Krein Matrix and an Interlacing Theorem"
 collection: publications
 permalink: /publications/krein_matrix
+date: 2016-01-01
 venue: 'SIURO'
 paperurl: 'https://www.semanticscholar.org/paper/The-Krein-Matrix-and-an-Interlacing-Theorem-Shamuel-Yu-Kapitula/2cfb79dfc9f546e5d9277cdcaea4976f4c8221bd?p2df'
 ---
