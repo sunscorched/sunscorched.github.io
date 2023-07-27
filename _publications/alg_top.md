@@ -2,8 +2,10 @@
 title: "An Algebraic Characterization of Highly Connected $2n$-Manifolds"
 collection: publications
 permalink: /publication/alg_top
+date: 2009-10-01
 venue: 'Rose Hulman Undergraduate Journal'
 paperurl: 'https://scholar.rose-hulman.edu/cgi/viewcontent.cgi?article=1333&context=rhumj'
+citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 In this paper, we classify oriented, $(n-1)$-connected, compact and closed $2n$-manifolds up
 to homotopy by treating them as $(n, 2n)$-cell complexes. To simplify the calculation,
