@@ -1,7 +1,7 @@
 ---
 title: "The Krein Matrix and an Interlacing Theorem"
 collection: publications
-permalink: /publications/krein_matrix
+permalink: /publication/krein_matrix
 excerpt: 'This paper is about the generalized eigenvalue problem; solving Ay = \lambdaBy. We construct a set of meromorphic functions, the Krein eigenvalues, whose zeros correspond to the real eigenvalues of the general eigenvalue problem. We also prove an interlacing theorem between the eigenvalues for the general problem and the eigenvalues of A.'
 date: 2013
 venue: 'SIURO'
