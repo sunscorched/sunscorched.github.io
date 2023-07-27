@@ -1,7 +1,7 @@
 ---
 title: "An Algebraic Characterization of Highly Connected $2n$-Manifolds"
 collection: publications
-permalink: /publication/alg_top
+permalink: /publications/alg_top
 excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
 date: 2016
 venue: 'Rose Hulman Undergraduate Journal'
