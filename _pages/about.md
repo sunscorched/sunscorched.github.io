@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-Hi, my name is Sam Auyeung, a recent graduate from Stony Brook University. My research interests are in symplectic geometry and how it interacts with other fields of mathematics such as algebraic geometry and string topology. 
+Hi, my name is Sam Auyeung, a recent graduate from Stony Brook University. I will be a Harold L. Dorwart visiting assisntant professor at Trinity College starting Fall 2023. My research interests are in symplectic geometry and how it interacts with other fields of mathematics such as algebraic geometry. 
 
 This site is under construction.
