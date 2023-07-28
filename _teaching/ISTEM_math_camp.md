@@ -12,7 +12,7 @@ I was a teacher for the I-STEM High School Mathematics Program at Stony Brook Un
 
 Topics
 ======
-* Graph Theory - Eulerian and Hamiltonian Circuits
+* Graph Theory - Eulerian and Hamiltonian Circuits and Error-Correcting Codes
 * Introduction Complex Number Theory - Fundamental Theorem of Algebra and Polynomial Equations
 * A Counting Problem using a Discrete Fourier Transform
 * Hamiltonian Mechanics
