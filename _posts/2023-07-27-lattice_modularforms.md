@@ -25,9 +25,9 @@ Being even, $(x\cdot x)/2$ is an integer and so this is an ordinary Taylor serie
 The first term is at least $\sum^n a^2\_i$ since $e^2\_i \geq 1$. As the $a_i$ grow, $x\cdot x$ grows like a polynomial of degree $n/2$. If we make the substitution $q = e^{2\pi i t}$, then $\theta\_\Gamma(t) = \sum\_{x \in \Gamma} e^{\pi it (x\cdot x)}$ and
 $\theta\_\Gamma(it ) = \sum\_{x \in \Gamma} e^{-\pi t (x\cdot x)}$.
 
-The **Poisson summation formula** for a function $f$ on $\mathbb{R}^n$ decaying sufficiently fast at infinity, says that for any lattice $\Lambda \subset \mathbb{R}^n$, the sum of values of $f$ on $\Lambda$ equals the sum of values of its **Fourier transform** on the dual lattice $\Lambda$. Here, $\Gamma \cong \Gamma^*$ because of unimodularity. Moreover, $e^{-\pi |x|^2}$ is its own Fourier transform (here, I'm just writing $|x|^2$ to mean $x \cdot x$). I'll prove it below for $n=1$.
+The **Poisson summation formula** for a function $f$ on $\mathbb{R}^n$ decaying sufficiently fast at infinity, says that for any lattice $\Lambda \subset \mathbb{R}^n$, the sum of values of $f$ on $\Lambda$ equals the sum of values of its **Fourier transform** on the dual lattice $\Lambda$. Here, $\Gamma \cong \Gamma^*$ because of unimodularity. Moreover, $e^{-\pi \|x\|^2}$ is its own Fourier transform (here, I'm just writing $\|x\|^2$ to mean $x \cdot x$). I'll prove it below for $n=1$.
 
-**Lemma:** If $\varphi(x) = e^{-\pi |x|^2}$, then the Fourier transform $\hat{\varphi}(\xi) = e^{-\pi |\xi|^2}$.
+**Lemma:** If $\varphi(x) = e^{-\pi \|x\|^2}$, then the Fourier transform $\hat{\varphi}(\xi) = e^{-\pi \|\xi\|^2}$.
 
 **Proof:** Let's just work on $\mathbb{R}$ though the same proof works on $\mathbb{R}^n$. $\hat{\varphi}(\xi):= \int^\infty_{-\infty} \exp(-\pi x^2-2\pi ix \xi) \, dx$. We can multiply by $1 = e^{-\pi \xi^2} e^{\pi \xi^2}$. Moving the second term into the exponent since it has no $x$ dependence, we have that the exponential becomes: $\exp(-\pi(x^2+2ix \xi -\xi^2)) = \exp(-\pi x+i\xi^2)$. Substituting $u = x+i\xi, du = dx$, we have that $\hat{\varphi}(\xi) = e^{-\pi \xi^2} \int^\infty_{-\infty}  e^{-\pi u^2}\, du$. The integral is the Gaussian integral and it equals 1. So $\hat{\varphi}(\xi) = e^{-\pi \xi^2}$. For $\mathbb{R}^n$, we would basically do the same thing by studying a product: $\prod^n_j \int^\infty_{-\infty} \exp(-\pi x^2_j - 2\pi i x_j \xi_j)$. $\square$
 
@@ -44,7 +44,6 @@ Let $\Gamma \subset SL_2(\mathbb{Z})$ be a finite index subgroup; this is not th
 ```math
 \begin{pmatrix}
 a & b \\
-
 c & d
 \end{pmatrix} \in \Gamma
 ```
