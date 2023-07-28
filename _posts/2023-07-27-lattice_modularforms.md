@@ -42,7 +42,7 @@ Also, $\theta_\Gamma(t + 1) = \sum e^{\pi i(t+1)x^2}$. Since $x\cdot x$ is even,
 #### Brief Aside on Modular Forms
 
 Let $\Gamma \subset SL_2(\mathbb{Z})$ be a finite index subgroup; this is not the same $\Gamma$ as above but since this is the standard notation in the literature, I'll use it here. Recall that a **modular form of weight $k$ and level $\Gamma$** is a holomorphic function $f:\mathbb{H} \to \mathbb{C}$ on the upper-half plane satisfying:
-1. $f(\frac{a\tau + b}{c \tau +d})= (c\tau+d)^{-k} f(\tau)$ for
+1. $f(\frac{a\tau + b}{c \tau +d})= (c\tau+d)^{k} f(\tau)$ for
 ```math
 \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Gamma
 ```
@@ -70,14 +70,12 @@ $G_{2k}(t):= \sum_{(m,n) \in \mathbb{Z}^2 \setminus (0,0)} (m+n \tau)^{-2k}$ whe
 **Example:** The $E_8$ lattice is rank 8 and hence, its theta function gives a modular form of weight 4 which means it must be a multiple of the Eisenstein series $G_8$. Since the theta function of any lattice has terms of the form $q^{(x \cdot x)/2}$, we always have $x=0$ in the lattice and hence, we have some constant terms. When the lattice is unimodular and definite, then the constant term is 1. Thus, $\theta_{E_8}(q) = \frac{1}{c_0}G_8$ where $c_0$ is the constant term of $G_8$. Amazingly, $c_0 = 2\zeta(4) = 2\sum^\infty_{n=1} \frac{1}{n^4} = \frac{\pi^4}{45}$ where $\zeta$ is the Riemann-Zeta function.
 In fact, $\theta_{E_8}(q) = 1+ 240\sum^\infty_{n=1} \sigma_3(n)q^n$ where $\sigma_3(n)$ is computed by taking all the positive divisors of $n$, cubing them, and then summing. For example, $\sigma_3(2) = 1^3+2^3 = 9$.
 
-**Example:** In the example above with $\Lambda = 2\mathbb{Z}$, we saw that the square of the theta function has coefficients that tell us the number of ways to write an integer $m$ as a sum of two squares; more generally, the coefficients of $q^{2m}$ in $\theta^k_{2\mathbb{Z}}(q)$ tell us when $m$ can be written as a sum of $k$ squares. Let $\Gamma_1(4) \subset SL_2(\mathbb{Z})$ be the subgroup of matrices congruent to 
+**Example:** In the example above with $\Lambda = 2\mathbb{Z}$, we saw that the square of the theta function has coefficients that tell us the number of ways to write an integer $m$ as a sum of two squares; more generally, the coefficients of $q^{2m}$ in $\theta^k\_{2\mathbb{Z}}(q)$ tell us when $m$ can be written as a sum of $k$ squares. Let $\Gamma_1(4) \subset SL_2(\mathbb{Z})$ be the subgroup of matrices congruent to 
 ```math
 \begin{pmatrix} 1 & * \\ 0 & 1 \end{pmatrix}
 ```
-after taking mod 4. It turns out that $\theta^{2j}_{2\mathbb{Z}}$ 
-
-is itself a modular form of weight $j$, level $\Gamma_1(4)$. By Riemann-Roch, one finds that for $j=1$, $M_1(\Gamma_1(4))$ is 1-dimensional so this modular form is a multiple of some Eisenstein series. In fact,
-$\theta^2_{2\mathbb{Z}}(q)$ $=1+4\sum^\infty_{m=1}(\sum_{d|m} \chi_4(d))q^{2m}$ where $\chi_4(d)=0$ when $d \equiv 0,2 \pmod{4}$, $\chi_4(d)=+1$ when $d \equiv 1 \pmod{4}$, and $\chi_4(d)=-1$ when $d \equiv 3 \pmod{4}$. In other words, the number of ordered pairs $(a,b)$ such that $a^2+b^2 = m$ is given by $4(d_1(m)-d_3(m))$ where $d_1(m)$ is the number of divisors $d$ of $m$ congruent to 1 mod 4 and $d_3(m)$ is similar but congruent to 3 mod 4. This recovers a theorem of Jacobi.
+after taking mod 4. It turns out that $\theta^{2j}\_{2\mathbb{Z}}$ is itself a modular form of weight $j$, level $\Gamma_1(4)$. By Riemann-Roch, one finds that for $j=1$, $M_1(\Gamma_1(4))$ is 1-dimensional so this modular form is a multiple of some Eisenstein series. In fact,
+$\theta^2\_{2\mathbb{Z}}(q)=1+4\sum^\infty_{m=1}(\sum_{d|m} \chi_4(d))q^{2m}$ where $\chi_4(d)=0$ when $d \equiv 0,2 \pmod{4}$, $\chi_4(d)=+1$ when $d \equiv 1 \pmod{4}$, and $\chi_4(d)=-1$ when $d \equiv 3 \pmod{4}$. In other words, the number of ordered pairs $(a,b)$ such that $a^2+b^2 = m$ is given by $4(d_1(m)-d_3(m))$ where $d_1(m)$ is the number of divisors $d$ of $m$ congruent to 1 mod 4 and $d_3(m)$ is similar but congruent to 3 mod 4. This recovers a theorem of Jacobi.
 For example, $d_1(3)=d_3(3)$ and hence, 3 cannot be written as a sum of two squares. On the other hand, $d_1(5) = 2,d_3(5)=0$ and so there are 8 ordered pairs for 5.
 
 **Corollary (originally due to Euler, after 1640):** If $p$ is an odd prime, then it can be written as a sum of two squares if and only if $p \equiv 1 \pmod{4}$.
