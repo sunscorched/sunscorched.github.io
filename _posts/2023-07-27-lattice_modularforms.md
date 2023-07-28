@@ -6,9 +6,9 @@ tags:
   - modularforms
   - lattices
 ---
-I am not a number theorist but this topic has fascinated me and I've decided to write about it as a first blog post. The classification of definite forms is difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
+I am not a number theorist but this topic has fascinated me and I've decided to write about it as a first blog post. The classification of definite forms is difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Much of what I write here can be found in "A First Course in Modular Forms" by Fred Diamond and Jerry Shurman.
 
-Under the identification of $Q$ with the Euclidean inner product, the domain of $Q$ is identified with some lattice $\Gamma \subset \mathbb{R}^n$. We can write a basis for the lattice and the absolute value of the determinant of the basis is called the **covolume.** In our case, the covolume is 1. 
+Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8. Under the identification of $Q$ with the Euclidean inner product, the domain of $Q$ is identified with some lattice $\Gamma \subset \mathbb{R}^n$. We can write a basis for the lattice and the absolute value of the determinant of the basis is called the **covolume.** In our case, the covolume is 1. 
 
 Since $Q$ is unimodular, $\Gamma$ is isomorphic to its dual. Associated to $\Gamma$ is a **theta function:**
 $\theta_\Gamma(q) := \sum_{x\in \Gamma} q^{(x \cdot x)/2}$.
