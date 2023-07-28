@@ -42,10 +42,7 @@ Also, $\theta_\Gamma(t + 1) = \sum e^{\pi i(t+1)x^2}$. Since $x\cdot x$ is even,
 Let $\Gamma \subset SL_2(\mathbb{Z})$ be a finite index subgroup; this is not the same $\Gamma$ as above but since this is the standard notation in the literature, I'll use it here. Recall that a **modular form of weight $k$ and level $\Gamma$** is a holomorphic function $f:\mathbb{H} \to \mathbb{C}$ on the upper-half plane satisfying:
 1. $f(\frac{a\tau + b}{c \tau +d})= (c\tau+d)^{k} f(\tau)$ for
 ```math
-\begin{pmatrix}
-a & b \\
-c & d
-\end{pmatrix} \in \Gamma
+\begin{pmatrix} a & b \\c & d\end{pmatrix} \in \Gamma
 ```
 2. $f$ is bounded as $\tau \to i \infty$.
 
