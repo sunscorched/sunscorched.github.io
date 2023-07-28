@@ -22,8 +22,8 @@ The number of ways to write $1$ as a sum of squares is 4. We have $(\pm 1)^2 + 0
 
 Being even, $(x\cdot x)/2$ is an integer and so this is an ordinary Taylor series in $q$. These exponents are also nonnegative (that's how the Euclidean dot product is). Also, if we have a basis for the lattice $\{e_1,...,e_n\}$ and $x = \sum a_i e_i$, then $x\cdot x = \sum^n a^2_i e^2_i + 2\sum\_{i,j} a_i a_j e_i\cdot e_j$. 
 
-The first term is at least $\sum^n a^2_i$ since $e^2_i \geq 1$. As the $a_i$ grow, $x\cdot x$ grows like a polynomial of degree $n/2$. If we make the substitution $q = e^{2\pi i t}$, then $\theta_\Gamma(t) = \sum_{x \in \Gamma} e^{\pi it (x\cdot x)}$ and
-$\theta_\Gamma(it ) = \sum_{x \in \Gamma} e^{-\pi t (x\cdot x)}$.
+The first term is at least $\sum^n a^2\_i$ since $e^2\_i \geq 1$. As the $a_i$ grow, $x\cdot x$ grows like a polynomial of degree $n/2$. If we make the substitution $q = e^{2\pi i t}$, then $\theta\_\Gamma(t) = \sum\_{x \in \Gamma} e^{\pi it (x\cdot x)}$ and
+$\theta\_\Gamma(it ) = \sum\_{x \in \Gamma} e^{-\pi t (x\cdot x)}$.
 
 The **Poisson summation formula** for a function $f$ on $\mathbb{R}^n$ decaying sufficiently fast at infinity, says that for any lattice $\Lambda \subset \mathbb{R}^n$, the sum of values of $f$ on $\Lambda$ equals the sum of values of its **Fourier transform** on the dual lattice $\Lambda$. Here, $\Gamma \cong \Gamma^*$ because of unimodularity. Moreover, $e^{-\pi |x|^2}$ is its own Fourier transform (here, I'm just writing $|x|^2$ to mean $x \cdot x$). I'll prove it below for $n=1$.
 
