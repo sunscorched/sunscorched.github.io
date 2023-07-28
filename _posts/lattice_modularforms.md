@@ -65,12 +65,3 @@ If we let $k=2j = 4$, then we obtain a modular form where for every $m$, the coe
 **Theorem (Lagrange's 4 Squares Theorem, 1770):** Every positive integer can be written as a sum of four squares.
 
 But more than that, we get a theorem of Jacobi, proved in 1834, which gives the exact number of 4-tuples $(w,x,y,z) \in \mathbb{Z}^4$ such that $m=w^2+x^2+y^2+z^2$. See this masters [thesis](https://www.universiteitleiden.nl/binaries/content/assets/science/mi/scripties/varmamaster.pdf) for more on this topic of modular forms and sums of squares.
-
-Headings are cool
-======
-
-You can have many headings
-======
-
-Aren't headings cool?
-------
