@@ -5,7 +5,7 @@ permalink: /publication/alg_top
 date: 2016-10-01
 venue: 'Rose Hulman Undergraduate Journal'
 paperurl: 'https://scholar.rose-hulman.edu/cgi/viewcontent.cgi?article=1333&context=rhumj'
-citation: 'S. Auyeung, J. Ruiter, D. Zhang, (2016). &quot;An Algebraic Characterization of Highly Connected $2n$-Manifolds.&quot; <i>Rose Hulman Undergraduate Journal</i>. 17(2).'
+citation: 'S. Auyeung, J. Ruiter, D. Zhang, (2016). &quot;An Algebraic Characterization of Highly Connected $2n$-Manifolds.&quot; <i>Rose Hulman Undergraduate Journal</i>. Vol. 17, Iss. 2.'
 ---
 All surfaces, up to homeomorphism, can be formed by gluing the edges
 of a polygon. This process is generalized into the idea of a $(n, 2n)$-cell complex:
