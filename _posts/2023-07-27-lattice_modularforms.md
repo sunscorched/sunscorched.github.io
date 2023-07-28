@@ -1,13 +1,13 @@
 ---
 title: 'Lattices and Modular Forms'
 date: 2023-07-27
-permalink: /posts/lattice_modularforms/
+permalink: /posts/2023/07/lattice_modularforms/
 tags:
   - modularforms
   - lattices
 ---
 
-The classification of definite forms is involved and difficult. WLOG, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
+I am not a number theorist but this topic has fascinated me. The classification of definite forms is very difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
 
 Under the identification of $Q$ with the Euclidean inner product, the domain of $Q$ is identified with some lattice $\Gamma \subset \mathbb{R}^n$. We can write a basis for the lattice and the absolute value of the determinant of the basis is called the **covolume.** In our case, the covolume is 1. 
 
