@@ -4,7 +4,7 @@ collection: teaching
 type: "Workshop"
 permalink: /teaching/ISTEM_math_camp
 venue: "Stony Brook University, Mathematics"
-date: 2015-01-01
+date: 2017-01-01
 location: "Stony Brook, New York"
 ---
 
