@@ -6,7 +6,7 @@ tags:
   - modularforms
   - lattices
 ---
-I am not a number theorist but this topic has fascinated me and I've wanted to write about it for a while. The classification of definite forms is very difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
+I am not a number theorist but this topic has fascinated me and I've decided to write about it as a first blog post. The classification of definite forms is difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
 
 Under the identification of $Q$ with the Euclidean inner product, the domain of $Q$ is identified with some lattice $\Gamma \subset \mathbb{R}^n$. We can write a basis for the lattice and the absolute value of the determinant of the basis is called the **covolume.** In our case, the covolume is 1. 
 
@@ -45,7 +45,6 @@ c & d \end{pmatrix}\in\Gamma$$
 2. $f$ is bounded as $\tau \to i \infty$.
 
 Let $\pi_N:SL_2(\mathbb{Z}) \to SL_2(\mathbb{Z}/N\mathbb{Z})$ be reduction mod $N$ on matrices. Typically, we want $\Gamma$ to contain $\Gamma(N) = \ker \pi_N$; we call such $\Gamma$ **congruence subgroups.** If we're studying $\Gamma = SL_2(\mathbb{Z})$, then we only need to check that $f$ satisfies property (1) for the generators 
-
 $$T=\begin{pmatrix}
 1 & 1 \\
 0 & 1 \end{pmatrix}, 
@@ -86,6 +85,7 @@ For example, $d_1(3)=d_3(3)$ and hence, 3 cannot be written as a sum of two squa
 **Corollary:** An integer $m$ can be written as the sum of two squares if and only if when writing out its prime factorization, all the primes $p \equiv 3 \pmod{4}$ have even powers.
 
 If we let $k=2j = 4$, then we obtain a modular form where for every $m$, the coefficient for $q^{2m}$ is positive. This recovers a theorem of Lagrange:
+
 **Theorem (Lagrange's 4 Squares Theorem, 1770):** Every positive integer can be written as a sum of four squares.
 
 But more than that, we get a theorem of Jacobi, proved in 1834, which gives the exact number of 4-tuples $(w,x,y,z) \in \mathbb{Z}^4$ such that $m=w^2+x^2+y^2+z^2$. See this masters [thesis](https://www.universiteitleiden.nl/binaries/content/assets/science/mi/scripties/varmamaster.pdf) for more on this topic of modular forms and sums of squares.
