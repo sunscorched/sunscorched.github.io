@@ -6,9 +6,6 @@ tags:
   - modularforms
   - lattices
 ---
-
-**Caveat lector:** The LaTex isn't compiling correctly once deployed even though the preview on my end is completely fine.
-
 I am not a number theorist but this topic has fascinated me and I've wanted to write about it for a while. The classification of definite forms is very difficult but also appears in the study of 4-manifolds since Freedman proved that closed, oriented, simply-connected, topological 4-manifolds are classified by their intersection form. This post isn't about that so much. Without loss of generality, let's assume that $Q$ is positive definite. If $Q$ is **even**, then its rank and signature are both divisible by 8.
 
 Under the identification of $Q$ with the Euclidean inner product, the domain of $Q$ is identified with some lattice $\Gamma \subset \mathbb{R}^n$. We can write a basis for the lattice and the absolute value of the determinant of the basis is called the **covolume.** In our case, the covolume is 1. 
@@ -41,9 +38,10 @@ Also, $\theta_\Gamma(t + 1) = \sum e^{\pi i(t+1)x^2}$. Since $x\cdot x$ is even,
 
 Let $\Gamma \subset SL_2(\mathbb{Z})$ be a finite index subgroup; this is not the same $\Gamma$ as above but since this is the standard notation in the literature, I'll use it here. Recall that a **modular form of weight $k$ and level $\Gamma$** is a holomorphic function $f:\mathbb{H} \to \mathbb{C}$ on the upper-half plane satisfying:
 1. $f(\frac{a\tau + b}{c \tau +d})= (c\tau+d)^{k} f(\tau)$ for
-```math
-\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\Gamma
-```
+$$\begin{pmatrix}
+a & b \\
+c & d \end{pmatrix}\in\Gamma$$
+
 2. $f$ is bounded as $\tau \to i \infty$.
 
 Let $\pi_N:SL_2(\mathbb{Z}) \to SL_2(\mathbb{Z}/N\mathbb{Z})$ be reduction mod $N$ on matrices. Typically, we want $\Gamma$ to contain $\Gamma(N) = \ker \pi_N$; we call such $\Gamma$ **congruence subgroups.** If we're studying $\Gamma = SL_2(\mathbb{Z})$, then we only need to check that $f$ satisfies property (1) for the generators 
@@ -58,9 +56,10 @@ S = \begin{pmatrix}
 This is what we did above with the theta function $\theta_\Gamma$. One can sort of see why modular forms are related to rank 2 lattices in $\mathbb{C}$ since $SL_2(\mathbb{Z})$ just changes the basis vectors and we only need to check the upper-half plane since we can take $\tau, 1$ as a basis where $\tau \in \mathbb{H}$.
 
 The boundary of $\mathbb{H}$ is $\mathbb{RP}^1$ and we can also consider $\mathbb{QP}^1 = \mathbb{Q} \cup \infty$. Then, an element 
-```math
-\begin{pmatrix} a & b \\ c & d \end{pmatrix} \in SL_2(\mathbb{Z})
-```
+$$\begin{pmatrix}
+a & b \\
+c & d \end{pmatrix} \in SL_2(\mathbb{Z})$$
+
 sends $x \in \mathbb{Q}$ to $(ax+b)/(cx+d)$ and sends $\infty$ to $a/c$. If $cx+d = 0$, then $x \mapsto \infty$. The **cusps** of a subgroup $\Gamma$ are the $\Gamma$-orbits. For example, if $\Gamma = SL_2(\mathbb{Z})$ we see that $0 \mapsto b/d$. Given any $b,d$ with $\gcd(b,d) = 1$ (so the fraction is fully reduced), then we just need to find $a,c$ so that $ad-bc=1$ to form an element of $\Gamma$. This is guaranteed by the Euclidean algorithm. And also, any matrix with $d=0$ sends $0 \mapsto \infty$. Hence, there is one orbit and thus, $SL_2(\mathbb{Z})$ itself has one cusp.
 
 As we saw above, it turns out that any even, unimodular rank $8m$ lattice produces a modular form of weight $4m$ for $SL_2(\mathbb{Z})$ because we have a Poisson summation formula in the setting of unimodular lattices. The definitions of modular forms makes it clear that the modular forms of weight $k$ and level $\Gamma$ form a vector space and in fact, can be alternatively described in the following way. 
@@ -74,9 +73,10 @@ $G_{2k}(t):= \sum_{(m,n) \in \mathbb{Z}^2 \setminus (0,0)} (m+n \tau)^{-2k}$ whe
 In fact, $\theta_{E_8}(q) = 1+ 240\sum^\infty_{n=1} \sigma_3(n)q^n$ where $\sigma_3(n)$ is computed by taking all the positive divisors of $n$, cubing them, and then summing. For example, $\sigma_3(2) = 1^3+2^3 = 9$.
 
 **Example:** In the example above with $\Lambda = 2\mathbb{Z}$, we saw that the square of the theta function has coefficients that tell us the number of ways to write an integer $m$ as a sum of two squares; more generally, the coefficients of $q^{2m}$ in $\theta^k\_{2\mathbb{Z}}(q)$ tell us when $m$ can be written as a sum of $k$ squares. Let $\Gamma_1(4) \subset SL_2(\mathbb{Z})$ be the subgroup of matrices congruent to 
-```math
-\begin{pmatrix} 1 & * \\ 0 & 1 \end{pmatrix}
-```
+$$\begin{pmatrix}
+1 & * \\
+0 & 1 \end{pmatrix}$$
+
 after taking mod 4. It turns out that $\theta^{2j}\_{2\mathbb{Z}}$ is itself a modular form of weight $j$, level $\Gamma_1(4)$. By Riemann-Roch, one finds that for $j=1$, $M_1(\Gamma_1(4))$ is 1-dimensional so this modular form is a multiple of some Eisenstein series. In fact,
 $\theta^2\_{2\mathbb{Z}}(q)=1+4\sum^\infty_{m=1}(\sum_{d|m} \chi_4(d))q^{2m}$ where $\chi_4(d)=0$ when $d \equiv 0,2 \pmod{4}$, $\chi_4(d)=+1$ when $d \equiv 1 \pmod{4}$, and $\chi_4(d)=-1$ when $d \equiv 3 \pmod{4}$. In other words, the number of ordered pairs $(a,b)$ such that $a^2+b^2 = m$ is given by $4(d_1(m)-d_3(m))$ where $d_1(m)$ is the number of divisors $d$ of $m$ congruent to 1 mod 4 and $d_3(m)$ is similar but congruent to 3 mod 4. This recovers a theorem of Jacobi.
 For example, $d_1(3)=d_3(3)$ and hence, 3 cannot be written as a sum of two squares. On the other hand, $d_1(5) = 2,d_3(5)=0$ and so there are 8 ordered pairs for 5.
