@@ -55,4 +55,5 @@ Work experience
   
 Service and leadership
 ======
-* Directed Reading Program mentor (spring 2021)
+* Symplectic Geometry, Low-Dimensional Topology, Gauge Theory Seminar Co-Organizer (Fall 2922 - Spring 2023)
+* Directed Reading Program Mentor (Spring 2021)
