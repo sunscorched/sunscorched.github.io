@@ -33,26 +33,25 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
+Honors and Awards
+======
+
+* Barry M. Goldwater Scholarship (August 2015 - May 2016)
+* NSF Scientific Computing Scholarship (August 2012 - May 2017)
+
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Fall 2013 - Spring 2016: Calvin College math and philosophy tutoring
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Summer 2015: Lab Intern
+  * Colorado State University
+  * Duties included: sample preparation for sputtering and ferromagnetic resonance experimentation
+  * Supervisor: Professor Mingzhong Wu
+
+* Summer 2014: Lab Intern
+  * Colorado State University
+  * Duties included: pockel cell driver board assembly for ultraviolet laser experimentation
+  * Supervisor: Professor Jorge Rocca
   
 Service and leadership
 ======
