@@ -1,5 +1,5 @@
 ---
-title: 'On _Anxiety is the Dizziness of Freedom_'
+title: 'On "Anxiety is the Dizziness of Freedom"'
 date: 2023-08-14
 permalink: /posts/2023/08/freedom/
 tags:
