@@ -1,0 +1,13 @@
+---
+title: 'Morava K-Theory'
+date: 2023-09-22
+permalink: /posts/2023/08/points/
+tags:
+  - linear algebra
+---
+
+Recently, a friend introduced me to a problem posed by Presh Talwalkar in a video [here](https://www.youtube.com/watch?v=bDBkySkS1aI&ab_channel=MindYourDecisions). The problem is as follows. Take an equilateral triangle and inscribe a circle into it. Pick any point $P$ on the circle and connect line segments from $P$ to each of the vertices. The challenge is to show that the sum of the squares of the lengths is actually a constant, independent of the placement of $P$. The video gives a nice proof of the fact but when one studies it more closely, we see that we can actually generalize the statement quite a bit.
+
+First of all, it turns out that it's not important that the radius of the circle happens to inscribe the triangle. You can take any radius $R$ for the circle so long as it's still centered at the middle of triangle. But also, it's not important that the points be arranged in this equilateral-triangular way. Indeed, so long as the circle is centered at the center of mass of the three points, the statement is still true. And it doesn't have to be three points; it can be any number of points $N$. Lastly, it doesn't even have to be in the plane, it can be in any $(k+1)$-dimensional space and you just ask that $P$ be on a $k$-sphere. So to summarize:
+
+**Proposition:** Consider any collection of $N$ points $P_1,...,P_N$ in $\mathbb{R}^{k+1}$ and let $C$ be the center of mass of these points. That is, viewing the points as vectors, $C = \frac{1}{N} \sum^N_{i=1} P_i$. Take a point $P$ that sits on a $k$-sphere of any radius, centered at $C$. Then the following sum is constant, independent of where $P$ is placed: $\sum^N_{i=1} \|P - P_i\|^2$.
