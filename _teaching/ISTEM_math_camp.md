@@ -2,6 +2,7 @@
 title: "I-STEM Math Camp"
 collection: teaching
 type: "Math camp"
+venue: "Stony Brook, New York"
 permalink: /teaching/ISTEM_math_camp
 date: 2018-01-01
 location: "Stony Brook, New York"
