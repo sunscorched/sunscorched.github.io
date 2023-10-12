@@ -1,7 +1,7 @@
 ---
 title: "Trinity College"
 collection: teaching
-type: "Lectures"
+type: "Undergraduate courses"
 permalink: /teaching/trinity
 venue: "Trinity College, Mathematics"
 date: 2023-10-01
