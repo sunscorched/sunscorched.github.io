@@ -1,9 +1,9 @@
 ---
 title: "Trinity College"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/ISTEM_math_camp
-venue: "Stony Brook University, Mathematics"
+type: "Lectures"
+permalink: /teaching/trinity
+venue: "Trinity College, Mathematics"
 date: 2023-10-01
 location: "Hartford, Connecticut"
 ---
