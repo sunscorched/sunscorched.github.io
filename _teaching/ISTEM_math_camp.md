@@ -8,7 +8,7 @@ date: 2017-01-01
 location: "Stony Brook, New York"
 ---
 
-I was a teacher for the I-STEM High School Mathematics Program at Stony Brook University. Click the link above to see a list of topics.
+I was a teacher for the [I-STEM](https://www.stonybrook.edu/istem/) High School Mathematics Program at Stony Brook University. Click the link above to see a list of topics.
 
 Topics
 ======
