@@ -3,6 +3,7 @@ title: "Trinity College"
 collection: teaching
 type: "Undergraduate courses"
 permalink: /teaching/trinity
+venue: "Hartford, Connecticut"
 date: 2023-10-01
 location: "Hartford, Connecticut"
 ---
