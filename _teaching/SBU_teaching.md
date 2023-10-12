@@ -3,6 +3,7 @@ title: "Stony Brook University"
 collection: teaching
 type: "Undergraduate courses"
 permalink: /teaching/SBU_teaching
+venue: "Stony Brook, New York"
 date: 2017-08-24
 location: "Stony Brook, New York"
 ---
