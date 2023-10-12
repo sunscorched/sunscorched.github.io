@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant"
+title: "Stony Brook University"
 collection: teaching
 type: "Undergraduate courses"
 permalink: /teaching/SBU_teaching
