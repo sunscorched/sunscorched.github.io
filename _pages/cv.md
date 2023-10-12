@@ -58,6 +58,7 @@ Work experience
   
 Service and leadership
 ======
-* Symplectic Geometry, Low-Dimensional Topology, Gauge Theory Seminar Co-Organizer (Fall 2922 - Spring 2023)
+* Symplectic Geometry, Low-Dimensional Topology, Gauge Theory Seminar Co-Organizer (Fall 2022 - Spring 2023)
+* RTG Student Seminar Co-Organizer (Fall-2019 - Spring 2020)
 * Directed Reading Program Mentor (Spring 2021)
 * Calvin Prison Initiative Tutor (Fall 2015 - Spring 2017)
