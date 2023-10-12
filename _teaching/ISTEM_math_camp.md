@@ -1,7 +1,7 @@
 ---
 title: "I-STEM Math Camp"
 collection: teaching
-type: "Workshop"
+type: "Math camp"
 permalink: /teaching/ISTEM_math_camp
 venue: "Stony Brook University, Mathematics"
 date: 2017-01-01
