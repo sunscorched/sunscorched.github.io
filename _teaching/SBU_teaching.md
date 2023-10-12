@@ -8,7 +8,7 @@ date: 2017-08-24
 location: "Stony Brook, New York"
 ---
 
-I taught a range of undergraduate courses at Stony Brook University; click the link above to see a full list.
+I taught a range of undergraduate courses at [Stony Brook University](https://www.math.stonybrook.edu/stony-brook-mathematics-department-and-institute-mathematical-sciences); click the link above to see a full list.
 
 Teaching Assistant
 ======
