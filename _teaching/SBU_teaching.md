@@ -8,11 +8,11 @@ date: 2017-08-24
 location: "Stony Brook, New York"
 ---
 
-I taught a range of undergraduate courses at Stony Brook University.
+I taught a range of undergraduate courses at Stony Brook University; click the link above to see a full list.
 
 Teaching Assistant
 ======
-
+* MAT 132 - Calculus II (Spring 2023)
 * MAT 122 - Overview of Calculus with Applications (Fall 2022)
 * MAT 131 - Calculus I (Fall 2021)
 * MAT 203 - Calculus III with Applications (Fall 2020)
