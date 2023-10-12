@@ -11,11 +11,11 @@ Here is a <a href="/files/academicCV.pdf">PDF</a> of my CV.
 
 {% include base_path %}
 
-Education
-======
-* BS in mathematics, Calvin College, 2017
-* BA in philosophy and Greek, Calvin College, 2017
-* PhD in mathematics, Stony Brook University, 2023
+%Education
+%======
+%* BS in mathematics, Calvin College, 2017
+%* BA in philosophy and Greek, Calvin College, 2017
+%* PhD in mathematics, Stony Brook University, 2023
 
 Publications
 ======
