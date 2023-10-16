@@ -1,5 +1,5 @@
 ---
-title: 'Integrability and The Three Body Problem'
+title: 'Integrability and the Three Body Problem'
 date: 2023-10-15
 permalink: /posts/2023/07/3bodyproblem/
 tags:
