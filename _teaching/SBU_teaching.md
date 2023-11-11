@@ -29,3 +29,7 @@ Instructor of Records
 * MAT 126 - Calculus II (Summer 2020)
 * MAT 312 - Applied Abstract Algebra (Summer 2019)
 * MAT 118 - Mathematical Thinking (Summer 2018)
+
+Directed Reading Program
+======
+I mentored a DRP project on Lie groups and algebras. Here is a <a href="/files/Lie_Theory.pdf">PDF</a> that summarizes some of the content.
