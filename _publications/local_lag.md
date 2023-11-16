@@ -3,9 +3,9 @@ title: "Local Lagrangian Floer Homology of Quasi-Minimally Degenerate Intersecti
 collection: publications
 permalink: /publication/local_lag
 date: 2023-07-05
-venue: 'arXiv'
-paperurl: 'https://arxiv.org/abs/2109.03679'
-citation: S. Auyeung (2023). &quot;Local Lagrangian Floer Homology of Quasi-Minimally Degenerate Intersections.&quot; <i>to appear in Journal of Topology and Analysis</i>.'
+venue: 'Journal of Topology and Analysis'
+paperurl: 'https://doi.org/10.1142/S179352532350036X'
+citation: S. Auyeung (2023). &quot;Local Lagrangian Floer Homology of Quasi-Minimally Degenerate Intersections.&quot; <i>Journal of Topology and Analysis</i>.'
 ---
 
 We define a broad class of local Lagrangian intersections which we call quasi-minimally degenerate (QMD) 
