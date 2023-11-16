@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/zariski
 date: 2023-10-01
 venue: 'arXiv'
-paperurl: '[https://arxiv.org/abs/2109.03679](https://arxiv.org/abs/2308.13925)'
+paperurl: 'https://arxiv.org/abs/2308.13925'
 citation: S. Auyeung (2023). &quot;Adjacent Singularities, TQFTs, and Zariski's Multiplicity Conjecture.&quot; <i>submitted</i>.'
 ---
 
