@@ -6,6 +6,11 @@ tags:
   - physics
   - differential topology
 ---
+In this post, we'll consider an example related to the Divergence Theorem and gravity. I think it's a nice example to show students taking multivariable/vector calculus (which I'm teaching this semester). Let's first recall the statement of the Divergence Theorem. Let $W \subset \mathbb{R}^3$ be a 3-dim region with boundary being a piecewise smooth, closed surface $S$. It's a somewhat nontrivial fact that all closed hypersurfaces of $\mathbb{R}^n$ are orientable but in this case, one can use the cross product on $\mathbb{R}^3$ to produce an orientation on a closed surface. Note the closedness is essential; the Möbius band is a nonorientable surface in $\mathbb{R}^3$ but it is not closed. Moreover, in $\mathbb{R}^3$, having a unit normal vector field on $S$ induces an orientation on $S$. So let's suppose that $W$ is oriented and $S$ has the induced orientation from $W$. If $F$ is a vector field defined on a neighborhood of $W$, we may find the divergence of $F$ which is a scalar function that intuitively, measures the net flow of $F$ at a given point.
+
+Now, if we were to integrate the divergence over $W$, then we see that on the interior, if a point has positive net flow, then some of the flow would be going into some other nearby point. This contributes a negative flow to that nearby point. So in this hand-wavy way, the integration of the divergence has a bunch of cancellation on the interior. It is only when we make it to the boundary that there isn't anything left to cancel since there is nothing beyond the boundary that is taken into account. So the integration reduces to studying how $F$ transfers the flow through the boundary $S$; that is exactly what a flux integral is. Thus, to summarize this discussion in symbols, the Divergence Theorem says:
+$\iiint_W \text{div}(F) \\, dV = \iint_S (F\cdot \hat{n})\\, dA$.
+
 Let $e_r$ be the radial vector field on $\mathbb{R}^3$ of unit length (it is a unit normal vector field to any sphere centered at the origin). Explicitly, 
 $e_r(x,y,z) = \frac{1}{\sqrt{x^2+y^2+z^2}}\langle x,y,z\rangle.$
 
