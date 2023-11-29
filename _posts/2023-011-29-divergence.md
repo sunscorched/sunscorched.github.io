@@ -1,6 +1,6 @@
 ---
 title: 'The Divergence Theorem and Gravity'
-date: 2023-07-04
+date: 2023-11-29
 permalink: /posts/2023/11/divergence/
 tags:
   - physics
