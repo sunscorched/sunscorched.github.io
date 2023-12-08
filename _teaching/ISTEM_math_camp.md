@@ -16,5 +16,6 @@ Topics
 * Introduction Complex Number Theory - Fundamental Theorem of Algebra and Polynomial Equations
 * A Counting Problem using Complex Numbers and a Discrete Fourier Transform
 * Hamiltonian Mechanics
-* Introduction to Group Theory
+* Introduction to Group Theory and Symmetries
 * The Pigeonhole Principle
+* Mathematics of Origami: Hexaflexagons
