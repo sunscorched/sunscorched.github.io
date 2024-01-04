@@ -22,3 +22,12 @@ I haven't thought too much about why we lose uniqueness if $\partial_y f$ isn't 
 
 ### The Central Limit Theorem
 
+Let's now turn to the Central Limit Theorem (CLT) from statistics. Above, I stated a weak version of it which I'll repeat here. Suppose that $X_i$ are independent, identically distributed random variables with zero mean and variance $\sigma^2$. Then $\frac{1}{\sqrt{N}}\sum^N_{i=1}X_i \to \mathcal{N}(0,\sigma^2)$ as $N \to \infty$. Here, $\mathcal{N}(0,\sigma^2)$ means a normal distribution with mean $\mu = 0$ and variance $\sigma^2$ so the probability density function looks like $Ae^{-Bx^2}$ where $A,B$ are some constants. 
+
+The convergence here is "almost everywhere" meaning that the random variable (a function) to which the sum converges agrees with the normal distribution on a set with full measure. So the points of disagreement forms a measure 0 set. Now, if we want to deal with a nonzero mean, that's fine because we can always normalize things by subtracting off the expectation from the variables. Then, we'd be back to the situation as this weak version of the CLT.
+
+Now, suppose we want a proof of the CLT that involves some kind of contraction map and fixed point. What might we do? Well, both for discrete and continuous random variables, when we add them, the probability density function for the new random variable that is the sum is obtained by a **convolution.** The nice thing about convolutions is that, one, it puts an algebra structure on functions (a new kind of multiplication, if you will). Secondly, for continuous functions, it has a smoothing property. Even if a random variable is very jagged, as we convolve, it becomes more and more differentiable. So one might imagine a contracting map being built from convolutions since this process of smoothing things out seems to have a contracting feature. One would then need to prove that the fixed point of the map is the normal distribution $\mathcal{N}(0,\sigma^2)$. But this isn't so difficult in fact. The convolution of two normal distributions is again a normal distribution. One approach to proving this is to use the Fourier transform. If $\hat{f}$ is the Fourier transform of $f$, then $\widehat{f*g} = \hat{f}\hat{g}$; i.e. the Fourier transform is an algebra homomorphism between the algebra of functions under convolution and the algebra of functions with the usual multiplication. But now, 
+
+So as long as our contracting map is properly normalized somehow, we can make the normal distribution a fixed point!
+
+
