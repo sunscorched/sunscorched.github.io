@@ -3,7 +3,7 @@ title: "On Flowers and Fibonacci-Type Sequences"
 collection: publications
 permalink: /publication/fibonacci
 date: 2024-01-12
-venue: arXiv
+venue: (to appear)
 paperurl:
 citation: 'S. Auyeung, T. Pensyl, J. Shuster, (2024). &quot;On Flowers and Fibonacci-Type Sequences.&quot; <i>in preparation</i>.'
 ---
