@@ -31,12 +31,14 @@ I made an interactive applet using Desmos [here](https://www.desmos.com/calculat
 
 ![label](/files/beats.jpg)
 
-The two cosine functions are constructively and destructively interfering in a way that reveals two kinds of periodic behavior. We have the usual periodicity but now the amplitude of the waves also grow and shrink in a periodic way. Any musician who has played with other musicians know this well; when you're almost playing in tune with each other but not quite, you hear a sort of pulse of volume.
+The two cosine functions are constructively and destructively interfering in a way that reveals two kinds of periodic behavior. We have the usual periodicity but now the amplitude of the waves also grow and shrink in a periodic way. Any musician who has played with other musicians know this well; when you're almost playing in tune with each other but not quite, you hear a sort of pulse of volume. These packets are often called  **envelopes** or **wavelets.** We've been discussing this in the context of a moving spring but hopefully it's clear that the equations describe a broader range of phenomenon than springs. It can also be applied to radio signals, for example.
 
-Using complex numbers, one can prove that our solution, a difference of cosines, can also be written as a product of sines: $\frac{2}{2-\omega^{2}}\sin\left(\left(\frac{\sqrt{2}-\omega}{2}\right)t\right)\sin\left(\left(\frac{\sqrt{2}+\omega}{2}\right)t\right)$.
+Using complex numbers, one can prove that our solution, a difference of cosines, can also be written as a product of sines: $\frac{2}{2-\omega^{2}}\sin\left(\left(\frac{\sqrt{2}-\omega}{2}\right)t\right)\sin\left(\left(\frac{\sqrt{2}+\omega}{2}\right)t\right)$. We may interpret the first sine function (along with the $\frac{2}{2-\omega^{2}}$ coefficient) as describing the amplitude of the second sine function. The amplitude depends on time and is periodic.
 
+Now, one interesting thing to do is let $\omega \to \sqrt{2}$; we see that the amplitude grows unbounded and in the Desmos link, we find the following at $\omega = 1.4$.
 ![label](/files/reson.jpg)
 
+At this scale, it looks like the amplitude is simply growing linearly and unbounded. We need to zoom out quite a bit (to around 450) before we see that we still do have a single wavelet but it's very large. Also, it's period is very large. In the limit then, the period goes to $\infty$ which is another way of saying that the amplitude stops having periodic behavior. In order to treat the case when $\omega = \sqrt{2}$, i.e. when the forcing frequency equals the natural frequency of the harmonic oscillator, we need to make a different kind of guess at our particular solution. This is because, if you still guess $x_p(t) = \alpha e^{i\omega t}$, it's already covered by the homogeneous solutions and we'll always get 0 when plugging it into the LHS. Instead, we guess $x_p(t) = \alpha t e^{i \omega t}$. We can then determine $\alpha$ and thus, say exactly how the apparent linear growth should be as $\omega \to \sqrt{q}$.
 
 ### Millennium Bridge
 
