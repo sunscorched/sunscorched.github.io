@@ -1,0 +1,9 @@
+---
+title: 'Undamped Forced Harmonic Oscillators and Resonance'
+date: 2024-03-12
+permalink: /posts/2024/03/resonance/
+tags:
+  - differential equations
+---
+
+I'm teaching an introductory differential equations class this semester and one of the topics is about studying harmonic oscillators in various settings. They're a great source of 2nd order ODEs and the general form they take is $x'' + p x' + qx = f(t)$ where the LHS of the equation comes from Hooke's Law. For a moment, suppose $f(t)=0$ and $p,q > 0$. Then we have $x'' =  -px' -qx$; if we think of $x(t)$ as describing the position of some object along a line on a spring with mass normalized to 1, then the $-qx$ term tells us that the force of the spring is always towards the equilibrium position. If $x(t)>0$, this means the spring is stretched and the force wants to pull it back. If $x(t) < 0$, then the spring is compressed and wants to push. Thus, $q$ is called the **spring constant.** The other constant is related to factors that depend on the velocity. For example, if the object moves quickly, then it may experience greater forces related to friction. Thus, the constant $p$ is called the **damping coefficient.**  
