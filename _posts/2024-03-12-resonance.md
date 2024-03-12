@@ -23,6 +23,8 @@ The characteristic equation of this matrix is $\lambda^2 + p \lambda + q =0$ whi
 
 ### Undamped Harmonic Oscillator with Sinusoidal Damping
 
-Let's make the simplifying assumptions that there is no damping and that $f(t)$ is sinusoidal. We could then  
+Let's make the simplifying assumptions that there is no damping and that $f(t)$ is sinusoidal and in fact, we'll just assume it's $a \cos(\omega t)$ or $a\sin(\omega t)$. If we use complex numbers, we can solve both equations at once: $x'' + qx = ae^{i\omega t}$. The homogeneous solutions come from studying the characteristic equation $\lambda^2 + q = 0$; since $q > 0$, the eigenvalues are purely imaginary: $\pm \sqrt{q} i$. By using Euler's formula $e^{i\theta} = \cos \theta + i \sin \theta$ and the fact that the real and imaginary parts are individually solutions, the homogeneous solutions are then linear combinations of $\cos(\sqrt{q} t)$ and $\sin(\sqrt{q}t)$
+
+In order to find a particular solution
 
 [here](https://www.desmos.com/calculator/uwbgim1ko8)
