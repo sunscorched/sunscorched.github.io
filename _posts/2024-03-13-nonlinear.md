@@ -7,7 +7,6 @@ tags:
 ---
 
 Another topic I've introduced in my differential equations class regards nonlinear systems. Let's consider just systems of two equations of the following form:
-
 $$\begin{cases}
 x'(t) = f(x,y) \\
 y'(t) = g(x,y)
