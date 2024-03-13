@@ -124,7 +124,7 @@ $$\begin{cases}
 \frac{dy}{dt} &= -x+(1-x^2)y
 \end{cases}$$
 
-We find that $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y } = 1-x^2$. When $|x|>1$, this is always negative and when $|x|<1$, then this is always positive. In other words, we cannot have any periodic orbits contained just in the strip defined by $|x|<1$ nor any contained just in its complement. Any periodic solution necessarily must cross over both regions. Let's see the phase portrait:
+We find that $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y } = 1-x^2$. When $\|x\|>1$, this is always negative and when $\|x\|<1$, then this is always positive. In other words, we cannot have any periodic orbits contained just in the strip defined by $\|x\|<1$ nor any contained just in its complement. Any periodic solution necessarily must cross over both regions. Let's see the phase portrait:
 
 ![label](/files/vdp.jpg)
 
