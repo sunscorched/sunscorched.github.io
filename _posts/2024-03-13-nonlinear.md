@@ -128,7 +128,7 @@ We find that $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y } = 1
 
 ![label](/files/vdp.jpg)
 
-Indeed, any of the potential periodic orbits must travel in both regions. However, we're still unsure if there are actually any orbits; the solutions could just be coming back nearly to itself without actually closing up and we're unable to tell because we can't zoom in far enough. So detecting orbits is a much more subtle matter. In the future, I may write a post on that subject.
+Indeed, any of the potential periodic orbits must travel in both regions (the vertical lines $x=\pm 1$ are part of the lightly colored grid). However, we're still unsure if there are actually any orbits; the solutions could just be coming back nearly to itself without actually closing up and we're unable to tell because we can't zoom in far enough. So detecting orbits is a much more subtle matter. In the future, I may write a post on that subject.
 
 ### Ending Thoughts
 
