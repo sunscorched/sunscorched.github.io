@@ -72,7 +72,9 @@ $$((3 − 3\mu) \pm \sqrt{(3 − 3\mu)^2 − 4(2 − 2\mu)})/2.$$
 
 Because $\mu < 1$, the first term is positive. The term under the square root becomes $9\mu^2 -10\mu + 1$ which is concave up and has roots $\mu = 1/9, 1$. For $1/9 < \mu < 1$, the term is negative so we would have complex eigenvalues with positive real part. Here are some phase portraits for different $\mu$.
 
-In the one below, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. However, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors.
+In the one below, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. Since it only contributes to $x'(t)$ and is symmetric with respect to the $y$-axis, we do expect some kind of symmetry in all of the $\mu$-portraits.
+
+However, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors. One use for the map is to address the question of whether there is at least a single periodic orbit in this region even if most solutions are not periodic.
 
 ![label](/files/nl6.jpg)
 
@@ -90,7 +92,7 @@ x'(t) = −x + x^3 + y \\
 y'(t) = -\nu x - y, \nu \in \mathbb{R}
 \end{cases}$$
 
-Below, we have the phase portrait for $\nu = 5$ which has 3 equilibria. But one interesting thing to note is that the solutions around the origin are not nearly as elliptical as the $\mu =5$ case above.
+Below, we have the phase portrait for $\nu = 5$ which has 3 equilibria. But one interesting thing to note is that the solutions around the origin are not nearly as elliptical as the $\mu =5$ case above and we do see some evident spiraling into the origin. Once again, one might wonder if there is a periodic orbit because there appears to be a transition between solutions asymptoting towards curves that approximately come from eigenvectors and the inward spirals.
 
 ![label](/files/nl8.jpg)
 
