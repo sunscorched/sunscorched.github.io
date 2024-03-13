@@ -70,17 +70,17 @@ $$((3 − 3\mu) \pm \sqrt{(3 − 3\mu)^2 − 4(2 − 2\mu)})/2.$$
 
 Because $\mu < 1$, the first term is positive. The term under the square root becomes $9\mu^2 -10\mu + 1$ which is concave up and has roots $\mu = 1/9, 1$. For $1/9 < \mu < 1$, the term is negative so we would have complex eigenvalues with positive real part. Here are some phase portraits for different $\mu$.
 
+In the one below, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. However, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors.
+
 ![label](/files/nl6.jpg)
-
-In this one above, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. However, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors.
-
-![label](/files/nl5.jpg)
 
 This next one is with $\mu = \frac{1}{2}$; there are 3 equilibria where the origin is a saddle point and the other two are spiral sources.
 
-![label](/files/nl7.jpg)
+![label](/files/nl5.jpg)
 
 Here, $\mu = −2$ and $(0,0)$ is a saddle point. The other two are sources; it’s a bit difficult to tell where they are located in the phase portrait but you can see there is sort of a line that, in the linearization, comes from eigenvectors. The solutions asymptote to this line. One can determine what the line is by studying looking for the larger eigenvalue since it will give the dominating exponential term.
+
+![label](/files/nl7.jpg)
 
 Lastly, let's suppose we just change the original system slightly by flipping the sign of the $y$ in the second equation.
 $$\begin{cases}
