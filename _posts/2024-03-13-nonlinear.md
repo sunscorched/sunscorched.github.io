@@ -50,6 +50,26 @@ y'(t) = -\mu x + y, \mu \in \mathbb{R}
 The $x$-nullclines lie on the curve $y = x -x^3$ and the $y$-nullclines on $y = \mu x$. The equilibria come from the intersections of the nullcline sets. Setting $\mu x = x -x^3$, we rearrange to get $x^3 + (\mu - 1)x = 0$. This has 3 solutions when $\mu < 1$, giving us 3 equilibria, and only 1 solution when $\mu > 1$. When $\mu > 1$, the only equilibria is $(0, 0)$. When $\mu < 1$, the equilibria are
 $(0, 0),(\sqrt{1 -\mu}, \mu\sqrt{1 -\mu}),(-\sqrt{1 -\mu},-\mu\sqrt{1 -\mu})$.
 
+Linearizing at $(0,0)$, we just throw out the $x^3$ term so we get a linear system with matrix 
+\begin{pmatrix}
+-1 & 1 \\
+-\mu & 1 
+\end{pmatrix}.$$
+
+The characteristic polynomial is $\lambda^2 - (1 + \mu)$ whose roots are $\pm(\sqrt{\mu- 1})/2$. So we see that when $\mu > 1$, we have real eigenvalues of opposite parity; i.e. a saddle point. When $\mu < 1$, we have purely imaginary eigenvalues and this suggests we have a center.
+But we have to be careful, remembering that the $x^3$ term may actually contribute something to perturb the behavior from periodic solutions.
+
+We may also linearize at the other equilibria when $\mu < 1$. It turns out the system in either case has matrix 
+\begin{pmatrix}
+2-3\mu & 1 \\
+-\mu & 1 
+\end{pmatrix}$$
+
+and characteristic polynomial $\lambda^2 -(3 -3\mu)\lambda + (2 -2\mu)$. The roots are then 
+$$((3 − 3\mu) \pm \sqrt{(3 − 3\mu)^2 − 4(2 − 2\mu)})/2.$$
+
+Because $\mu < 1$, the first term is positive. The term under the square root becomes $9\mu^2 -10\mu + 1$ which is concave up and has roots $\mu = 1/9, 1$. For $1/9 < \mu < 1$, the term is negative so we would have complex eigenvalues with positive real part.
+
 ![label](/files/nl5.jpg)
 
 ![label](/files/nl6.jpg)
