@@ -1,5 +1,5 @@
 ---
-title: 'Phase Portraits of Some Nonlinear Systems'
+title: 'Phase Portraits of Some Nonlinear Systems and Periodic Solutions'
 date: 2024-03-13
 permalink: /posts/2024/03/nonlinear/
 tags:
