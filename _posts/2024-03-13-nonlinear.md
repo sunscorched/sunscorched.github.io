@@ -115,8 +115,7 @@ whose eigenvalues are real and have opposite parody. So we have saddle points wh
 Let's give one more criterion for ruling out periodic orbits. Once again, let $V =\langle f,g \rangle$ be a differentiable vector and suppose $\gamma$ is a solution, not necessarily one that closes up. This means that if we parametrize $\gamma(t) = (x(t),y(t))$, it satisfies $\frac{dx}{dt} = f, \frac{dy}{dt} =g$. Then, by somewhat nonrigorous reasoning, $\frac{dy}{dx} = \frac{g}{f}$ which allows us to produce the differential form equation $f \, dy - g\, dx = 0$. So integrating this differential 1-form along $\gamma$ gives 0. **Caution:** $V$ is not necessarily a conservative vector field. 
 
 Now, if $\gamma$ is _additionally_ a closed solution (hence, periodic), it encloses a region $D$ and Green's Theorem tells us:
-
-\[0=\oint_\gamma  f \, dy - g\, dx= \iint_D \left(\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y }\right)\, dx\, dy.\]
+$$0=\oint_\gamma  f \, dy - g\, dx= \iint_D \left(\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y }\right)\, dx\, dy.$$
 
 So in order for $\gamma$ to be a periodic solution, the RHS integral over $D$ has to be 0. Thus, if we find regions where $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y }$ is always positive or always negative, we cannot have periodic solutions contained in those regions. This is known as **Bendixson's Criterion.** Let's apply this to the so-called van der Pol system.
 
