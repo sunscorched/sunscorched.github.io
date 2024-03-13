@@ -30,7 +30,7 @@ we have $-(x - n\pi/2)$. If $n \equiv 3 \pmod{4}$, then it is $+(x - n\pi/2)$. S
 $$\begin{pmatrix}
 -1 & 1 \\
 -1 & 0 
-\end{pmatrix}
+\end{pmatrix},
 \begin{pmatrix}
 -1 & 1 \\
 1 & 0 
@@ -51,7 +51,7 @@ The $x$-nullclines lie on the curve $y = x -x^3$ and the $y$-nullclines on $y = 
 $(0, 0),(\sqrt{1 -\mu}, \mu\sqrt{1 -\mu}),(-\sqrt{1 -\mu},-\mu\sqrt{1 -\mu})$.
 
 Linearizing at $(0,0)$, we just throw out the $x^3$ term so we get a linear system with matrix 
-\begin{pmatrix}
+$$\begin{pmatrix}
 -1 & 1 \\
 -\mu & 1 
 \end{pmatrix}.$$
@@ -60,7 +60,7 @@ The characteristic polynomial is $\lambda^2 - (1 + \mu)$ whose roots are $\pm(\s
 But we have to be careful, remembering that the $x^3$ term may actually contribute something to perturb the behavior from periodic solutions.
 
 We may also linearize at the other equilibria when $\mu < 1$. It turns out the system in either case has matrix 
-\begin{pmatrix}
+$$\begin{pmatrix}
 2-3\mu & 1 \\
 -\mu & 1 
 \end{pmatrix}$$
