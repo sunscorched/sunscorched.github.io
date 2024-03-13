@@ -40,7 +40,7 @@ The first has eigenvalues $(-1\pm i\sqrt{3})/2$ and the latter has $(-1 \pm \sqr
 
 I don't know about you but the phase portrait above reminds me of vortices that appear when studying fluid dynamics such as smoke in turbulent air.
 
-### Another Example: 1-Paramater Family of Nonlinear Systems
+### Another Example: 1-Parameter Family of Nonlinear Systems
 
 Let's take another example
 
@@ -84,7 +84,7 @@ Here, $\mu = −2$ and $(0,0)$ is a saddle point. The other two are sources; it�
 
 ![label](/files/nl7.jpg)
 
-Lastly, let's suppose we just change the original system slightly by flipping the sign of the $y$ in the second equation.
+Lastly, let's suppose we just change the original system (2) slightly by flipping the sign of the $y$ in the second equation.
 $$\begin{cases}
 x'(t) = −x + x^3 + y \\
 y'(t) = -\nu x - y, \nu \in \mathbb{R}
