@@ -38,6 +38,8 @@ $$\begin{pmatrix}
 
 The first has eigenvalues $(-1\pm i\sqrt{3})/2$ and the latter has $(-1 \pm \sqrt{5})/2$. Thus, in the first case, we have complex eigenvalues; the negative real part means we have **spiral sources.** For the other case, since $\sqrt{5}>1$, we have a pair of eigenvalues of opposite parity and thus, get **saddle points.**
 
+I don't know about you but the phase portrait above reminds me of vortices that appear when studying fluid dynamics such as smoke in turbulent air.
+
 ### Another Example: 1-Paramater Family of Nonlinear Systems
 
 Let's take another example
