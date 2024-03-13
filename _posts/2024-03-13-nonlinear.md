@@ -38,6 +38,18 @@ $$\begin{pmatrix}
 
 The first has eigenvalues $(-1\pm i\sqrt{3})/2$ and the latter has $(-1 \pm \sqrt{5})/2$. Thus, in the first case, we have complex eigenvalues; the negative real part means we have **spiral sources.** For the other case, since $\sqrt{5}>1$, we have a pair of eigenvalues of opposite parity and thus, get **saddle points.**
 
+### Another Example: 1-Paramater Family of Nonlinear Systems
+
+Let's take another example
+
+$$\begin{cases}
+x'(t) = −x + x^3 + y \\
+y'(t) = -\mu x + y, \mu \in \mathbb{R}
+\end{cases}$$
+
+The $x$-nullclines lie on the curve $y = x -x^3$ and the $y$-nullclines on $y = \mu x$. The equilibria come from the intersections of the nullcline sets. Setting $\mu x = x -x^3$, we rearrange to get $x^3 + (\mu - 1)x = 0$. This has 3 solutions when $\mu < 1$, giving us 3 equilibria, and only 1 solution when $\mu > 1$. When $\mu > 1$, the only equilibria is $(0, 0)$. When $\mu < 1$, the equilibria are
+$(0, 0),(\sqrt{1 -\mu}, \mu\sqrt{1 -\mu}),(-\sqrt{1 -\mu},-\mu\sqrt{1 -\mu})$.
+
 ![label](/files/nl5.jpg)
 
 ![label](/files/nl6.jpg)
