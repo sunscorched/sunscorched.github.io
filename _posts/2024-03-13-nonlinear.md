@@ -23,9 +23,7 @@ One may use the nullclines to partition the $xy$-plane into pieces and then stud
 
 ![label](/files/nl9.jpg)
 
-Here, I've picked some solutions for the applet to plot; we can see that there are two general behaviors occurring. We have spiraling behavior at some equilibrium points, namely those for $n \equiv 1 \pmod{4}$ and what look like saddle points when $n \equiv 3 \pmod{4}$. If you draw the vertical lines $x=n \pi/2$ for odd $n$, you'll find that they intersect the solution curves at points whose tangent lines are horizontal, confirming that these lines are the $y$-nullclines.
-
-We may explain this behavior by now doing our second step: **linearization at the equilibria.**
+Here, I've picked some solutions for the applet to plot; we can see that there are two general behaviors occurring. We have spiraling behavior at some equilibrium points, namely those for $n \equiv 1 \pmod{4}$ and what look like saddle points when $n \equiv 3 \pmod{4}$. If you draw the vertical lines $x=n \pi/2$ for odd $n$, you'll find that they intersect the solution curves at points whose tangent lines are horizontal, confirming that these lines are the $y$-nullclines. We may further understand this behavior by now doing our second step: **linearization at the equilibria.**
 
 The first equation above is linear already but the second one is not. However, we know that the Taylor series of a smooth function $f(x)$ at a point $a$ is $\sum^\infty_{k=0} \frac{f^{(k)}(a)}{k!}(x-a)^k$. For cosine, the first two terms when centered at $a$ is $\cos(a)−\sin(a)(x−a)$. When $a$ is one of the equilibrium points, the first term vanishes. If $n \equiv 1 \pmod{4}$, then
 we have $-(x - n\pi/2)$. If $n \equiv 3 \pmod{4}$, then it is $+(x - n\pi/2)$. So the linear systems we get have matrices:
