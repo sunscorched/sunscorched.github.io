@@ -92,9 +92,13 @@ x'(t) = −x + x^3 + y \\
 y'(t) = -\nu x - y, \nu \in \mathbb{R}
 \end{cases}$$
 
-Below, we have the phase portrait for $\nu = 5$ which has 3 equilibria. But one interesting thing to note is that the solutions around the origin are not nearly as elliptical as the $\mu =5$ case above and we do see some evident spiraling into the origin. Once again, one might wonder if there is a periodic orbit because there appears to be a transition between solutions asymptoting towards curves that approximately come from eigenvectors and the inward spirals.
+Below, we have the phase portrait for $\nu = 5$ which has 3 equilibria. But one interesting thing to note is that the solutions around the origin are not nearly as elliptical as the $\mu =5$ case above and we do see some evident spiraling into the origin.
 
 ![label](/files/nl8.jpg)
+
+Once again, one might wonder if there is a periodic orbit because there appears to be a transition between solutions asymptoting towards curves that approximately come from eigenvectors and the inward spirals. This question is rather subtle; there are rather straightforward criteria for ruling out the existence of periodic solutions. For example, if we take the vector field defined by the system, we can assign indices to equilibria by using the **winding number.** A closed loop (not necessarily a solution) can then be assigned an index as well by essentially summing up the indices of all the equilibria it encloses. Moreover, deforming the loop does not change the index unless we cross over equilibria. Thus, we see the winding number is a **topological invariant.** One finds that a periodic solution must then enclose equilibria whose total index is nonzero. So for example, if we have two equilibria with indices $+1$ and $-1$, there cannot be any periodic solution which encloses exactly both of them and no others.
+
+However, to detect orbits is a much more subtle matter. In the future, I may write a post on that subject.
 
 ### Ending Thoughts
 
