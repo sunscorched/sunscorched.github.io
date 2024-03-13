@@ -86,7 +86,9 @@ Here, $\mu = −2$ and $(0,0)$ is a saddle point. The other two are sources; it�
 
 ![label](/files/nl7.jpg)
 
-Lastly, let's suppose we just change the original system (2) slightly by flipping the sign of the $y$ in the second equation.
+### Ruling Out Periodic Orbits
+
+Let's suppose we just change the original system (2) slightly by flipping the sign of the $y$ in the second equation.
 $$\begin{cases}
 x'(t) = −x + x^3 + y \\
 y'(t) = -\nu x - y, \nu \in \mathbb{R}
@@ -98,7 +100,36 @@ Below, we have the phase portrait for $\nu = 5$ which has 3 equilibria. But one 
 
 Once again, one might wonder if there is a periodic orbit because there appears to be a transition between solutions asymptoting towards curves that approximately come from eigenvectors and the inward spirals. This question is rather subtle; there are rather straightforward criteria for ruling out the existence of periodic solutions. For example, if we take the vector field defined by the system, we can assign indices to equilibria by using the **winding number.** A closed loop (not necessarily a solution) can then be assigned an index as well by essentially summing up the indices of all the equilibria it encloses. Moreover, deforming the loop does not change the index unless we cross over equilibria. Thus, we see the winding number is a **topological invariant.** One finds that a periodic solution must then enclose equilibria whose total index is nonzero. So for example, if we have two equilibria with indices $+1$ and $-1$, there cannot be any periodic solution which encloses exactly both of them and no others.
 
-However, to detect orbits is a much more subtle matter. In the future, I may write a post on that subject.
+In our situation above, linearizing at the origin, we find a matrix
+$$\begin{pmatrix}
+-1 & 1 \\
+-5 & -1 
+\end{pmatrix}$$
+with eigenvalues having negative real part and nonzero imaginary part. So we have a spiral sink and its index is $+1$. If we linearize at the other two points, we get the same matrix for both:
+$$\begin{pmatrix}
+17 & 1 \\
+-5 & -1 
+\end{pmatrix}$$
+whose eigenvalues are real and have opposite parody. So we have saddle points whose indices are $-1$. Thus, a periodic orbit would have to either enclose only the origin or all three equilibria but cannot enclose only two of them where one is the origin.
+
+Let's give one more criterion for ruling out periodic orbits. Once again, let $V =\langle f,g \rangle$ be a differentiable vector and suppose $\gamma$ is a solution, not necessarily one that closes up. This means that if we parametrize $\gamma(t) = (x(t),y(t))$, it satisfies $\frac{dx}{dt} = f, \frac{dy}{dt} =g$. Then, by somewhat nonrigorous reasoning, $\frac{dy}{dx} = \frac{g}{f}$ which allows us to produce the differential form equation $f \, dy - g\, dx = 0$. So integrating this differential 1-form along $\gamma$ gives 0. **Caution:** $V$ is not necessarily a conservative vector field. 
+
+Now, if $\gamma$ is _additionally_ a closed solution (hence, periodic), it encloses a region $D$ and Green's Theorem tells us:
+
+\[0=\oint_\gamma  f \, dy - g\, dx= \iint_D \left(\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y }\right)\, dx\, dy.\]
+
+So in order for $\gamma$ to be a periodic solution, the RHS integral over $D$ has to be 0. Thus, if we find regions where $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y }$ is always positive or always negative, we cannot have periodic solutions contained in those regions. This is known as **Bendixson's Criterion.** Let's apply this to the so-called van der Pol system.
+
+$$\begin{cases}
+\frac{dx}{dt} &= y \\
+\frac{dy}{dt} &= -x+(1-x^2)y
+\end{cases}$$
+
+We find that $\frac{\partial f}{\partial x} + \frac{\partial g}{\partial y } = 1-x^2$. When $|x|>1$, this is always negative and when $|x|<1$, then this is always positive. In other words, we cannot have any periodic orbits contained just in the strip defined by $|x|<1$ nor any contained just in its complement. Any periodic solution necessarily must cross over both regions. Let's see the phase portrait:
+
+![label](/files/vdp.jpg)
+
+Indeed, any of the potential periodic orbits must travel in both regions. However, we're still unsure if there are actually any orbits; the solutions could just be coming back nearly to itself without actually closing up and we're unable to tell because we can't zoom in far enough. So detecting orbits is a much more subtle matter. In the future, I may write a post on that subject.
 
 ### Ending Thoughts
 
