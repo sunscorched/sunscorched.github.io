@@ -73,7 +73,7 @@ Because $\mu < 1$, the first term is positive. The term under the square root be
 
 In the one below, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. Since it only contributes to $x'(t)$ and is symmetric with respect to the $y$-axis, we do expect some kind of symmetry in all of the $\mu$-portraits. Indeed, this symmetry is consistent with us having the same matrix at the two non-origin equilibria. If we make the coordinate change $(x,y) \mapsto (-x,-y)$, the equations stay exactly the same since the LHS would then have $-x'(t)$ and $-y'(t)$ and the RHS would have every sign flipped as well.
 
-However, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors. One use for the map is to address the question of whether there is at least a single periodic orbit in this region even if most solutions are not periodic.
+Anyways, despite $x^3$ contributing little when $x$ is very small, it is still a nonzero amount and so the solutions never fully come back to themselves. There is an interesting map called the Poincar\'e return map which studies these kinds of behaviors. One use for the map is to address the question of whether there is at least a single periodic orbit in this region even if most solutions are not periodic.
 
 ![label](/files/nl6.jpg)
 
