@@ -69,7 +69,7 @@ $$\begin{pmatrix}
 and characteristic polynomial $\lambda^2 -(3 -3\mu)\lambda + (2 -2\mu)$. The roots are then 
 $$((3 − 3\mu) \pm \sqrt{(3 − 3\mu)^2 − 4(2 − 2\mu)})/2.$$
 
-Because $\mu < 1$, the first term is positive. The term under the square root becomes $9\mu^2 -10\mu + 1$ which is concave up and has roots $\mu = 1/9, 1$. For $1/9 < \mu < 1$, the term is negative so we would have complex eigenvalues with positive real part. Here are some phase portraits for different $\mu$.
+Because $\mu < 1$, the first term is positive. The term under the square root becomes $9\mu^2 -10\mu + 1$ which is concave up and has roots $\mu = 1/9, 1$. For $1/9 < \mu < 1$, the term is negative so we would have complex eigenvalues with positive real part. So in the language of ODEs, $\mu =1/9,1$ are **bifurcation points** for our 1-parameter family. We'll now look at some phase portraits for specified values of $\mu$.
 
 In the one below, we have $\mu = 5$ and so there is only one equilibrium point. Note that it looks as if the solutions are periodic and ellipses but this is because the $x^3$ is contributing a very small amount when $x$ is small. Since it only contributes to $x'(t)$ and is symmetric with respect to the $y$-axis, we do expect some kind of symmetry in all of the $\mu$-portraits. Indeed, this symmetry is consistent with us having the same matrix at the two non-origin equilibria. If we make the coordinate change $(x,y) \mapsto (-x,-y)$, the equations stay exactly the same since the LHS would then have $-x'(t)$ and $-y'(t)$ and the RHS would have every sign flipped as well.
 
