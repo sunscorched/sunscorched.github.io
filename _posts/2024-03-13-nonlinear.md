@@ -101,7 +101,7 @@ Once again, one might wonder if there is a periodic orbit because there appears 
 
 ![label](/files/milnor.jpg)
 
-In our situation above, linearizing at the origin, we find a matrix
+In our equations above, linearizing at the origin, we find a matrix
 $$\begin{pmatrix}
 -1 & 1 \\
 -5 & -1 
