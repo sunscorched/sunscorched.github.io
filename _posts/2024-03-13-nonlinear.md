@@ -101,7 +101,9 @@ Once again, one might wonder if there is a periodic orbit because there appears 
 
 ![label](/files/milnor.jpg)
 
-In our equations above, linearizing at the origin, we find a matrix
+One certainly doesn't need to mention topology but I cannot resist pointing out that the winding number is obtained from forming a self-map on the circle $S^1 \to S^1$ and seeing what its homotopy class is. In particular, it induces an endomorphism on the **fundamental group** $\pi_1(S^1) \cong \mathbb{Z}$ and the winding number is equal to the image of the positive generator in $\mathbb{Z}$. This is a nice perspective because if we were to increase the number of our equations in the system to $n$, then we can still define an index for vector fields in these higher dimensions based on **wrapping numbers** or the **degree** of maps $S^{n-1} \to S^{n-1}$ which is again obtained from looking at the induced endomorphism on $\pi_{n-1}(S^{n-1}) \cong \mathbb{Z}$.
+
+Back to our equations from the start of this section, linearizing at the origin, we find a matrix
 $$\begin{pmatrix}
 -1 & 1 \\
 -5 & -1 
