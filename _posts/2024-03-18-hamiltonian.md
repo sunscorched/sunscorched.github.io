@@ -52,7 +52,9 @@ $$\begin{pmatrix}
 2x & -1 \\
 -1 & -1 \end{pmatrix}.$$
 
-For $x=-2, 1$, the norm of the Hessian is smaller than $2\pi$ so I believe $H$ is considered to be $C^2$-small which means that the notion of nondegeneracy of critical points in the Morse theoretic sense coincides with the notion of nondegeneracy for periodic orbits in the Floer theoretic sense. The critical point $(-2,4)$ has index 2: i.e. is a local maximum. At $(1,1)$, the critical point has index 1 as we know since it's a saddle. Here is a graph of $H$; we can see the shape of it fits well with the level sets.
+For $x=-2, 1$, the norm of the Hessian is smaller than $2\pi$ so I believe $H$ is considered to be $C^2$-small which means that the notion of nondegeneracy of critical points in the Morse theoretic sense (where $dH=0$) coincides with the notion of nondegeneracy for periodic orbits in the Floer theoretic sense. The latter sense is where we take the time $T$-flow $\psi_T$ and find its fixed points; these correspond to orbits with period $T$. For an orbit $\gamma$ to be nondegenerate, we require the linearization $D_{\gamma(t)}\psi_T$ to not have $+1$ as an eigenvalue.
+
+The critical point $(-2,4)$ has index 2: i.e. is a local maximum. At $(1,1)$, the critical point has index 1 as we know since it's a saddle. Here is a graph of $H$; we can see the shape of it fits well with the level sets.
 
 ![label](/files/level_set_ham.png)
 
