@@ -7,8 +7,6 @@ tags:
   - symplectic geometry
 ---
 
-# Hamiltonian Dynamics and Periodic Solutions
-
 Consider the following system of nonlinear ODEs.
 $$\begin{cases} \frac{dx}{dt} = 2-x-y \\
 \frac{dy}{dt} = y-x^2 \end{cases}$$
