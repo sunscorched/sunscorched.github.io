@@ -31,8 +31,8 @@ $$\begin{pmatrix}
 and its characteristic equation is $\lambda^2 + 3$ which has roots $\pm i \sqrt{3}$. So the equilibrium point is a **center** and we expect to see solutions that are approximately periodic (if not actually periodic).
 
 For $(1,1)$: We let $u=x-1,v=y-1$ and the equations become
-$\begin{cases} u' = 2-(u+1)-(v+1) = -u-v \\
-v' = (v+1)-(u+1)^2 = -u^2-2u+v \end{cases}$
+$$\begin{cases} u' = 2-(u+1)-(v+1) = -u-v \\
+v' = (v+1)-(u+1)^2 = -u^2-2u+v \end{cases}$$
 
 To linearize, we again drop the $-u^2$ term and the matrix for the linear system is then 
 $$\begin{pmatrix}
@@ -62,13 +62,13 @@ So some of these level sets will roughly appear as:
 
 ![label](/files/elliptic_curve1.png)
 
-These have lower energy than these next ones:
+These previous ones have lower energy than these next ones:
 ![label](/files/elliptic_curve2.png)
 
-For these, we'll have a periodic orbit as well as a nonclosed trajectory in the same energy level. Lastly, these nonclosed trajectories have the highest energy.
+For these, note we'll have a periodic orbit as well as a nonclosed trajectory in the same energy level. Lastly, these nonclosed trajectories have the highest energy.
 ![label](/files/elliptic_curve3.png)
 
-But also, $H$ is an autonomous Hamiltonian which means that any **nonconstant** periodic orbit is automatically **degenerate**. This fits with our situation: the nondegenerate orbits should be isolated and here, the nonconstant periodic orbits are not isolated and hence, must be degenerate. For this reason, the example is not immediately ammenable to the standard Floer theory that Floer himself developed since for that, we usually take Hamiltonians with only nondegenerate periodic orbits. We would need to do a kind of Morse-Bott version which has been developed in various settings. Since the line segment is a manifold-with-boundary but is contractible, I think the Morse-Bott type Hamiltonian Floer homology with $R$ coefficients will just have $C_*([0,1]) \cong R$ contributing and in the end, we just recover that $H_*(\mathbb{R}^2,R) \cong R$.
+But also, $H$ is an autonomous Hamiltonian which means that any **nonconstant** periodic orbit is automatically **degenerate**. This fits with our situation: the nondegenerate orbits should be isolated and here, the nonconstant periodic orbits are not isolated and hence, must be degenerate. For this reason, the example is not immediately ammenable to the standard Floer theory that Floer himself developed since for that, we usually take Hamiltonians with only nondegenerate periodic orbits. We would need to do a kind of Morse-Bott version which has been developed in various settings. Since the line segment is a manifold-with-boundary but is contractible, I think the Morse-Bott type Hamiltonian Floer homology with $R$ coefficients will just have $C_\*([0,1]) \cong R$ contributing and in the end, we just recover that $H_*(\mathbb{R}^2,R) \cong R$.
 
 Now, the period of all these orbits is not the same. To discuss this, we define the action of an orbit $\gamma$ and we'll show it is related to its period. First, we can pick a 1-form $\lambda =x\,dy$ which is a primitive for $\omega = d\lambda$. 
 
