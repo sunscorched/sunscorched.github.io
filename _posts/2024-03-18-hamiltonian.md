@@ -11,7 +11,7 @@ Consider the following system of nonlinear ODEs.
 $$\begin{cases} \frac{dx}{dt} = 2-x-y \\
 \frac{dy}{dt} = y-x^2 \end{cases}$$
 
-We may think of the equations as describing a vector field $X_H$ for us. Here's a phase portrait (the length of the vectors has been normalized but their lengths should really be varying):
+We'll use this example to illustrate various phenomena in Hamiltonian dynamics and symplectic geometry. We may think of the equations as describing a vector field $X_H$ for us. Here's a phase portrait (the length of the vectors has been normalized but their lengths should really be varying):
 
 ![label](/files/phase_ham.png)
 
