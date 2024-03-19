@@ -1,5 +1,5 @@
 ---
-title: 'Hamiltonian Dynamics, Periodic Orbits, and Arnold's Conjecture'
+title: 'Hamiltonian Dynamics, Periodic Orbits, and the Arnold Conjecture'
 date: 2024-03-18
 permalink: /posts/2024/03/hamiltonian/
 tags:
