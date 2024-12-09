@@ -3,8 +3,6 @@ layout: archive
 title: "Resume"
 permalink: /resume/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
 Here is a <a href="/files/resume_finance.pdf">PDF</a> of my resume.
