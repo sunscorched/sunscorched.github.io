@@ -8,7 +8,7 @@ date: 2023-10-01
 location: "Hartford, Connecticut"
 ---
 
-I am a Harold L. Dorwart visiting assistant professor at [Trinity College](https://www.trincoll.edu/mathematics/). This Spring 2025, I am teaching an introductory statistics course and a differential equations course. In my teaching, I enjoy using tools such as Desmos. Here are some examples: 
+I am a Harold L. Dorwart visiting assistant professor at [Trinity College](https://www.trincoll.edu/mathematics/). This Spring 2025, I am teaching an introductory statistics course and a differential equations course. In my teaching, I enjoy using free online tools such as Desmos and Geogebra. Here are some examples: 
 * Statistics: [Type I and II Errors](https://www.desmos.com/calculator/06ljv6oxtu)
 * Differential equations: [Resonance in Undamped Harmonic Oscillators with Sinusoidal Forcing](https://www.desmos.com/calculator/u9qrxmhhlr), [Bifurcation Diagram](https://www.desmos.com/calculator/qlcogpj21k)
 * Calculus I: [Secant and Tangent Lines](https://www.desmos.com/calculator/uhor2kqhki), [Implicit Differentiation](https://www.desmos.com/calculator/qygf7xdkjc), [Newton Approximation](https://www.desmos.com/calculator/s8d8rgrrdx), [Quartics Know the Golden Ratio](https://www.desmos.com/calculator/bzodfdyj5b)
