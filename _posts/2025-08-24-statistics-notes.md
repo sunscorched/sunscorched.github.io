@@ -135,8 +135,8 @@ Hence $\beta=P(\text{accept } H_0) = P(N\geq2)= 1-P(N=0)-P(N=1) \approx 0.2644$.
 
 There is a online [widget](https://shiny.rit.albany.edu/stat/binomial/) for visualizing binomial distributions. The first one is when $p=1/2$, the second when $p=1/10$.
 
-![5a05d76ffea42cacd0ef9da87ce5b736.png](5a05d76ffea42cacd0ef9da87ce5b736.png)
-![065be8cfccefef9c7d40ba1edad3e7b4.png](065be8cfccefef9c7d40ba1edad3e7b4.png)
+![label](/files/5a05d76ffea42cacd0ef9da87ce5b736.png)
+![065be8cfccefef9c7d40ba1edad3e7b4.png](/files/065be8cfccefef9c7d40ba1edad3e7b4.png)
 
 **Remark 1:** $\beta$ not only depends on an extra concrete assumption (in this discrete case $p=1/10$, in the previous case $\mu_a=181$), it actually depends on the rejection region we computed in the first step.
 
