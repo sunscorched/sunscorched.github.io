@@ -119,7 +119,7 @@ To calculate $\beta$, we find a new $z$-score: $z^\∗_a =(\bar{x}_0 -\mu_a)/\si
 
 Here are two distributions. The red one is associated to $H_0$ with $\mu = 178$ and the blue one for $H_a$ when we choose $\mu_a=181$; so it's simply the red curve shifted to the right. The shaded red area is $\alpha=0.05$ and the shaded blue region is $\beta=0.1539$. Note that I'm using the same $x=179.856 \text{ cm}$ to define the boundaries of the red and blue regions. It's a bit hard to see but the black line on the $x$-axis is the rejection region. So to compute $\beta$, we need to look at the area under the **new** distribution assuming $\mu_a$, over the complement of the rejection region.
 
-![14e814dce5a94e0821bca2c2c8a5b950.png](14e814dce5a94e0821bca2c2c8a5b950.png)
+![14e814dce5a94e0821bca2c2c8a5b950.png](/files/14e814dce5a94e0821bca2c2c8a5b950.png)
 
 **Remark:** In general, $\alpha+\beta \neq 1$. We can do whatever we like in setting $\mu_a$ and it will not affect $\alpha$. In this way, we're able to make $\beta$ whatever we like; e.g. make $\mu_a$ really big. However, if we're trying to be honest about the power of our statistical test, we should pick a reasonable $\mu_a$. For example, it's dishonest to pick 300 cm since that's saying we hypothesize that Czech men are 3 meters tall.
 
@@ -142,7 +142,7 @@ There is a online [widget](https://shiny.rit.albany.edu/stat/binomial/) for visu
 
 **Remark 2:** We can also conduct two tailed tests like this one where the rejection region is in two pieces. However, the _complement_ of the rejection region is in one piece hence, there's only one shaded blue region.
 
-![3f437aa3446e04ee836b2d298943f399.png](3f437aa3446e04ee836b2d298943f399.png)
+![3f437aa3446e04ee836b2d298943f399.png](/files/3f437aa3446e04ee836b2d298943f399.png)
 ### Maximum Likelihood Estimation in the Discrete Setting
 
 **Example:** Suppose we have a biased coin with probability $p$ of getting H. We toss the coin 80 times and it comes up heads 49 times. The probability of seeing this is $L(p)={80 \choose 49}p^{49}(1-p)^{31}$. That is, $L(p)=P(\text{Data}\|p)$, a conditional probability for any fixed $p$. But we're going to let $p$ vary and so for each $p$, we do get a **different** probability distribution. 
@@ -335,10 +335,10 @@ On the other hand, let $w=x-\text{proj}_v x$. The vectors $x,v,w$ form a right t
 
 Let's visualize this with $n=3$ samples. Suppose I generate 3 observations 100 times from a given distribution and plot them as $x=(x_1,x_2,x_3)$. These will form a cloud of points centered roughly around the vector determined by the **true mean** $(\mu,\mu,\mu)$. This is shown below; the yellow points represent each of the 3 observations put into a vector. We can project the yellow points onto the vector of ones $v$ (denoted below by $\vec{1}$) to get the sample mean for each. These are shown in blue. The big black plus is $(\mu,\mu,\mu)$; we don't know its exact values but it makes sense that it should be at the center of the blue points. So the expected value $E[\bar{x}]=\mu$ which makes $\bar{x}$ and unbiased indicator of $\mu$. 
 
-![93093e733f34687ae94bd80e2ba62294.png](93093e733f34687ae94bd80e2ba62294.png)
+![93093e733f34687ae94bd80e2ba62294.png](/files/93093e733f34687ae94bd80e2ba62294.png)
 On the other hand, to predict the true variance $\sigma^2$, we would need to know $\mu$. We don't actually know $\mu$ but what we do know is that since $\bar{x}$ and $\mu$ lie on the same line spanned by $v$, projecting to the orthogonal complement would then send $\bar{x}$ and $\mu$ to the same point, namely to $0 \in U:=\langle v \rangle^\perp$. We can project all the yellow points into $U$ as well to get a new dataset with a known expected value of 0.
 
-![637d4cbcc712064bae06fc6db9c0caf3.png](637d4cbcc712064bae06fc6db9c0caf3.png)
+![637d4cbcc712064bae06fc6db9c0caf3.png](/files/637d4cbcc712064bae06fc6db9c0caf3.png)
 
 In general, if $y \in \mathbb{R}^k$ and the mean is 0 as we have here, then $\frac{1}{k}|y|^2$ is an unbiased indicator for $\sigma^2$. This is because $E(\frac{1}{k}|y|^2 )=\frac{1}{k}E(\sum^k y^2_i)= \frac{1}{k}\sum^k E(y^2_i)=\frac{1}{k}(k \sigma^2)=\sigma^2$. Well, our new data points are in $U \cong \mathbb{R}^2$ so $k=2$.
 
@@ -408,7 +408,7 @@ Alternative hypothesis: the true values are described by the full model.
 
 Here's a geometric picture; we depict $R$ as a line and $F$ as a plane but they are larger linear subspaces in general.
 
-![5a1342fabe32ba968bd20fb252d7b614.png](5a1342fabe32ba968bd20fb252d7b614.png)
+![5a1342fabe32ba968bd20fb252d7b614.png](/files/5a1342fabe32ba968bd20fb252d7b614.png)
 
 The picture depicts the null hypothesis that the true value is in the space $R$ that is spanned by the reduced model. The error is $y_{obs}-y_{True} \in R^\perp$ which is drawn from $N(0,\sigma^2 I)$. Also, $y_{obs}-\hat{y}_{Red} \in R^\perp$, $y_{obs}-\hat{y}_{Full}\in F^\perp$ and $\hat{y}_{Full}-\hat{y}_{Red} \in F\cap R^\perp$.
 
