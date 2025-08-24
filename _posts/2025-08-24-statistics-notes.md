@@ -234,33 +234,52 @@ Let's just set $N=3$. So $\mu = (3-1)/2=2$ and $\sigma^2 = 8/12 = 2/3$.
 Then sampling pairs, we have 9 pairs:
 
 $\text{Pair} \hspace{16mm} \bar{x} \hspace{20mm} s^2$
+
 $(1,1)\hspace{15mm} 1 \hspace{20mm} 0$
+
 $(1,2)\hspace{15mm} 1.5 \hspace{15mm} 0.25$
+
 $(1,3)\hspace{15mm} 2 \hspace{20mm} 1$
+
 $(2,1)\hspace{15mm} 1.5 \hspace{15mm} 0.25$
+
 $(2,2)\hspace{15mm} 2 \hspace{20mm} 0$
+
 $(2,3)\hspace{15mm} 2.5 \hspace{15mm} 0.25$
+
 $(3,1)\hspace{15mm} 2 \hspace{20mm} 1$
+
 $(3,2)\hspace{15mm} 2.5 \hspace{15mm} 0.25$
+
 $(3,3)\hspace{15mm} 3 \hspace{20mm} 0$
 
 We have that $\bar{x}$ is a random variable which takes on values with probability: 
+
 $\text{Value} \hspace{10mm} p$
+
 $1 \hspace{15mm} 1/9$
+
 $1.5 \hspace{12mm} 2/9$
+
 $2 \hspace{15mm} 3/9$
+
 $2.5 \hspace{12mm} 2/9$
+
 $3 \hspace{15mm} 1/9$
 
 Note that the expected value of $\bar{x}$ is  $\mu_{\bar{x}} = \frac{1}{9}(1*1 + 1.5*2+2*3+2.5*2+3*1) = 2$ which is the expected value of the original random variable. This shows our $\bar{x}$ is an unbiased estimator.
 
 $s^2$ is also a random variable:
+
 $\text{Value} \hspace{10mm} p$
+
 $0 \hspace{15mm} 3/9$
+
 $0.25 \hspace{11mm} 4/9$
+
 $1 \hspace{15mm} 2/9$
 
-Note that the expected value of $s^2$ is $\mu_{s^2} = \frac{1}{9}(0*3+0.25*4+1*2) = 1/3<\sigma^2=2/3$. So $s^2$ is a biased estimator. But if we multiply by the factor $n/(n-1) = 2/1$, we then get the correct variance.
+Note that the expected value of $s^2$ is $\mu_{s^2} = \frac{1}{9}(0\*3+0.2\*4+1\*2) = 1/3<\sigma^2=2/3$. So $s^2$ is a biased estimator. But if we multiply by the factor $n/(n-1) = 2/1$, we then get the correct variance.
 
 **Exercise:** For practice, let $N=2,n=3$. That is, we sample triples from the set $\{1,2\}$; there are 8 possible samples. Then we'll find that $s^2$ only takes on values $0$ and $2/9$ with probability $2/8$ and $6/8$. Thus, $\mu_{s^2}=2/12$. If we multiply by the factor $n/(n-1)=3/2$, we'll get $\sigma^2 = 3/12$.
 
