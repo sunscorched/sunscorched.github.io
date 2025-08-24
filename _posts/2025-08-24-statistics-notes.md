@@ -68,10 +68,10 @@ Wikipedia has a list of some other [common test statistics](https://en.wikipedia
 
 Above, we discussed a significance level $\alpha$ to which we compared our $p$-value. We can also construct so-called **confidence intervals** with a chosen $\alpha$. For example, if we're studying sample means with $\alpha=0.05$, then $(1-\alpha)=0.95$ and we can build a 95% confidence interval. This is a range of values that, if we have a large sample, then the true mean lies inside of the range of values 95% of the time. For the $Z$-test, we assume that the distribution is approximately normal when we have a large number of samples and that its mean $\mu_{\bar{x}} = E[\bar{X}] = \bar{X}$ is equal to the true mean $\mu$.
 So we build the interval as $[\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}]$. Here, $\sigma_{\bar{x}} = \sigma/\sqrt{n}$ and $\sigma$ is the true population standard deviation. To get this $z_{\alpha/2}$, we look for a $z$-score $z^\*$ so that the area under the standard normal curve on the interval $[-z^\*,z^\*]$ is $(1-\alpha)$, our desired confidence level. For example, if $\alpha=0.05$, we want 
-$0.95 = P(\mu_{\bar{x}} − z^\* \sigma_{\bar{x}} < x < \mu_{\bar{x}} + z^\*\sigma_{\bar{x}})$
-$= P(−z^\∗ < z < z^\∗)$
-$\Rightarrow 0.975 = P(z < z^\∗)$
-$\Rightarrow z^\∗ = 1.96$.
+$0.95 = P(\mu_{\bar{x}} − z^* \sigma_{\bar{x}} < x < \mu_{\bar{x}} + z^*\sigma_{\bar{x}})$
+$= P(−z^∗ < z < z^∗)$
+$\Rightarrow 0.975 = P(z < z^∗)$
+$\Rightarrow z^∗ = 1.96$.
 
 However, we must be careful about our assumptions. The distribution is assumed to be approximately normal and the samples are independent. But it could certainly be the case that the true mean $\mu \neq \mu_{\bar{x}}$ and that it doesn't lie within our confidence interval at all. We're only saying that given the data that we have, we expect that if we conduct the experiment 100 times and construct 100 confidence intervals, the true mean would lie in 95 of those confidence intervals. We're not saying there's $100(1-\alpha)$% chance that $\mu$ lies in a given interval because it's a fixed number, not a random variable. It's important to be careful; confidence intervals are often misinterpreted.
 
@@ -114,8 +114,8 @@ If our $H_0:\mu=178$ and $H_a:\mu \neq 178$, we'd have needed a 2-tailed test an
 Now, in the 1-tail test example, we had a $z$-score of 1.65 given to us by having chosen $\alpha=0.05$. So we use the value $\bar{x}_0=178 + 1.65(9/8)\approx 179.856\, \text{cm}$; this is the cutoff in our rejection region. If the average height of the Czech men had been 179, we would not reject our original $H_0$.
 So now, to try and determine the likelihood of failing to reject $H_0$ when it is in fact correct, let's set up a new hypothesis test where we let $H_a:\mu = 181$; we have many choices for the value here but we pick 181 since it's the average height of the 64 sampled Czech men. Specifically, we set $\mu_a = 181$ but keep the same standard deviation. So this simply translates the normal distribution.
 
-Finally, $\beta$ is the likelihood of accepting $H_0$ (which means rejecting $H_a$), i.e. the area under the curve to the **left** of $\bar{x}_0$ in the new distribution $N(\mu_a, \sigma_{\bar{x}})$ (the area to the right defined our reject $H_0$ region). So we see that if the area to the right is small, the area to the left will be usually be large even after adjusting $\mu_a=181$. This is why we're not usually able to simultaneously make $\alpha$ and $\beta$ as small as we want.
-To calculate $\beta$, we find a new $z$-score: $z^\∗_a =(\bar{x}_0 -\mu_a)/\sigma_{\bar{x}}$ and calculate $β := P(z < z^∗_a)$. In our situation, we have $z^∗_a= (179.856−181)/(9/8) \approx -1.02$. So $β = P(z < −1.02) = 0.1539$ is the likelihood of accepting $H_0$ when it is in fact, incorrect.
+Finally, $\beta$ is the likelihood of accepting $H_0$ (which means rejecting $H_a$), i.e. the area under the curve to the **left** of $\bar{x}\_0$ in the new distribution $N(\mu_a, \sigma_{\bar{x}})$ (the area to the right defined our reject $H_0$ region). So we see that if the area to the right is small, the area to the left will be usually be large even after adjusting $\mu_a=181$. This is why we're not usually able to simultaneously make $\alpha$ and $\beta$ as small as we want.
+To calculate $\beta$, we find a new $z$-score: $z^∗\_a =(\bar{x}\_0 -\mu_a)/\sigma_{\bar{x}}$ and calculate $\beta := P(z < z^∗\_a)$. In our situation, we have $z^∗\_a= (179.856−181)/(9/8) \approx -1.02$. So $\beta = P(z < −1.02) = 0.1539$ is the likelihood of accepting $H_0$ when it is in fact, incorrect.
 
 Here are two distributions. The red one is associated to $H_0$ with $\mu = 178$ and the blue one for $H_a$ when we choose $\mu_a=181$; so it's simply the red curve shifted to the right. The shaded red area is $\alpha=0.05$ and the shaded blue region is $\beta=0.1539$. Note that I'm using the same $x=179.856 \text{ cm}$ to define the boundaries of the red and blue regions. It's a bit hard to see but the black line on the $x$-axis is the rejection region. So to compute $\beta$, we need to look at the area under the **new** distribution assuming $\mu_a$, over the complement of the rejection region.
 
@@ -357,11 +357,12 @@ which we multiply by $\frac{n}{n-1}$ to yield Bessel's correction. Both estimate
 
 One is that if we have $n$ samples $x_1,...,x_n$, we can move to $\mathbb{R}^n$ by packaging $x=(x_1,...,x_n)$. Let $v=(1,1,...,1)$, the vector of all 1s. Note that the projection of two vectors is $\text{proj}_v x = (\frac{v\cdot x}{\|v\|^2})v$. In this case, $\|v\|^2 = n$ and $v\cdot x = \sum^n\_{i=1} x_i$. So then in our situation, $(v\cdot x)/\|v\|^2 = \bar{x}$, the sample mean. Thus, computing the mean is related to projecting $x$ onto $(1,1,...,1)$. 
 
-On the other hand, let $w=x-\text{proj}\_v x$. The vectors $x,v,w$ form a right triangle and $w$ is perpendicular to $v$. That is, $w \in \langle v\rangle^\perp$. Note that $|w|^2 = \|x- \bar{x} v\|^2 = \sum^n_{i=1} (x_i-\bar{x})^2$ and so $w$, if we scale it, will equal the standard deviation.
+On the other hand, let $w=x-\text{proj}\_v x$. The vectors $x,v,w$ form a right triangle and $w$ is perpendicular to $v$. That is, $w \in \langle v\rangle^\perp$. Note that $\|w\|^2 = \|x- \bar{x} v\|^2 = \sum^n_{i=1} (x_i-\bar{x})^2$ and so $w$, if we scale it, will equal the standard deviation.
 
 Let's visualize this with $n=3$ samples. Suppose I generate 3 observations 100 times from a given distribution and plot them as $x=(x_1,x_2,x_3)$. These will form a cloud of points centered roughly around the vector determined by the **true mean** $(\mu,\mu,\mu)$. This is shown below; the yellow points represent each of the 3 observations put into a vector. We can project the yellow points onto the vector of ones $v$ (denoted below by $\vec{1}$) to get the sample mean for each. These are shown in blue. The big black plus is $(\mu,\mu,\mu)$; we don't know its exact values but it makes sense that it should be at the center of the blue points. So the expected value $E[\bar{x}]=\mu$ which makes $\bar{x}$ and unbiased indicator of $\mu$. 
 
 ![93093e733f34687ae94bd80e2ba62294.png](/files/93093e733f34687ae94bd80e2ba62294.png)
+
 On the other hand, to predict the true variance $\sigma^2$, we would need to know $\mu$. We don't actually know $\mu$ but what we do know is that since $\bar{x}$ and $\mu$ lie on the same line spanned by $v$, projecting to the orthogonal complement would then send $\bar{x}$ and $\mu$ to the same point, namely to $0 \in U:=\langle v \rangle^\perp$. We can project all the yellow points into $U$ as well to get a new dataset with a known expected value of 0.
 
 ![637d4cbcc712064bae06fc6db9c0caf3.png](/files/637d4cbcc712064bae06fc6db9c0caf3.png)
@@ -374,14 +375,14 @@ In linear regression, since we assume the errors are normally distributed and al
 
 ### Method of Moments
 
-The **$k$th moment** of a random variable $X$ is $\mu_k = E[X^k]$. If $X_1,...,X_n$ are iid random variables, the **$k$th sample
-moment** is defined as $\hat{\mu}_k = \frac{1}{n}\sum^n_{i=1}X^k_i$.
+The **$k$th moment** of a random variable $X$ is $\mu\_k = E[X^k]$. If $X_1,...,X_n$ are iid random variables, the **$k$th sample
+moment** is defined as $\hat{\mu}\_k = \frac{1}{n}\sum^n\_{i=1}X^k\_i$.
 
-The 1st sample moment is then just $\hat{\mu}\_1=\bar{X}$, the sample mean which we can use to estimate the true mean $\mu$. Also, note that $\hat{\mu}\_2-\hat{\mu}_1^2 = \frac{1}{n}\sum^n_{i=1}X^2_i - \bar{X}^2$ is an estimate for the true variance $\sigma^2$. These sample moment estimates are a method for estimating true population parameters and thus, the is called **method of moments.** We'll return to this in a moment (horrible pun) but let's introduce a few more definitions and results.
+The 1st sample moment is then just $\hat{\mu}\_1=\bar{X}$, the sample mean which we can use to estimate the true mean $\mu$. Also, note that $\hat{\mu}\_2-\hat{\mu}\_1^2 = \frac{1}{n}\sum^n\_{i=1}X^2\_i - \bar{X}^2$ is an estimate for the true variance $\sigma^2$. These sample moment estimates are a method for estimating true population parameters and thus, the is called **method of moments.** We'll return to this in a moment (horrible pun) but let's introduce a few more definitions and results.
 
-The **moment generating function** for a random variable $X$ is $M_X(s):=E[e^{sX}]$. If $X$ is a continuous random variable with a probability density function $f$, then $M_X(s)=\int^\infty_{-\infty}e^{sx}f(x)\,dx$. It may be that for many values of $s$, this diverges. But the main use is for its derivatives. Observe that the two-sided Laplace transform of $f$ is $\mathcal{L}\{f\}(s)=\int^\infty_{-\infty}e^{-sx}f(x)\,dx$ and so $M_X(s)=\mathcal{L}\{f\}(-s)$. The **characteristic function** on the other hand, is $\varphi_X(t) = E[e^{itX}] = \mathcal{F}\{f\}(-t)$ which is built from the Fourier transform. 
+The **moment generating function** for a random variable $X$ is $M_X(s):=E[e^{sX}]$. If $X$ is a continuous random variable with a probability density function $f$, then $M_X(s)=\int^\infty\_{-\infty}e^{sx}f(x)\,dx$. It may be that for many values of $s$, this diverges. But the main use is for its derivatives. Observe that the two-sided Laplace transform of $f$ is $\mathcal{L}\{f\}(s)=\int^\infty\_{-\infty}e^{-sx}f(x)\,dx$ and so $M_X(s)=\mathcal{L}\{f\}(-s)$. The **characteristic function** on the other hand, is $\varphi_X(t) = E[e^{itX}] = \mathcal{F}\{f\}(-t)$ which is built from the Fourier transform. 
 
-Note that $\frac{d^n}{ds^n}M_X(s)\|_{s=0} = \int^\infty_{-\infty}x^n f(x)\,dx$. The integral value here is the $n$th **moment** of $X$. Note that for $n=0$, the answer is just 1 because that's the total probability. For $n=1$, it is the expected value of $X$, $n=2$, it is a part of the definition for variance. And if re
+Note that $\frac{d^n}{ds^n}M_X(s)\|_{s=0} = \int^\infty\_{-\infty}x^n f(x)\,dx$. The integral value here is the $n$ th **moment** of $X$. Note that for $n=0$, the answer is just 1 because that's the total probability. For $n=1$, it is the expected value of $X$, $n=2$, it is a part of the definition for variance. And if re
 For $n=3$, it measures skewedness (symmetric distributions have 0 skewedness), for $n=4$, it measures kurtosis or "tailedness."
 
 So what's the big deal about moments and moment generating functions?
@@ -427,7 +428,7 @@ Alright, now the $F$-statistic allows us to make a comparison. We have an ambien
 
 The full model is $Y=\beta_0+\beta_1X_1+...+\beta_q X_q+\beta_{q+1}X_{q+1}+...+\beta_pX_p$ while the reduced model is $Y=\beta_0+\beta_1X_1+...+\beta_q X_q$; so it says $\beta_{q+1}=...=\beta_p=0$.
 
-So let $F=\text{Span}\{1,x\_1,...,x\_p\}$ and $R=\text{Span}\{1,x\_1,...,x\_q\}$. The hypothesis test we set up is:
+So let $F=\text{Span}\\{1,x\_1,...,x\_p\\}$ and $R=\text{Span}\\{1,x\_1,...,x\_q\\}$. The hypothesis test we set up is:
 
 Null hypothesis: the true values are described by the reduced model.
 Alternative hypothesis: the true values are described by the full model.
