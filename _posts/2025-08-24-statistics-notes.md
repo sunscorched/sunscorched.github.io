@@ -206,6 +206,7 @@ $$
 \frac{\partial \ell}{\partial \sigma} &= \frac{n}{\sigma} - \sum_{i=1}^{n} \frac{(x_i-\mu)^2}{\sigma^3}
 \end{align*}
 $$
+
 Setting both equal to $0$ and solving, we obtain what we naturally would guess the mean and variance to be: 
 
 $$
@@ -225,7 +226,7 @@ $$
 
 which differs from the MLE estimate we just saw above, by a factor of $\frac{n}{n-1}$. This one with the $n-1$ is unbiased. while the one where we divide by $n$, it is biased. Why is that? Right away, we can see that in both formulas, we're approximating the true mean $\mu$ by $\bar{x}$. So we should already expect to see some error due to this approximation.
 
-#### Example
+### Example
 
 Let's first consider an example. Suppose I have a discrete random variable that takes values $1,...,N$ with uniform probability. Then the mean is $E[k]=\sum^N_{k=1} k p(k)=(N+1)/2$. The variance is $E[(k-\mu)^2] = E[k^2]-\mu^2$. The sum of squares from 1 to $N$ is $N(N+1)(2N+1)/6$ and so the variance is $\frac{N^2-1}{12}$.
 
@@ -287,7 +288,7 @@ Note that the expected value of $s^2$ is $\mu_{s^2} = \frac{1}{9}(0\*3+0.2\*4+1\
 
 We'll now see that this factor always corrects things for us.
 
-#### Bessel's Correction
+### Bessel's Correction
 
 I will temporarily use $\hat{\sigma}^2\_{\textrm{mle}}$ and $\hat{\sigma}^2\_{\textrm{bessel}}$ to distinguish between the two.
 
@@ -438,9 +439,9 @@ Here's a geometric picture; we depict $R$ as a line and $F$ as a plane but they 
 
 ![5a1342fabe32ba968bd20fb252d7b614.png](/files/5a1342fabe32ba968bd20fb252d7b614.png)
 
-The picture depicts the null hypothesis that the true value is in the space $R$ that is spanned by the reduced model. The error is $y_{obs}-y_{True} \in R^\perp$ which is drawn from $N(0,\sigma^2 I)$. Also, $y_{obs}-\hat{y}_{Red} \in R^\perp$, $y_{obs}-\hat{y}_{Full}\in F^\perp$ and $\hat{y}_{Full}-\hat{y}_{Red} \in F\cap R^\perp$.
+The picture depicts the null hypothesis that the true value is in the space $R$ that is spanned by the reduced model. The error is $y_{obs}-y_{True} \in R^\perp$ which is drawn from $N(0,\sigma^2 I)$. Also, $y_{obs}-\hat{y}\_{Red} \in R^\perp$, $y_{obs}-\hat{y}\_{Full}\in F^\perp$ and $\hat{y}\_{Full}-\hat{y}_{Red} \in F\cap R^\perp$.
 
-Under the null hypothesis, if we project $y_{obs}-y_{True}$ into $F$, I believe we obtain a random vector which aligns with $\hat{y}\_{Full}-\hat{y}\_{Red}$ and the theorem above tells us that that this is also normally distributed on $F \cap R^\perp$ (which has dimension $p-q$) with variance $\sigma^2$. Also, $y_{obs}-\hat{y}_{Full}\in F^\perp$ is normally distributed; $\dim F^\perp = n-p-1$; the extra 1 is from the span containing a 1 for $\beta_0$.
+Under the null hypothesis, if we project $y_{obs}-y_{True}$ into $F$, I believe we obtain a random vector which aligns with $\hat{y}\_{Full}-\hat{y}\_{Red}$ and the theorem above tells us that that this is also normally distributed on $F \cap R^\perp$ (which has dimension $p-q$) with variance $\sigma^2$. Also, $y_{obs}-\hat{y}\_{Full}\in F^\perp$ is normally distributed; $\dim F^\perp = n-p-1$; the extra 1 is from the span containing a 1 for $\beta_0$.
 
 Then $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2$ is a sum of squares of $p-q$ iid terms all with variance $\sigma^2$. So $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2 \sim \sigma^2 \chi^2_{p-q}$ and $\|y\_{obs}-\hat{y}\_{Full}\|^2\sim \sigma^2 \chi^2\_{n-p-1}$ these are independent as they are in orthogonal spaces. Then the $F$ distribution is to built from a ratio of these multiplied by another fraction that uses the dimensions (see above for the definition): $\frac{n-p-1}{p-q} \frac{\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2}{\|y\_{obs}-\hat{y}\_{Full}\|^2} \sim F(p-q,n-p-1)$.
 
