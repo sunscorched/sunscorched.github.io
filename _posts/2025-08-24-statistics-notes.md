@@ -458,7 +458,7 @@ $\log L(\lambda) = -n\lambda + \log(\lambda) \sum^n k_i-\sum^n \log(k_i!)$.
 
 Differentiating with respect to $\lambda$ and setting equal to 0 (the last term goes away), we get $\frac{1}{\lambda} \sum^n k_i = n$ and thus, $\lambda = \frac{1}{n}\sum^nk_i$ which is the average of the samples which agrees with the 1st sample moment of $\bar{k}$.
 
-**Example 2:** Let's draw $n$ samples $X_1,...,X_n$ from a uniform distribution on $[0,b]$ where $b$ is unknown. The 1st moment is $\mu_1 = b/2$ and so the 1st sample moment is $\hat{\mu}_1 = \bar{X}=\hat{b}/2$ and so the method of moments predicts $\hat{b}_{MOM}=2\bar{X}$. On the other hand, using maximum likelihood estimates, we'd find that the best estimate there is that $\hat{b}_{MLE}=\max\{X_1,...,X_n\}$. So the two methods differ.
+**Example 2:** Let's draw $n$ samples $X_1,...,X_n$ from a uniform distribution on $[0,b]$ where $b$ is unknown. The 1st moment is $\mu_1 = b/2$ and so the 1st sample moment is $\hat{\mu}\_1 = \bar{X}=\hat{b}/2$ and so the method of moments predicts $\hat{b}\_{MOM}=2\bar{X}$. On the other hand, using maximum likelihood estimates, we'd find that the best estimate there is that $\hat{b}\_{MLE}=\max\{X_1,...,X_n\}$. So the two methods differ.
 
 Also, $E[\hat{b}\_{MOM}]=2E[\bar{X}] = b$ so this is an unbiased estimator. However, $E[\hat{b}\_{MLE}]=E[\max\{X_1,...,X_n\}] = \frac{1}{b^n}\int_{[0,b]^n} \max\{X_1,...,X_n\}\,dV$
 
