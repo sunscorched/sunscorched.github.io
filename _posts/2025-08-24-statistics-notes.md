@@ -179,6 +179,7 @@ P(\theta \| \textrm{Data})
 \textrm{Posterior} &\propto \textrm{Likelihood} \cdot \textrm{Prior}
 \end{align*}
 $$
+
 Since $P(\text{Data})$ is constant with respect to $\theta$, we don't need to worry about it much. Our prior can be interpreted as being equivalent to 16 ["pseudo-observations"](https://en.wikipedia.org/wiki/Conjugate_prior#Pseudo-observations) with 8 heads and 8 tails. Intuitively you could say something like "Since most coins I have seen are balanced with $\theta=1/2$, I will give this coin a 'head start' of 8 heads and 8 tails before estimating my parameter $\theta$. This is to incorporate my belief that coins are usually weighed fairly." If I'm very confident, I might decide to give the coin a headstart of 100 heads and 100 tails and it's going to take a lot of coin flips to convince me that $\theta$ is far from $1/2$.
 
 Note that if $P(\theta)$ is also constant like it would be in a uniform distribution, then $P(\theta\|\text{Data}) = C \cdot P(\text{Data}\|\theta)$; i.e. just constant multiples of each other. This means that up to a constant, MLE is equivalent to MAP with a uniform prior distribution. In terms of pseudo-observations, we give it zero head start.
@@ -439,7 +440,7 @@ Here's a geometric picture; we depict $R$ as a line and $F$ as a plane but they 
 
 The picture depicts the null hypothesis that the true value is in the space $R$ that is spanned by the reduced model. The error is $y_{obs}-y_{True} \in R^\perp$ which is drawn from $N(0,\sigma^2 I)$. Also, $y_{obs}-\hat{y}_{Red} \in R^\perp$, $y_{obs}-\hat{y}_{Full}\in F^\perp$ and $\hat{y}_{Full}-\hat{y}_{Red} \in F\cap R^\perp$.
 
-Under the null hypothesis, if we project $y_{obs}-y_{True}$ into $F$, I believe we obtain a random vector which aligns with $\hat{y}_{Full}-\hat{y}_{Red}$ and the theorem above tells us that that this is also normally distributed on $F \cap R^\perp$ (which has dimension $p-q$) with variance $\sigma^2$. Also, $y_{obs}-\hat{y}_{Full}\in F^\perp$ is normally distributed; $\dim F^\perp = n-p-1$; the extra 1 is from the span containing a 1 for $\beta_0$.
+Under the null hypothesis, if we project $y_{obs}-y_{True}$ into $F$, I believe we obtain a random vector which aligns with $\hat{y}\_{Full}-\hat{y}\_{Red}$ and the theorem above tells us that that this is also normally distributed on $F \cap R^\perp$ (which has dimension $p-q$) with variance $\sigma^2$. Also, $y_{obs}-\hat{y}_{Full}\in F^\perp$ is normally distributed; $\dim F^\perp = n-p-1$; the extra 1 is from the span containing a 1 for $\beta_0$.
 
 Then $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2$ is a sum of squares of $p-q$ iid terms all with variance $\sigma^2$. So $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2 \sim \sigma^2 \chi^2_{p-q}$ and $\|y\_{obs}-\hat{y}\_{Full}\|^2\sim \sigma^2 \chi^2\_{n-p-1}$ these are independent as they are in orthogonal spaces. Then the $F$ distribution is to built from a ratio of these multiplied by another fraction that uses the dimensions (see above for the definition): $\frac{n-p-1}{p-q} \frac{\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2}{\|y\_{obs}-\hat{y}\_{Full}\|^2} \sim F(p-q,n-p-1)$.
 
