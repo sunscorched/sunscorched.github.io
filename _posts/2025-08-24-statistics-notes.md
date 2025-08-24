@@ -213,6 +213,7 @@ $$
 \hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2
 \end{align*}
 $$
+
 ### Bessel's Correction
 
 One mystifying thing is that when dealing with sample variance (rather than population variance), we often use the formula
@@ -267,7 +268,7 @@ $2.5 \hspace{12mm} 2/9$
 
 $3 \hspace{15mm} 1/9$
 
-Note that the expected value of $\bar{x}$ is  $\mu_{\bar{x}} = \frac{1}{9}(1*1 + 1.5*2+2*3+2.5*2+3*1) = 2$ which is the expected value of the original random variable. This shows our $\bar{x}$ is an unbiased estimator.
+Note that the expected value of $\bar{x}$ is  $\mu_{\bar{x}} = \frac{1}{9}(1\*1 + 1.5\*2+2\*3+2.5\*2+3\*1) = 2$ which is the expected value of the original random variable. This shows our $\bar{x}$ is an unbiased estimator.
 
 $s^2$ is also a random variable:
 
@@ -287,7 +288,7 @@ We'll now see that this factor always corrects things for us.
 
 #### Bessel's Correction
 
-I will temporarily use $\hat{\sigma}^2_{\textrm{mle}}$ and $\hat{\sigma}^2_{\textrm{bessel}}$ to distinguish between the two.
+I will temporarily use $\hat{\sigma}^2\_{\textrm{mle}}$ and $\hat{\sigma}^2\_{\textrm{bessel}}$ to distinguish between the two.
 
 The sample mean $\bar{x}$ is not exactly equal to the true population mean $\mu$.  Let's see how that difference contributes to the MLE estimate. Since 
 
@@ -298,6 +299,7 @@ $$
 &= (x_i - \mu)^2 + (\mu - \bar{x})^2 + 2(x_i - \mu)(\mu - \bar{x})
 \end{align*}
 $$
+
 Summing over all samples we have
 
 $$
@@ -306,16 +308,19 @@ $$
 &= n(\mu - \bar{x})^2 + \sum_{i=1}^{n} (x_i - \mu)^2 + 2(\mu - \bar{x})\sum_{i=1}^{n} (x_i - \mu)
 \end{align*}
 $$
+
 Observe that $\sum_{i=1}^{n} (x_i - \mu) = n(\bar{x} - \mu)$, so we have
 
 $$
  \sum_{i=1}^{n} (x_i - \bar{x})^2  = \left(\sum_{i=1}^{n} (x_i - \mu)^2\right) - n(\mu - \bar{x})^2
 $$
+
 We thus have that
 
 $$
 \hat{\sigma}^2_{\textrm{mle}} = \frac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})^2  = \frac{1}{n}\left(\sum_{i=1}^{n} (x_i - \mu)^2\right) - (\mu - \bar{x})^2
 $$
+
 The first term is the true variance and we're subtracting off a positive value from: the square of the difference between the true and sample mean. In other words, our MLE estimate of the variance $\hat{\sigma}^2_{\textrm{mle}}$ is always going to be a bit **smaller** than the true variance.  The factor of $\frac{n}{n-1}>1$ serves to "bump it up" a little to compensate. Why do we choose this factor and why not just add $(\mu-\bar{x})^2$? We can't add this because we usually do not know $\mu$. So we need to make a modification that doesn't depend on knowing $\mu$.
 
 Let's calculate the expected value of $\hat{\sigma}^2_{\textrm{mle}}$.
@@ -325,6 +330,7 @@ $$
 \mathbb{E}(\hat{\sigma}^2_{\textrm{mle}}) = \mathbb{E}\left(\frac{1}{n}\sum_{i=1}^{n} (x_i - \mu)^2\right) - \mathbb{E}\left((\mu - \bar{x})^2\right)
 \end{align*}
 $$
+
 The first term is just the variance $\mathbb{E}\left(\frac{1}{n}\sum_{i=1}^{n} (x_i - \mu)^2\right) = \sigma^2$
 
 The second term is $\frac{1}{n}\sigma^2$:
@@ -344,13 +350,14 @@ Thus:
 $$
 \mathbb{E}(\hat{\sigma}^2_{\textrm{mle}}) = \sigma^2 - \frac{1}{n}\sigma^2 = \frac{n-1}{n} \sigma^2
 $$
-which we multiply by $\frac{n}{n-1}$ to yield Bessel's correction. Both estimates $\hat{\sigma}^2_{\textrm{mle}}$ and $\hat{\sigma}^2_{\textrm{bessel}}$ converge to the true value $\sigma^2$ as the number of samples grows since $n/(n-1) \to 1$ as $n \to \infty$.  In other words both estimators are **consistent**.  However, $\hat{\sigma}^2_{\textrm{mle}}$ is a **biased** estimator while $\hat{\sigma}^2_{\textrm{bessel}}$ is an **unbiased** estimator.
+
+which we multiply by $\frac{n}{n-1}$ to yield Bessel's correction. Both estimates $\hat{\sigma}^2\_{\textrm{mle}}$ and $\hat{\sigma}^2\_{\textrm{bessel}}$ converge to the true value $\sigma^2$ as the number of samples grows since $n/(n-1) \to 1$ as $n \to \infty$.  In other words both estimators are **consistent**.  However, $\hat{\sigma}^2\_{\textrm{mle}}$ is a **biased** estimator while $\hat{\sigma}^2\_{\textrm{bessel}}$ is an **unbiased** estimator.
 
 **Remark:** Steven Gubkin (Erdos Institute) claims this $n-1$ factor can also be interpreted another way. He wrote a [answer](https://stats.stackexchange.com/questions/3931/intuitive-explanation-for-dividing-by-n-1-when-calculating-standard-deviation/639305#639305) addressing this which I'll now explain.
 
-One is that if we have $n$ samples $x_1,...,x_n$, we can move to $\mathbb{R}^n$ by packaging $x=(x_1,...,x_n)$. Let $v=(1,1,...,1)$, the vector of all 1s. Note that the projection of two vectors is $\text{proj}_v x = (\frac{v\cdot x}{|v|^2})v$. In this case, $|v|^2 = n$ and $v\cdot x = \sum^n_{i=1} x_i$. So then in our situation, $(v\cdot x)/|v|^2 = \bar{x}$, the sample mean. Thus, computing the mean is related to projecting $x$ onto $(1,1,...,1)$. 
+One is that if we have $n$ samples $x_1,...,x_n$, we can move to $\mathbb{R}^n$ by packaging $x=(x_1,...,x_n)$. Let $v=(1,1,...,1)$, the vector of all 1s. Note that the projection of two vectors is $\text{proj}_v x = (\frac{v\cdot x}{\|v\|^2})v$. In this case, $\|v\|^2 = n$ and $v\cdot x = \sum^n\_{i=1} x_i$. So then in our situation, $(v\cdot x)/\|v\|^2 = \bar{x}$, the sample mean. Thus, computing the mean is related to projecting $x$ onto $(1,1,...,1)$. 
 
-On the other hand, let $w=x-\text{proj}_v x$. The vectors $x,v,w$ form a right triangle and $w$ is perpendicular to $v$. That is, $w \in \langle v\rangle^\perp$. Note that $|w|^2 = |x- \bar{x} v|^2 = \sum^n_{i=1} (x_i-\bar{x})^2$ and so $w$, if we scale it, will equal the standard deviation.
+On the other hand, let $w=x-\text{proj}\_v x$. The vectors $x,v,w$ form a right triangle and $w$ is perpendicular to $v$. That is, $w \in \langle v\rangle^\perp$. Note that $|w|^2 = \|x- \bar{x} v\|^2 = \sum^n_{i=1} (x_i-\bar{x})^2$ and so $w$, if we scale it, will equal the standard deviation.
 
 Let's visualize this with $n=3$ samples. Suppose I generate 3 observations 100 times from a given distribution and plot them as $x=(x_1,x_2,x_3)$. These will form a cloud of points centered roughly around the vector determined by the **true mean** $(\mu,\mu,\mu)$. This is shown below; the yellow points represent each of the 3 observations put into a vector. We can project the yellow points onto the vector of ones $v$ (denoted below by $\vec{1}$) to get the sample mean for each. These are shown in blue. The big black plus is $(\mu,\mu,\mu)$; we don't know its exact values but it makes sense that it should be at the center of the blue points. So the expected value $E[\bar{x}]=\mu$ which makes $\bar{x}$ and unbiased indicator of $\mu$. 
 
@@ -359,7 +366,7 @@ On the other hand, to predict the true variance $\sigma^2$, we would need to kno
 
 ![637d4cbcc712064bae06fc6db9c0caf3.png](/files/637d4cbcc712064bae06fc6db9c0caf3.png)
 
-In general, if $y \in \mathbb{R}^k$ and the mean is 0 as we have here, then $\frac{1}{k}|y|^2$ is an unbiased indicator for $\sigma^2$. This is because $E(\frac{1}{k}|y|^2 )=\frac{1}{k}E(\sum^k y^2_i)= \frac{1}{k}\sum^k E(y^2_i)=\frac{1}{k}(k \sigma^2)=\sigma^2$. Well, our new data points are in $U \cong \mathbb{R}^2$ so $k=2$.
+In general, if $y \in \mathbb{R}^k$ and the mean is 0 as we have here, then $\frac{1}{k}\|y\|^2$ is an unbiased indicator for $\sigma^2$. This is because $E(\frac{1}{k}\|y\|^2 )=\frac{1}{k}E(\sum^k y^2_i)= \frac{1}{k}\sum^k E(y^2_i)=\frac{1}{k}(k \sigma^2)=\sigma^2$. Well, our new data points are in $U \cong \mathbb{R}^2$ so $k=2$.
 
 More generally, if we had general $n$, then to get an unbiased indicator, we'll divide by $n-1 = \dim U$; this is Bessel's correction.
 
@@ -370,11 +377,11 @@ In linear regression, since we assume the errors are normally distributed and al
 The **$k$th moment** of a random variable $X$ is $\mu_k = E[X^k]$. If $X_1,...,X_n$ are iid random variables, the **$k$th sample
 moment** is defined as $\hat{\mu}_k = \frac{1}{n}\sum^n_{i=1}X^k_i$.
 
-The 1st sample moment is then just $\hat{\mu}_1=\bar{X}$, the sample mean which we can use to estimate the true mean $\mu$. Also, note that $\hat{\mu}_2-\hat{\mu}_1^2 = \frac{1}{n}\sum^n_{i=1}X^2_i - \bar{X}^2$ is an estimate for the true variance $\sigma^2$. These sample moment estimates are a method for estimating true population parameters and thus, the is called **method of moments.** We'll return to this in a moment (horrible pun) but let's introduce a few more definitions and results.
+The 1st sample moment is then just $\hat{\mu}\_1=\bar{X}$, the sample mean which we can use to estimate the true mean $\mu$. Also, note that $\hat{\mu}\_2-\hat{\mu}_1^2 = \frac{1}{n}\sum^n_{i=1}X^2_i - \bar{X}^2$ is an estimate for the true variance $\sigma^2$. These sample moment estimates are a method for estimating true population parameters and thus, the is called **method of moments.** We'll return to this in a moment (horrible pun) but let's introduce a few more definitions and results.
 
 The **moment generating function** for a random variable $X$ is $M_X(s):=E[e^{sX}]$. If $X$ is a continuous random variable with a probability density function $f$, then $M_X(s)=\int^\infty_{-\infty}e^{sx}f(x)\,dx$. It may be that for many values of $s$, this diverges. But the main use is for its derivatives. Observe that the two-sided Laplace transform of $f$ is $\mathcal{L}\{f\}(s)=\int^\infty_{-\infty}e^{-sx}f(x)\,dx$ and so $M_X(s)=\mathcal{L}\{f\}(-s)$. The **characteristic function** on the other hand, is $\varphi_X(t) = E[e^{itX}] = \mathcal{F}\{f\}(-t)$ which is built from the Fourier transform. 
 
-Note that $\frac{d^n}{ds^n}M_X(s)|_{s=0} = \int^\infty_{-\infty}x^n f(x)\,dx$. The integral value here is the $n$th **moment** of $X$. Note that for $n=0$, the answer is just 1 because that's the total probability. For $n=1$, it is the expected value of $X$, $n=2$, it is a part of the definition for variance. And if re
+Note that $\frac{d^n}{ds^n}M_X(s)\|_{s=0} = \int^\infty_{-\infty}x^n f(x)\,dx$. The integral value here is the $n$th **moment** of $X$. Note that for $n=0$, the answer is just 1 because that's the total probability. For $n=1$, it is the expected value of $X$, $n=2$, it is a part of the definition for variance. And if re
 For $n=3$, it measures skewedness (symmetric distributions have 0 skewedness), for $n=4$, it measures kurtosis or "tailedness."
 
 So what's the big deal about moments and moment generating functions?
@@ -394,9 +401,9 @@ If $U_1,...,U_n$ are all independent $\chi^2$ distributions with 1 degree of fre
 Anyways, observe that $\frac{1}{\sigma^2}\sum^n(X_i-\mu)^2 = \sum^n (\frac{X_i-\mu}{\sigma})^2 \sim \chi^2_n$. But also, $\frac{1}{\sigma^2}\sum^n(X_i-\mu)^2 = \frac{1}{\sigma^2} \sum^n ((X_i-\bar{X})+(\bar{X}-\mu))^2$. Interestingly, all the cross terms (the ones in grouped in the parentheses) cancel. So what we get in the end is 
 $\frac{1}{\sigma^2}\sum^n(X_i-\mu)^2=(\frac{\bar{X}-\mu}{\sigma/\sqrt{n}})^2+ \frac{1}{\sigma^2}\sum^n(X_i-\bar{X})^2$.
 
-This is of the form $W=U+V$ where $U$ and $V$ are independent. Thus, the moment generating functions have the relationship: $M_W=M_U M_V$. We see that $W \sim \chi^2_n$ and by CLT we also have $V\sim \chi^2_1$, then $U \sim \chi^2_{n-1}$. Hence, $s^2 \sim \frac{\sigma^2}{n-1}\chi^2_{n-1}$.
+This is of the form $W=U+V$ where $U$ and $V$ are independent. Thus, the moment generating functions have the relationship: $M_W=M_U M_V$. We see that $W \sim \chi^2\_n$ and by CLT we also have $V\sim \chi^2\_1$, then $U \sim \chi^2\_{n-1}$. Hence, $s^2 \sim \frac{\sigma^2}{n-1}\chi^2\_{n-1}$.
 
-If you look at a graph of $\chi^2_{n-1}$, you'll note that it is not symmetric about its expected vaule of 0. Thus, if we form a confidence interval, it will **not** be symmetric about $s^2$. The interval is $(\frac{ns^2}{\chi^2_{n-1}(\alpha/2)},\frac{ns^2}{\chi^2_{n-1}(1-\alpha/2)})$ where $\chi^2_{n-1}(\alpha/2)$ is the value such that $P(X<\chi^2_{n-1}(\alpha/2)) = \alpha/2$. Similarly, $P(X<\chi^2_{n-1}(1-\alpha/2)) = 1-\alpha/2$.
+If you look at a graph of $\chi^2\_{n-1}$, you'll note that it is not symmetric about its expected vaule of 0. Thus, if we form a confidence interval, it will **not** be symmetric about $s^2$. The interval is $(\frac{ns^2}{\chi^2\_{n-1}(\alpha/2)},\frac{ns^2}{\chi^2\_{n-1}(1-\alpha/2)})$ where $\chi^2\_{n-1}(\alpha/2)$ is the value such that $P(X<\chi^2\_{n-1}(\alpha/2)) = \alpha/2$. Similarly, $P(X<\chi^2\_{n-1}(1-\alpha/2)) = 1-\alpha/2$.
 
 However, for $\bar{x}$, those confidence intervals are symmetric because the distribution in question is the normal distribution which is symmetric.
 
@@ -414,13 +421,13 @@ The $F$-distribution is named after Fisher. It's often used when we want to comp
 
 Now suppose we have some data which satisfies the assumptions needed to run linear regression. That is, we assume there's a linear relationship between some features $X$ and outcome $Y$ and that the errors are independent and all drawn from a normal distribution $N(0,\sigma^2 I)$ (so the variance doesn't change between different data points). To proceed, let's first state a very useful theorem.
 
-**Theorem:** If $X \sim N(0,\sigma^2I)$ is normally distributed on an inner product space $V$, then for any subspace $U\subset V$ we have that $\text{Proj}_U(X)$ and $\text{Proj}_{U^\perp}(X)$ are independent and are both normally distributed with the same variance $\sigma^2$.
+**Theorem:** If $X \sim N(0,\sigma^2I)$ is normally distributed on an inner product space $V$, then for any subspace $U\subset V$ we have that $\text{Proj}\_U(X)$ and $\text{Proj}_{U^\perp}(X)$ are independent and are both normally distributed with the same variance $\sigma^2$.
 
 Alright, now the $F$-statistic allows us to make a comparison. We have an ambient space $\mathbb{R}^n$ and we have two models that we want to fit to some data. One model uses $p$ parameters which we call the **full model** and the other uses $q<p$ parameters which we call the **reduced model.**
 
 The full model is $Y=\beta_0+\beta_1X_1+...+\beta_q X_q+\beta_{q+1}X_{q+1}+...+\beta_pX_p$ while the reduced model is $Y=\beta_0+\beta_1X_1+...+\beta_q X_q$; so it says $\beta_{q+1}=...=\beta_p=0$.
 
-So let $F=\text{Span}\{1,x_1,...,x_p\}$ and $R=\text{Span}\{1,x_1,...,x_q\}$. The hypothesis test we set up is:
+So let $F=\text{Span}\{1,x\_1,...,x\_p\}$ and $R=\text{Span}\{1,x\_1,...,x\_q\}$. The hypothesis test we set up is:
 
 Null hypothesis: the true values are described by the reduced model.
 Alternative hypothesis: the true values are described by the full model.
@@ -433,13 +440,13 @@ The picture depicts the null hypothesis that the true value is in the space $R$ 
 
 Under the null hypothesis, if we project $y_{obs}-y_{True}$ into $F$, I believe we obtain a random vector which aligns with $\hat{y}_{Full}-\hat{y}_{Red}$ and the theorem above tells us that that this is also normally distributed on $F \cap R^\perp$ (which has dimension $p-q$) with variance $\sigma^2$. Also, $y_{obs}-\hat{y}_{Full}\in F^\perp$ is normally distributed; $\dim F^\perp = n-p-1$; the extra 1 is from the span containing a 1 for $\beta_0$.
 
-Then $|\hat{y}_{Full}-\hat{y}_{Red}|^2$ is a sum of squares of $p-q$ iid terms all with variance $\sigma^2$. So $|\hat{y}_{Full}-\hat{y}_{Red}|^2 \sim \sigma^2 \chi^2_{p-q}$ and $|y_{obs}-\hat{y}_{Full}|^2\sim \sigma^2 \chi^2_{n-p-1}$ these are independent as they are in orthogonal spaces. Then the $F$ distribution is to built from a ratio of these multiplied by another fraction that uses the dimensions (see above for the definition): $\frac{n-p-1}{p-q} \frac{|\hat{y}_{Full}-\hat{y}_{Red}|^2}{|y_{obs}-\hat{y}_{Full}|^2} \sim F(p-q,n-p-1)$.
+Then $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2$ is a sum of squares of $p-q$ iid terms all with variance $\sigma^2$. So $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2 \sim \sigma^2 \chi^2_{p-q}$ and $\|y\_{obs}-\hat{y}\_{Full}\|^2\sim \sigma^2 \chi^2\_{n-p-1}$ these are independent as they are in orthogonal spaces. Then the $F$ distribution is to built from a ratio of these multiplied by another fraction that uses the dimensions (see above for the definition): $\frac{n-p-1}{p-q} \frac{\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2}{\|y\_{obs}-\hat{y}\_{Full}\|^2} \sim F(p-q,n-p-1)$.
 
 **Note:** I changed the notation a bit so that I don't have a long subscript for the $F$-distribution.
 
-If $\theta$ is the angle between $\hat{y}_{Full}-\hat{y}_{Red}$ and $y_{obs}-\hat{y}_{Full}$, then the $F$-distribution is, up to a constant, just $\cot^2(\theta)$. If the angle is very small, then $\cot^2(\theta)$ is large. But also, a small angle means that $y_{obs}$ is very close to $\hat{y}_{Full}$ which would be very strange, assuming the Null Hypothesis which says that it should be $y_{obs}$ and $\hat{y}_{Red}$ that are closer.
+If $\theta$ is the angle between $\hat{y}\_{Full}-\hat{y}\_{Red}$ and $y\_{obs}-\hat{y}\_{Full}$, then the $F$-distribution is, up to a constant, just $\cot^2(\theta)$. If the angle is very small, then $\cot^2(\theta)$ is large. But also, a small angle means that $y_{obs}$ is very close to $\hat{y}\_{Full}$ which would be very strange, assuming the Null Hypothesis which says that it should be $y\_{obs}$ and $\hat{y}\_{Red}$ that are closer.
 
-Also, by the Pythagorean Theorem, $|\hat{y}_{Full}-\hat{y}_{Red}|^2 + |y_{obs}-\hat{y}_{Full}|^2 = |y_{obs}-\hat{y}_{Red}|^2$ so sometimes we see the numerator of the $F$-distribution above replaced by an appropriate different of squares.
+Also, by the Pythagorean Theorem, $\|\hat{y}\_{Full}-\hat{y}\_{Red}\|^2 + \|y\_{obs}-\hat{y}\_{Full}\|^2 = \|y\_{obs}-\hat{y}\_{Red}\|^2$ so sometimes we see the numerator of the $F$-distribution above replaced by an appropriate different of squares.
 
 ### Maximum Likelihood Estimator
 
@@ -452,7 +459,7 @@ Differentiating with respect to $\lambda$ and setting equal to 0 (the last term 
 
 **Example 2:** Let's draw $n$ samples $X_1,...,X_n$ from a uniform distribution on $[0,b]$ where $b$ is unknown. The 1st moment is $\mu_1 = b/2$ and so the 1st sample moment is $\hat{\mu}_1 = \bar{X}=\hat{b}/2$ and so the method of moments predicts $\hat{b}_{MOM}=2\bar{X}$. On the other hand, using maximum likelihood estimates, we'd find that the best estimate there is that $\hat{b}_{MLE}=\max\{X_1,...,X_n\}$. So the two methods differ.
 
-Also, $E[\hat{b}_{MOM}]=2E[\bar{X}] = b$ so this is an unbiased estimator. However, $E[\hat{b}_{MLE}]=E[\max\{X_1,...,X_n\}] = \frac{1}{b^n}\int_{[0,b]^n} \max\{X_1,...,X_n\}\,dV$
+Also, $E[\hat{b}\_{MOM}]=2E[\bar{X}] = b$ so this is an unbiased estimator. However, $E[\hat{b}\_{MLE}]=E[\max\{X_1,...,X_n\}] = \frac{1}{b^n}\int_{[0,b]^n} \max\{X_1,...,X_n\}\,dV$
 
 This integral can be broken into $n$ pieces on various simplices of the hypercube $[0,b]^n$ where on each pieces, we just integrate one of the $X_i$. The results are all the same so we really just need to find $\frac{n}{b^n}\int_{n-\text{simplex}} X_1\, dV$. This is still rather complicated to compute but it comes out to be $\frac{n}{n+1}b$ which shows we have a biased estimator.
 
@@ -463,7 +470,7 @@ In fact:
 
 To prove this, let's begin with a lemma.
 
-**Lemma:** Define $I(\theta)=E[(\partial_\theta \log f(X|\theta))^2]$. Under appropriate smoothness conditions on $f$, $I(\theta) = -E[\partial^2_\theta \log f(X|\theta)]$. That is the expected value of the square of the 1st partial derivative of the log of $f$ is equal to the negative expected value of the 2nd partial derivative of the log of $f$.
+**Lemma:** Define $I(\theta)=E[(\partial_\theta \log f(X\|\theta))^2]$. Under appropriate smoothness conditions on $f$, $I(\theta) = -E[\partial^2_\theta \log f(X\|\theta)]$. That is the expected value of the square of the 1st partial derivative of the log of $f$ is equal to the negative expected value of the 2nd partial derivative of the log of $f$.
 
 **Proof:** For the sake of decluttering notation, I'll just write $f$ instead of $f(X|\theta)$ for the most part. Then note that $\int_\Omega f\, dx =1$ which means $\partial_\theta \int_\Omega f\, dx = 0$. Also, observe that $\partial_\theta \log(f) = f'/f$ so $\partial_\theta f = f\cdot \partial_\theta \log(f)$. Combining these two facts, we have:
 $0=\partial_\theta \int_\Omega f\, dx = \int_\Omega \partial_\theta f\, dx = \int_\Omega f\partial_\theta \log(f)\, dx$.
@@ -471,7 +478,7 @@ $0=\partial_\theta \int_\Omega f\, dx = \int_\Omega \partial_\theta f\, dx = \in
 Here, we need some smoothness assumptions on $f$ in order to interchange differentiation with integration. Applying another $\partial_\theta$ to the previous equation and using product rule, we have:
 $0=\partial_\theta \int_\Omega f\partial_\theta \log(f)\, dx = \int_\Omega f(\partial_\theta \log(f))^2\, dx + \int_\Omega f\partial^2_\theta \log(f)\, dx$. 
 
-This is a sum of expected values and the probability measure is $f\, dx$. So we've shown $E[(\partial_\theta \log f(X|\theta))^2]=-E[\partial^2_\theta \log f(X|\theta)]$. $\square$
+This is a sum of expected values and the probability measure is $f\, dx$. So we've shown $E[(\partial_\theta \log f(X\|\theta))^2]=-E[\partial^2_\theta \log f(X\|\theta)]$. $\square$
 
 **Theorem 2:** Let $\hat{\theta}_n$ be the maximum likelihood estimate of some population parameter whose true value is $\theta_0$. Under the same smooth conditions on $f$ as Thm. 1 and also that the true value $\theta_0$ is a critical point, not a boundary point of the maximum likelihood function, then $\sqrt{nI(\theta_0)}(\hat{\theta}_n-\theta_0)$ converges in distribution to the standard normal distribution $N(0,1)$.
 
@@ -483,7 +490,7 @@ Let's rewrite this as $n^{1/2}(\hat{\theta}-\theta_0) \approx \frac{-n^{-1/2}\el
 
 The expected value of the numerator was computed in the lemma and we saw that it's 0. It's variance is exactly what we defined to be $I(\theta_0)$. 
 
-Anyways, the denominator, on the other hand, equals $\frac{1}{n}\ell''(\theta_0) = \frac{1}{n}\sum^n \partial^2_\theta \log(f)(\theta_0)$. The Law of Large Numbers tells us that this average approaches the expected value as $n \to \infty$ which we write as $E[\partial^2_\theta \log(f)(\theta_0)] = -I(\theta)$. Therefore, as $n$ grows, our approximation above becomes $\sqrt{n}(\hat{\theta}-\theta_0) \approx n^{-1/2}\ell'(\theta_0)/I(\theta_0) \to 0$ as $n \to \infty$. Thus, the expected value of the LHS is approximately 0.
+Anyways, the denominator, on the other hand, equals $\frac{1}{n}\ell''(\theta\_0) = \frac{1}{n}\sum^n \partial^2\_\theta \log(f)(\theta\_0)$. The Law of Large Numbers tells us that this average approaches the expected value as $n \to \infty$ which we write as $E[\partial^2_\theta \log(f)(\theta_0)] = -I(\theta)$. Therefore, as $n$ grows, our approximation above becomes $\sqrt{n}(\hat{\theta}-\theta_0) \approx n^{-1/2}\ell'(\theta_0)/I(\theta_0) \to 0$ as $n \to \infty$. Thus, the expected value of the LHS is approximately 0.
 
 Moreover, the variance of the LHS is approximately the expected value of the square of the RHS (since subtracting off the square of the expected value is to subtract $0^2$). But this, which we noted above about the numerator, is just $I(\theta_0)/I(\theta_0)^2$. So the variance of $\hat{\theta}-\theta_0 \approx \frac{1}{nI(\theta_0)}$.
 Now, $\ell'(\theta_0) = \sum^n \partial_\theta \log(f)(\theta_0)$ is a sum of iid so we can apply the Central Limit Theorem to it. Thus, $\sqrt{nI(\theta_0)}(\hat{\theta}-\theta_0)$ converges to the standard normal distribution. Put into other words $\hat{\theta}_n$ converges to $N(\theta_0, 1/nI(\theta_0))$ where the 2nd entry is the variance. So $\hat{\theta}_n$ is asymptotically unbiased. $\square$
