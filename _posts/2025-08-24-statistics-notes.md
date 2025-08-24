@@ -26,7 +26,7 @@ Also, if we have $n$ identically and independently distributed variables $X_1,..
 
 A **statistic** is a function $F$ on $X$; since $X$ is a random variable (which is a function), then so is $F$. But for example, we can have $F(X_1,...,X_n):\Omega^n \to \mathbb{R}^n \to \mathbb{R}$ where the $X_i$ are all independently and identically distributed and $F(X_1,...,X_n)=(X_1+...+X_n)/n$ is the average.
 
-A null hypothesis can really be any statement in probability. For example, it can be that "$A$ and $B$ are correlated" but we can also have "$A$'s mean is equal to $B$'s mean", "$X$ has probability distribution function being a normal distribution", or "the sequential data we received are picked randomly from an independently and identically distributed (**iid**) sample." The idea is to **assume** that the null hypothesis is true; with the assumption plus a statistic $F$, we're able to built a **null distribution** to study. We want to know that under our assumption, what is the probability that we get the real data that's in front of us? For example, if we hypothesize that a coin has equal probability flipping heads or tails but in 1000 flips, we have only 10 heads, then our hypothesis seems very likely to be wrong. And so we'd want to reject it. Here's the general procedure.
+A null hypothesis can really be any statement in probability. For example, it can be that " $A$ and $B$ are correlated" but we can also have " $A$'s mean is equal to $B$'s mean", "$X$ has probability distribution function being a normal distribution", or "the sequential data we received are picked randomly from an independently and identically distributed (**iid**) sample." The idea is to **assume** that the null hypothesis is true; with the assumption plus a statistic $F$, we're able to built a **null distribution** to study. We want to know that under our assumption, what is the probability that we get the real data that's in front of us? For example, if we hypothesize that a coin has equal probability flipping heads or tails but in 1000 flips, we have only 10 heads, then our hypothesis seems very likely to be wrong. And so we'd want to reject it. Here's the general procedure.
 
 Procedure:
 0. Define a null hypothesis $H_0$ and an alternative hypotheses $H_a$.
@@ -67,17 +67,17 @@ Wikipedia has a list of some other [common test statistics](https://en.wikipedia
 ### Confidence Intervals
 
 Above, we discussed a significance level $\alpha$ to which we compared our $p$-value. We can also construct so-called **confidence intervals** with a chosen $\alpha$. For example, if we're studying sample means with $\alpha=0.05$, then $(1-\alpha)=0.95$ and we can build a 95% confidence interval. This is a range of values that, if we have a large sample, then the true mean lies inside of the range of values 95% of the time. For the $Z$-test, we assume that the distribution is approximately normal when we have a large number of samples and that its mean $\mu_{\bar{x}} = E[\bar{X}] = \bar{X}$ is equal to the true mean $\mu$.
-So we build the interval as $[\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}]$. Here, $\sigma_{\bar{x}} = \sigma/\sqrt{n}$ and $\sigma$ is the true population standard deviation. To get this $z_{\alpha/2}$, we look for a $z$-score $z^*$ so that the area under the standard normal curve on the interval $[-z^*,z^*]$ is $(1-\alpha)$, our desired confidence level. For example, if $\alpha=0.05$, we want 
-$0.95 = P(\mu_{\bar{x}} − z^* \sigma_{\bar{x}} < x < \mu_{\bar{x}} + z^*\sigma_{\bar{x}})$
-$= P(−z^∗ < z < z^∗)$
-$\Rightarrow 0.975 = P(z < z^∗)$
-$\Rightarrow z^∗ = 1.96$.
+So we build the interval as $[\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}},\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}]$. Here, $\sigma_{\bar{x}} = \sigma/\sqrt{n}$ and $\sigma$ is the true population standard deviation. To get this $z_{\alpha/2}$, we look for a $z$-score $z^\*$ so that the area under the standard normal curve on the interval $[-z^\*,z^\*]$ is $(1-\alpha)$, our desired confidence level. For example, if $\alpha=0.05$, we want 
+$0.95 = P(\mu_{\bar{x}} − z^\* \sigma_{\bar{x}} < x < \mu_{\bar{x}} + z^\*\sigma_{\bar{x}})$
+$= P(−z^\∗ < z < z^\∗)$
+$\Rightarrow 0.975 = P(z < z^\∗)$
+$\Rightarrow z^\∗ = 1.96$.
 
 However, we must be careful about our assumptions. The distribution is assumed to be approximately normal and the samples are independent. But it could certainly be the case that the true mean $\mu \neq \mu_{\bar{x}}$ and that it doesn't lie within our confidence interval at all. We're only saying that given the data that we have, we expect that if we conduct the experiment 100 times and construct 100 confidence intervals, the true mean would lie in 95 of those confidence intervals. We're not saying there's $100(1-\alpha)$% chance that $\mu$ lies in a given interval because it's a fixed number, not a random variable. It's important to be careful; confidence intervals are often misinterpreted.
 
 Now, in the example above, we are assuming we know $\sigma/\sqrt{n}$ but in practice, we don't know the true population parameter $\sigma$. We only know $s/\sqrt{n}$, the sample standard deviation divided by $\sqrt{n}$. We can try to approximate $\sigma/\sqrt{n}$ with $s/\sqrt{n}$ but this generally works better only if $n$ is large. In such a scenario, we have to use a $t$-distribution which has a similar shape of density function as a normal distribution but it is algebraic (unlike $e^{-z^2/2}$ which is not) and has larger tails so that extreme events are more common. In particular, $t$-distributions are **not** weighted sums of normal distributions. This is because the sum of normal random variables is still normal. On the other hand, a $t$-distribution depends on a parameter called **degrees of freedom** $df = n-1$ which is, in this case, just one less than the number of samples and is related to why $s$ has a factor of $1/(n-1)$ instead of $1/n$ to make it an unbiased indicator.
 
-Anyways, we're able to get a $t$-score to build a confidence interval $\bar{x} \pm t^* \frac{s}{\sqrt{n}}$. Thus, for small $n$, we use this recipe instead of the one from earlier. Note that if we know that we're sampling from a normal distribution $X$, then $\bar{X}$ is automatically a normal distribution as well. However, if we don't know $\sigma$, then may still need to use $s$ if $n$ is small and thus, also use $t^*$ instead of $z^*$.
+Anyways, we're able to get a $t$-score to build a confidence interval $\bar{x} \pm t^\* \frac{s}{\sqrt{n}}$. Thus, for small $n$, we use this recipe instead of the one from earlier. Note that if we know that we're sampling from a normal distribution $X$, then $\bar{X}$ is automatically a normal distribution as well. However, if we don't know $\sigma$, then may still need to use $s$ if $n$ is small and thus, also use $t^\*$ instead of $z^\*$.
 
 One technique for trying to estimate the sampling distribution is to just repeatedly draw samples with replacement from our observed data. So if we have 30 data points, we can do this resampling thousands of times. This technique is called bootstrapping. Note that it won't improve our accuracy for estimating population parameters since it's still the same 30 points, it's only meant to give us a sense of the sampling distribution. However, from this bootstrapping, we're able to build confidence intervals.
 
@@ -107,15 +107,15 @@ Type II (false negative): failing to reject the null hypothesis when it's incorr
 Let $\mu$ denote the "true mean" for the height of Czech men and do a 1-sided test. We have
 $H_0:\mu \leq 178, H_a: \mu>178$.
 
-We'll assume $n=64$ samples is large enough to give us that $\bar{x}$ is a normal distribution $N(178,9/\sqrt{64})$. Note that the mean is 178 because for our null hypothesis, we're assuming average Czech men are not taller than average European men. Then, assuming that 181 cm came from this distribution, we see that its $z$-score is $(181-178)/(9/8) =8/3 \approx 2.67$. We now need a rejection region. If we choose $\alpha =0.05$, our rejection is $z>z^*$ where $P(z>z^*))=\alpha$. In this case, $z^*\approx1.65$. Since our $z$-score of $2.67 >1.65$, we reject $H_0$. We can be more specific and get a $p$-value which is $P(z > 2.67) \approx 0.0038< 0.05$. This gives a particular quantity that tells us it's very unlikely to see the results we did from the 64 Czech men and for them to be, on average, no taller than the average European man.
+We'll assume $n=64$ samples is large enough to give us that $\bar{x}$ is a normal distribution $N(178,9/\sqrt{64})$. Note that the mean is 178 because for our null hypothesis, we're assuming average Czech men are not taller than average European men. Then, assuming that 181 cm came from this distribution, we see that its $z$-score is $(181-178)/(9/8) =8/3 \approx 2.67$. We now need a rejection region. If we choose $\alpha =0.05$, our rejection is $z>z^\*$ where $P(z>z^\*))=\alpha$. In this case, $z^\*\approx1.65$. Since our $z$-score of $2.67 >1.65$, we reject $H_0$. We can be more specific and get a $p$-value which is $P(z > 2.67) \approx 0.0038< 0.05$. This gives a particular quantity that tells us it's very unlikely to see the results we did from the 64 Czech men and for them to be, on average, no taller than the average European man.
 
-If our $H_0:\mu=178$ and $H_a:\mu \neq 178$, we'd have needed a 2-tailed test and our rejection region would have been in two pieces $|z|>z^*$. In that case, with $\alpha=0.05$, then $z^*\approx 1.96$ but even then, $2.67>1.96$. The $p$-value would be $P(|z| > 2.67)= 0.0076<0.05$. So we still reject.
+If our $H_0:\mu=178$ and $H_a:\mu \neq 178$, we'd have needed a 2-tailed test and our rejection region would have been in two pieces $\|z\|>z^\*$. In that case, with $\alpha=0.05$, then $z^\*\approx 1.96$ but even then, $2.67>1.96$. The $p$-value would be $P(\|z\| > 2.67)= 0.0076<0.05$. So we still reject.
 
 Now, in the 1-tail test example, we had a $z$-score of 1.65 given to us by having chosen $\alpha=0.05$. So we use the value $\bar{x}_0=178 + 1.65(9/8)\approx 179.856\, \text{cm}$; this is the cutoff in our rejection region. If the average height of the Czech men had been 179, we would not reject our original $H_0$.
-So now, to try and determine the likelihood of failing to reject $H_0$ when it is in fact correct, let's set up a new hypothesis test where we let $H_a:\mu = 181$; we have many choices for the value here but we pick 181 since it's the average height of the 64 sampled Czech men. Specifically, we set $μ_a = 181$ but keep the same standard deviation. So this simply translates the normal distribution.
+So now, to try and determine the likelihood of failing to reject $H_0$ when it is in fact correct, let's set up a new hypothesis test where we let $H_a:\mu = 181$; we have many choices for the value here but we pick 181 since it's the average height of the 64 sampled Czech men. Specifically, we set $\mu_a = 181$ but keep the same standard deviation. So this simply translates the normal distribution.
 
-Finally, $β$ is the likelihood of accepting $H_0$ (which means rejecting $H_a$), i.e. the area under the curve to the **left** of $\bar{x}_0$ in the new distribution $N(\mu_a, \sigma_{\bar{x}})$ (the area to the right defined our reject $H_0$ region). So we see that if the area to the right is small, the area to the left will be usually be large even after adjusting $\mu_a=181$. This is why we're not usually able to simultaneously make $\alpha$ and $\beta$ as small as we want.
-To calculate $\beta$, we find a new $z$-score: $z^∗_a =(\bar{x}_0 -\mu_a)/\sigma_{\bar{x}}$ and calculate $β := P(z < z^∗_a)$. In our situation, we have $z^∗_a= (179.856−181)/(9/8) \approx -1.02$. So $β = P(z < −1.02) = 0.1539$ is the likelihood of accepting $H_0$ when it is in fact, incorrect.
+Finally, $\beta$ is the likelihood of accepting $H_0$ (which means rejecting $H_a$), i.e. the area under the curve to the **left** of $\bar{x}_0$ in the new distribution $N(\mu_a, \sigma_{\bar{x}})$ (the area to the right defined our reject $H_0$ region). So we see that if the area to the right is small, the area to the left will be usually be large even after adjusting $\mu_a=181$. This is why we're not usually able to simultaneously make $\alpha$ and $\beta$ as small as we want.
+To calculate $\beta$, we find a new $z$-score: $z^\∗_a =(\bar{x}_0 -\mu_a)/\sigma_{\bar{x}}$ and calculate $β := P(z < z^∗_a)$. In our situation, we have $z^∗_a= (179.856−181)/(9/8) \approx -1.02$. So $β = P(z < −1.02) = 0.1539$ is the likelihood of accepting $H_0$ when it is in fact, incorrect.
 
 Here are two distributions. The red one is associated to $H_0$ with $\mu = 178$ and the blue one for $H_a$ when we choose $\mu_a=181$; so it's simply the red curve shifted to the right. The shaded red area is $\alpha=0.05$ and the shaded blue region is $\beta=0.1539$. Note that I'm using the same $x=179.856 \text{ cm}$ to define the boundaries of the red and blue regions. It's a bit hard to see but the black line on the $x$-axis is the rejection region. So to compute $\beta$, we need to look at the area under the **new** distribution assuming $\mu_a$, over the complement of the rejection region.
 
@@ -145,7 +145,7 @@ There is a online [widget](https://shiny.rit.albany.edu/stat/binomial/) for visu
 ![3f437aa3446e04ee836b2d298943f399.png](3f437aa3446e04ee836b2d298943f399.png)
 ### Maximum Likelihood Estimation in the Discrete Setting
 
-**Example:** Suppose we have a biased coin with probability $p$ of getting H. We toss the coin 80 times and it comes up heads 49 times. The probability of seeing this is $L(p)={80 \choose 49}p^{49}(1-p)^{31}$. That is, $L(p)=P(\text{Data}|p)$, a conditional probability for any fixed $p$. But we're going to let $p$ vary and so for each $p$, we do get a **different** probability distribution. 
+**Example:** Suppose we have a biased coin with probability $p$ of getting H. We toss the coin 80 times and it comes up heads 49 times. The probability of seeing this is $L(p)={80 \choose 49}p^{49}(1-p)^{31}$. That is, $L(p)=P(\text{Data}\|p)$, a conditional probability for any fixed $p$. But we're going to let $p$ vary and so for each $p$, we do get a **different** probability distribution. 
 
 Note this is a polynomial where the leading term is $-{80 \choose 49}p^{80}$; this is negative so if we find a unique local max, it will in fact be the global max.
 To find the maximum of $L$, we can differentiate: $\frac{dL}{dp}={89\choose 40}(49 p^{48}(1-p)^{31} -31p^{49}(1-p)^{30}) = {89\choose 40} p^{48}(1-p)^{30}(49(1-p)-31p)$. Setting equal to zero, we have solutions when $p=0,\frac{49}{80},1$. But $F$ is minimized (equals 0) when $p=0,1$ and is maximized at $49/80$. Thus the most likely value of $p$ given this experiment is $49/80$. That's exactly what we would expect.
@@ -163,25 +163,25 @@ In the literature, people often use $\theta$ as the symbol instead of $p$ so let
 Now usually, real world coins have $\theta \approx \frac{1}{2}$. In the situation above we are **told** that the coin (might be) biased, and so it is reasonable to guess that $\theta= \frac{4}{5}$ if you observe $4$ heads and $1$ tail out of 5 flips, say.  Without being given any such information, we might instead think that the distribution of weights could look something like $P(\theta) = k \theta^8 (1-\theta)^8$ where the constant $k$ has been chosen to make the integral equal to $1$ over $[0,1]$ (it turns out that $k = \frac{1}{B(9,9)}$ where $B$ is the "beta" function. See [beta distribution](https://en.wikipedia.org/wiki/Beta_distribution) for more info). This $P(\theta)$ is the **prior** which is based on our prior experience that coins are usually fair.
 
 Assume that we flip our coin $5$ times and obtain $4$ heads as before but we also know that "normal" coins have $\theta=1/2$ and prior to flipping we thought to ourselves "If I flip this coin 16 times, I expect 8 heads." So instead of estimating $\theta = 4/5$ we should now guess something in between $4/5$ and $1/2$. How can we calculate it exactly? Bayes Rule is useful:
-$P(\theta | \textrm{Data})\propto P(\textrm{Data}| \theta) \cdot P(\theta)$
+$P(\theta \| \textrm{Data})\propto P(\textrm{Data}| \theta) \cdot P(\theta)$
          $\propto \theta^4(1-\theta)^1 \cdot \theta^8(1-\theta)^8$
          $\propto \theta^{4+8}(1-\theta)^{1+8}$
          $= \theta^{12} (1 - \theta)^9$
 
 We have maximized this type of thing before: the maximum value occurs at $\hat{\theta} = \frac{12}{21} = \frac{4}{7}$.
 
-Note that $P(\theta | \textrm{Data})$ is the "posterior probability". We are maximizing this term, hence **maximum a posteriori** estimation. To summarize the terminology:
+Note that $P(\theta \| \textrm{Data})$ is the "posterior probability". We are maximizing this term, hence **maximum a posteriori** estimation. To summarize the terminology:
 
 $$
 \begin{align*}
-P(\theta | \textrm{Data}) 
+P(\theta \| \textrm{Data}) 
 &= P(\textrm{Data}| \theta) \cdot \dfrac{P(\theta)}{P(\text{Data})}\\
 \textrm{Posterior} &\propto \textrm{Likelihood} \cdot \textrm{Prior}
 \end{align*}
 $$
 Since $P(\text{Data})$ is constant with respect to $\theta$, we don't need to worry about it much. Our prior can be interpreted as being equivalent to 16 ["pseudo-observations"](https://en.wikipedia.org/wiki/Conjugate_prior#Pseudo-observations) with 8 heads and 8 tails. Intuitively you could say something like "Since most coins I have seen are balanced with $\theta=1/2$, I will give this coin a 'head start' of 8 heads and 8 tails before estimating my parameter $\theta$. This is to incorporate my belief that coins are usually weighed fairly." If I'm very confident, I might decide to give the coin a headstart of 100 heads and 100 tails and it's going to take a lot of coin flips to convince me that $\theta$ is far from $1/2$.
 
-Note that if $P(\theta)$ is also constant like it would be in a uniform distribution, then $P(\theta|\text{Data}) = C \cdot P(\text{Data}|\theta)$; i.e. just constant multiples of each other. This means that up to a constant, MLE is equivalent to MAP with a uniform prior distribution. In terms of pseudo-observations, we give it zero head start.
+Note that if $P(\theta)$ is also constant like it would be in a uniform distribution, then $P(\theta\|\text{Data}) = C \cdot P(\text{Data}\|\theta)$; i.e. just constant multiples of each other. This means that up to a constant, MLE is equivalent to MAP with a uniform prior distribution. In terms of pseudo-observations, we give it zero head start.
 
 ### MLE in the Continuous Setting
 
@@ -232,6 +232,7 @@ On the other hand, suppose we consider a random variable built from taking $n=2$
 Let's just set $N=3$. So $\mu = (3-1)/2=2$ and $\sigma^2 = 8/12 = 2/3$.
 
 Then sampling pairs, we have 9 pairs:
+
 $\text{Pair} \hspace{16mm} \bar{x} \hspace{20mm} s^2$
 $(1,1)\hspace{15mm} 1 \hspace{20mm} 0$
 $(1,2)\hspace{15mm} 1.5 \hspace{15mm} 0.25$
@@ -436,7 +437,7 @@ Also, $E[\hat{b}_{MOM}]=2E[\bar{X}] = b$ so this is an unbiased estimator. Howev
 
 This integral can be broken into $n$ pieces on various simplices of the hypercube $[0,b]^n$ where on each pieces, we just integrate one of the $X_i$. The results are all the same so we really just need to find $\frac{n}{b^n}\int_{n-\text{simplex}} X_1\, dV$. This is still rather complicated to compute but it comes out to be $\frac{n}{n+1}b$ which shows we have a biased estimator.
 
-Recall that we say an estimator $\hat{\theta}_n$ (built from $n$ samples) is **consistent** if, as the number of samples $n \to \infty$, the sequence of estimator sampling distributions converges (in measure) towards the true parameters value. This means they converge to a Dirac delta type of distribution concentrated on $\theta$. In our case, $\hat{b}_{MLE}$ is a consistent estimator for this uniform distribution example.
+Recall that we say an estimator $\hat{\theta}\_n$ (built from $n$ samples) is **consistent** if, as the number of samples $n \to \infty$, the sequence of estimator sampling distributions converges (in measure) towards the true parameters value. This means they converge to a Dirac delta type of distribution concentrated on $\theta$. In our case, $\hat{b}_{MLE}$ is a consistent estimator for this uniform distribution example.
 
 In fact:
 **Theorem 1:** Under appropriate smoothness conditions on the PDF $f$ of a continuous random distribution $D$, the maximum likelihood estimate $\hat{\theta}_n$ for a parameter $\theta$ of $n$ samples independently and identically drawn from $D$ is consistent. We can formulate this as saying that for any $\epsilon >0$, $P(|\hat{\theta}_n-\theta|>\epsilon) \to 0$.
