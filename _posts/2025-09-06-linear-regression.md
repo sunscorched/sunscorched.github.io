@@ -77,7 +77,7 @@ It turns out that the **residual** (the difference between observed and predicte
 
 This relies on the lemma we mentioned above: For the covariance, if $z = c+Ay$ where $y$ is random but $A,c$ are fixed, then $\text{Cov}(z) = A\text{Cov}(y)A^\top$. Moreover, since $I-P$ is symmetric and idempotent, we get the final result.
 
-Each coordinate of the residual $\hat{\epsilon} \in \R^n$ represents the residual for a single datapoint and there is correlation between residuals as we can read off from this covariance matrix. Also, different residuals have different variances, as we can read off from the diagonal of $I-P$. As such, we usually standardize them; the $i$th standardized residual is
+Each coordinate of the residual $\hat{\epsilon} \in \mathbb{R}^n$ represents the residual for a single datapoint and there is correlation between residuals as we can read off from this covariance matrix. Also, different residuals have different variances, as we can read off from the diagonal of $I-P$. As such, we usually standardize them; the $i$th standardized residual is
 $\dfrac{\hat{\epsilon}}{s\sqrt{1-p_{ii}}}$ where $s$ is the unbiased estimate for $\sigma$ above.
 
 **Theorem:** If the **errors** have covariance matrix $\sigma^2I$; i.e. they are have the same variance, then the **residuals** are uncorrelated with the fitted values; i.e. $\text{Cov}(\hat{\epsilon},\hat{y}) = 0$. Put another way, the residuals should look random.
@@ -100,9 +100,9 @@ To run a hypothesis test, we can have $H_0:\beta_i = b$ for some fixed $b$ and u
 
 ### Confidence Intervals for Linear Regression
 
-We have some "true" relation $y=X^\top\beta + \epsilon$ for the total population where the error is normally distributed with variance $\sigma^2$ and $X \in \R^{p+1}$ with the first coordinate being 1. So if we wrote this out, we'll see $y=\beta_0+\beta_1x_1+...+\beta_px_p$. 
+We have some "true" relation $y=X^\top\beta + \epsilon$ for the total population where the error is normally distributed with variance $\sigma^2$ and $X \in \mathbb{R}^{p+1}$ with the first coordinate being 1. So if we wrote this out, we'll see $y=\beta_0+\beta_1x_1+...+\beta_px_p$. 
 
-We can build a model that has some $\hat{\beta}$ to try and predict the true relation but we build it from samples so it will likely not be quite right. With a slight abuse of notation, let $X_0 \in \R^{p+1}$ as well with the first coordinate being 1. What is $X_0^\top \hat{\beta}$? It is a single value function and we obtain $\hat{\beta}=(X^\top X)^{-1}X^\top y_{obs}$. But $y_{obs}=X\beta+\epsilon$. So then $\hat{\beta}=\beta+ (X^\top X)^{-1}X^\top\epsilon$. Thus, because $\epsilon \sim N(0,\sigma^2I)$, then $\hat{\beta}$ is also normally distributed. Also, recall that $X^\top X$ is symmetric and usually positive definite in which case, it is invertible. Then $(X^\top X)^{-1}$ has a square root.
+We can build a model that has some $\hat{\beta}$ to try and predict the true relation but we build it from samples so it will likely not be quite right. With a slight abuse of notation, let $X_0 \in \mathbb{R}^{p+1}$ as well with the first coordinate being 1. What is $X_0^\top \hat{\beta}$? It is a single value function and we obtain $\hat{\beta}=(X^\top X)^{-1}X^\top y_{obs}$. But $y_{obs}=X\beta+\epsilon$. So then $\hat{\beta}=\beta+ (X^\top X)^{-1}X^\top\epsilon$. Thus, because $\epsilon \sim N(0,\sigma^2I)$, then $\hat{\beta}$ is also normally distributed. Also, recall that $X^\top X$ is symmetric and usually positive definite in which case, it is invertible. Then $(X^\top X)^{-1}$ has a square root.
 
 **Lemma:** If $Z \sim N(\mu,\Sigma)$ is normally distributed where $\Sigma$ is the covariant matrix and $A$ is any linear transformation, then applying it to $Z$, we have $AZ \sim N(A\mu,A\Sigma A^\top)$.
 
@@ -119,7 +119,8 @@ $X^\top_0(\hat{\beta}-\beta)/\hat{\sigma}\sqrt{X^\top_0 (X^\top X)^{-1} X_0} = \
 **Claim:** The thing with the parentheses and the $-1/2$ power can be viewed as the denominator while $W$ is viewed as the numerator. $W \sim N(0,1)$ (we already knew this) while the denominator has distribution $\chi^2_{n-p-1}/(n-p-1)$. moreover, the two are indepedent. Thus, by definition, the two together gives the $t$-distribution $T_{n-p-1}$ with $n-p-1$ degrees of freedom.
 
 To prove independence, we can draw a picture.
-![74cc3bc0c0a75bd8a8464b967689d1a8.png](./74cc3bc0c0a75bd8a8464b967689d1a8.png)
+
+![74cc3bc0c0a75bd8a8464b967689d1a8.png](/files/74cc3bc0c0a75bd8a8464b967689d1a8.png)
 
 We assume that $X$ has full-rank and so though it doesn't have an inverse on its full codomain, it has one at least on its image (a left inverse) which we'll just write as $X^{-1}$. Then the numerator of $W$ which is $X^\top_0\hat{\beta}-X^\top_0 \beta$ can be written $X^\top_0X^{-1}(X\hat{\beta}-X \beta)$. But $X\hat{\beta}-X \beta$ lies in $\text{Span}(X)$ while the residuals $y_{obs}-X\hat{\beta}$ lies in the orthogonal complement $\text{Span}(X)^\perp$. So those two are independent. Moreover, applying linear maps won't change independence. Thus we've proven independence. Also, more or less by definition, we see that the denominator term is the $\chi^2$ distribution described above. Thus, the quotient above is the $t$-distribution, by definition.
 
@@ -137,7 +138,7 @@ On the other hand, if you run two separate linear regressions, each one only tak
 
 What is going on here? Clearly there is a linear relationship in the dependent variable, so why isn't it showing up as significant when we regress using both features?
 
-The answer is that the data exhibits **collinearity.** In our context, if we plot (height, weight, catheter length) in $\R^3$, we find that the data roughly lie on a single straight line rather than a plane. Collinearity means that the linear subspace spanned by the datapoints has dimension less than the number of features (remember, we're assuming the data behaves linearly up to some error). Put another way, there's some linear dependence.
+The answer is that the data exhibits **collinearity.** In our context, if we plot (height, weight, catheter length) in $\mathbb{R}^3$, we find that the data roughly lie on a single straight line rather than a plane. Collinearity means that the linear subspace spanned by the datapoints has dimension less than the number of features (remember, we're assuming the data behaves linearly up to some error). Put another way, there's some linear dependence.
 
 This creates a problem for multiple regression. Recall the interpretation of the coefficients in a multiple regression. Holding all other $\beta_j$ with $j\neq i$ constant, the coefficient $\beta_i$ is the expected change in $y$ given a unit increase in $x_i$.
 
@@ -145,7 +146,7 @@ The key to the issue is with holding all other constant. Since the data is colli
 
 One way to address collinearity is to use **principal component analysis** or truncated singular value decomposition. What we can do is find the left and right singular vectors which will be orthonormal bases in the respective vector spaces. The singular values can be taken to be positive and ordered in decreasing order. Using the singular vectors (also called **components**), we have a new basis (so we no longer have linear dependence) and the singular values tell us how much those components contribute.
 
-In the example, there are three components since the data are in $\R^3$ but one of components explains the relation far more than the other two. So we could do a regression where we end up with just one feature that is a linear combination of height and weight.
+In the example, there are three components since the data are in $\mathbb{R}^3$ but one of components explains the relation far more than the other two. So we could do a regression where we end up with just one feature that is a linear combination of height and weight.
 
 There are several metrics for determining the usefulness of a model. The **coefficient of determination** is $R^2 = \dfrac{s^2_y-s^2_{\hat{\epsilon}}}{s^2_y}$. This is the proportion of the sample variation in $y$ that is _explained_ by the regression model (so the part that is unexplained is from the residuals).
 
