@@ -88,7 +88,7 @@ $\dfrac{\hat{\epsilon}}{s\sqrt{1-p_{ii}}}$ where $s$ is the unbiased estimate fo
 
 ### Inference on $\beta$
 
-Now we will utilize our assumption that the errors are independent or normally distributed in order to make some inference on $\beta$. Recall that we had the following theorem from above:
+Now we will utilize our assumption that the errors are independent or normally distributed in order to make some inference on $\beta$; i.e. try to understand the underlying relationships between predictors and target via our coefficients. Recall that we had the following theorem from above:
 
 **Theorem:** $E[\hat{\beta}] = \beta$ where $\beta$ is supposed to give the "true" linear coefficients. Moreover, $\text{Cov}(\hat{\beta}) = \sigma^2 (X^\top X)^{-1}$.
 
