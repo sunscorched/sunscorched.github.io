@@ -98,7 +98,7 @@ Taking $s^2 = \dfrac{\|y-\hat{y}\|^2\_2}{n-p}$ as above, the standard error of $
 
 To run a hypothesis test, we can have $H_0:\beta_i = b$ for some fixed $b$ and use the test statistic $t=(\hat{\beta}\_i-b)/s_{\hat{\beta}_i}$, then compute the p-value. Commonly we set $b=0$ to test whether the $i$th independent variable $x_i$ has predictive value.
 
-### Confidence Intervals for Linear Regression
+### More on Confidence Intervals for Linear Regression
 
 We have some "true" relation $y=X^\top\beta + \epsilon$ for the total population where the error is normally distributed with variance $\sigma^2$ and $X \in \mathbb{R}^{p+1}$ with the first coordinate being 1. So if we wrote this out, we'll see $y=\beta_0+\beta_1x_1+...+\beta_px_p$. 
 
@@ -116,7 +116,7 @@ $X^\top_0\hat{\beta}-z_{1-\alpha/2}\sigma\sqrt{X^\top_0 (X^\top X)^{-1} X_0} \le
 But we don't usually know $\sigma$! So we need to understand how $W$ is distributed. If we have replace $\sigma$ with the sample standard deviation $\hat{\sigma}$, then:
 $X^\top_0(\hat{\beta}-\beta)/\hat{\sigma}\sqrt{X^\top_0 (X^\top X)^{-1} X_0} = \frac{\sigma}{\hat{\sigma}}W = \left(\frac{\frac{1}{n-p-1}|X^\top_0\hat{\beta}-y_{obs}|^2}{\sigma^2}\right)^{-1/2}W$. 
 
-**Claim:** The thing with the parentheses and the $-1/2$ power can be viewed as the denominator while $W$ is viewed as the numerator. $W \sim N(0,1)$ (we already knew this) while the denominator has distribution $\chi^2_{n-p-1}/(n-p-1)$. moreover, the two are indepedent. Thus, by definition, the two together gives the $t$-distribution $T_{n-p-1}$ with $n-p-1$ degrees of freedom.
+**Claim:** The thing with the parentheses and the $-1/2$ power can be viewed as the denominator while $W$ is viewed as the numerator. $W \sim N(0,1)$ (we already knew this) while the denominator has distribution $\chi^2\_{n-p-1}/(n-p-1)$. moreover, the two are indepedent. Thus, by definition, the two together gives the $t$-distribution $T_{n-p-1}$ with $n-p-1$ degrees of freedom.
 
 To prove independence, we can draw a picture.
 
