@@ -16,7 +16,7 @@ A **time series** is a sequence of data points $(\vec{x}_1, y_1), (\vec{x}_2, y_
 
 **Gaussian white noise model:** We hypothesize a data generating process of the form: $f(t) = \mu + \epsilon_t$with $\mu$ as some constant and $\epsilon_t \sim \text{NID}(0,\sigma^2)$. In this context we can call our error terms "Gaussian white noise."
 
-The MLE fitted model will have $\hat{\mu} = \displaystyle \frac{1}{n}\sum_{i=1}^n y_i$, and $\hat{\sigma}^2 = \displaystyle \frac{1}{n} \sum_{i=1}^n (y - \hat{\mu})^2$.
+The MLE fitted model will have $\hat{\mu} = \displaystyle \frac{1}{n}\sum\_{i=1}^n y_i$, and $\hat{\sigma}^2 = \displaystyle \frac{1}{n} \sum\_{i=1}^n (y - \hat{\mu})^2$.
 
 **Average forecast:** To predict the value of $y_t$ for $t>n$ we just report $\hat{\mu} = \displaystyle \frac{1}{n}\sum_{i=1}^n y_i$.
 
@@ -53,7 +53,7 @@ We need to believe that _something_ about the relationship between $X$ and $Y$ d
 
 In this case the joint distribution between $y_t$ and $y_{t-1}$ is invariant under translation. We might also be happy if we could determine that $y_t = 3 + 5t + \epsilon_t, \epsilon_t - 0.5 \epsilon_{t-1} \sim \text{U}[-1,1]$. We'll discuss (weak) stationarity below but neither example is (weak) stationary.
 
-This would also result in a joint distribution between $y_t$ and $y_{t-1}$ which is invariant under translation, but with consecutive error terms correlated in an interesting way. Our goal in time series modeling is thus to find a relation $F(t, y_{t}, y_{t-1}, y_{t-2}, \dots) = \epsilon_t $$ which makes the joint distribution of the $\epsilon_t$'s "invariant" under translation.  This notion is formalized by the concept of **stationarity**. Our work is complicated by the fact that we only get to see one version of history:  we cannot "reroll the tapes".  So we generally only have access to one realization of this data generating process:  only one observation of $y_0$, $y_1$, $y_2$, ... etc.  This is one thing that makes time series modeling such a difficult task!
+This would also result in a joint distribution between $y_t$ and $y_{t-1}$ which is invariant under translation, but with consecutive error terms correlated in an interesting way. Our goal in time series modeling is thus to find a relation $F(t, y_{t}, y_{t-1}, y_{t-2}, \dots) = \epsilon_t $ which makes the joint distribution of the $\epsilon_t$'s "invariant" under translation.  This notion is formalized by the concept of **stationarity**. Our work is complicated by the fact that we only get to see one version of history:  we cannot "reroll the tapes".  So we generally only have access to one realization of this data generating process:  only one observation of $y_0$, $y_1$, $y_2$, ... etc.  This is one thing that makes time series modeling such a difficult task!
 
 
 We say that a time series $\left\lbrace y_t  \right\rbrace$ is **strictly stationary** if the joint probability distribution of $y_{t_1}, y_{t_2}, \dots y_{t_n}$ is equal to that of $y_{t_1 + \tau}, y_{t_2 + \tau}, \dots y_{t_n + \tau}$. for any $t_1, \dots, t_n, \tau, n$. This implies that the joint distribution only depends on the intervals between $t_1, \dots, t_n$ and in particular if $n=1$: $E(y_t) =  \mu, \text{Var}(y_t) = \sigma^2$ are not functions of $t$. 
@@ -76,7 +76,7 @@ $E[y_t]=E[\cos(t+U)] = \frac{1}{2\pi}\int^{2\pi}_0 \cos(t+u)\, du = 0$ for all $
 The covariance we want to compute is just $E[y_t y_{t+\tau}] = E[\cos(t+U)\cos(t+\tau+U)]$ since the expected value is 0. Using sum of angle formulas, we have that:
 
 $$
-\cos(t+U)\cos(t+\tau+U) = \frac{1}{2}\cos(2t+\tau + 2U) + \frac{1}{2}\cos(t+\tau+U-(t+U))=\frac{1}{2}\cos(2t+\tau + 2U)+\frac{1}{2}\cos(\tau).
+\cos(t+U)\cos(t+\tau+U) = \frac{1}{2}\cos(2t+\tau + 2U) + \frac{1}{2}\cos(t+\tau+U-(t+U))
 $$
 
 $$
@@ -95,7 +95,7 @@ If we have a weak sense stationary process, let $R_Y(\tau) = E[y_t y_{t-\tau}] =
 
 Note that $R_Y(0) = E[y^2_t]$. Also, $R_Y(-\tau) = R_Y(\tau)$ so this function is an **even** function.
 
-Lastly, by Cauchy-Schwarz, $\|E[XY]\|^2 \leq E[X^2]E[Y^2]$; with equality if and only if $X=\alpha Y$. Letting $X=y_t, Y=y_{t-\tau}$, we obtain that $\|R_Y(\tau)\|^2 = \|E[y_t y_{t-\tau}]\|^2 \leq E[y^2_t]E[y^2_{t-\tau}] = R_Y(0)R_Y(0)$. Hence, $\|R_Y(\tau)\|\leq R_Y(0)$. Thus, $0$ is a maximum of $R_Y(\tau)$. Note that if we then add $-\mu^2$, this only vertically translates the function so the covariance will have these properties: it is even and takes its maximum at $\tau = 0$; i.e. where there is no lag. Which is what we would want: $y_{t_1}$ and $y_{t_2}$ should be more correlated when $t_1$ and $t_2$ are close and possibly not very correlated when they are far apart. Either way, the highest the correlation can be is when $t_1 = t_2$.
+Lastly, by Cauchy-Schwarz, $\|E[XY]\|^2 \leq E[X^2]E[Y^2]$; with equality if and only if $X=\alpha Y$. Letting $X=y_t, Y=y_{t-\tau}$, we obtain that $\|R\_Y(\tau)\|^2 = \|E[y\_t  y\_{t-\tau}]\|^2 \leq E[y^2\_t]E[y^2\_{t-\tau}] = R_Y(0)R_Y(0)$. Hence, $\|R_Y(\tau)\|\leq R_Y(0)$. Thus, $0$ is a maximum of $R_Y(\tau)$. Note that if we then add $-\mu^2$, this only vertically translates the function so the covariance will have these properties: it is even and takes its maximum at $\tau = 0$; i.e. where there is no lag. Which is what we would want: $y_{t_1}$ and $y_{t_2}$ should be more correlated when $t_1$ and $t_2$ are close and possibly not very correlated when they are far apart. Either way, the highest the correlation can be is when $t_1 = t_2$.
 
 Also, if $X_t,Y_t$ are both WSS and their joint correlation function is only dependent on lag, then $Z_t := X_t + Y_t$ is also WSS.
 
@@ -141,7 +141,7 @@ $1-\phi_1​z-\phi_2 ​z^2-...-\phi_p ​z^p=0$. We say the polynomial on the l
 
 For example, in a simple AR(1) process defined as $y_t​=\phi y_{t-1}​+\epsilon_t​$, the characteristic equation is $1-\phi z=0$. If $\phi=1$, the series has a unit root. For an AR(2) model $y_t​=\phi_1​ y_{t-1}​ + \phi_2​ y_{t-2}​+\epsilon_t$​, the characteristic equation becomes $1−\phi_1 ​z- \phi_2 ​z^2=0$.
 
-The roots of this characteristic equation are critical because they determine the stationarity of the time series. Specifically, if all the roots lie outside the unit circle (i.e., $|z|>1$), then the process is stationary. If any root lies on or inside the unit circle, the process is non-stationary. To see why, consider the following.
+The roots of this characteristic equation are critical because they determine the stationarity of the time series. Specifically, if all the roots lie outside the unit circle (i.e., $\|z\|>1$), then the process is stationary. If any root lies on or inside the unit circle, the process is non-stationary. To see why, consider the following.
 
 * **Infinite Moving Average Representation:**
   An autoregressive process (AR) can be expressed as an infinite sum of past white noise shocks—this is known as its $MA(\infty)$ representation. When all roots of the characteristic equation are outside the unit circle, the coefficients in this infinite series decay rapidly enough. This decay guarantees that the series converges, meaning the effects of shocks diminish over time.
