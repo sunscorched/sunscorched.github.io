@@ -35,7 +35,7 @@ Then our statistical model is
 $y_t = \epsilon_t + \sum_0^{T-1} \beta_j D_{t,j}$
 $\epsilon_t \sim \text{NID}(0,\sigma^2)$ 
 
-The MLE fit model has $\hat{\beta}_j$ as the mean value for the season, in other words the average of $y_{j}, y_{j+T}, y_{j+2T}, ...$ And $\hat{\sigma}^2$ is the variance of the residuals.
+The MLE fit model has $\hat{\beta}\_j$ as the mean value for the season, in other words the average of $y_{j}, y_{j+T}, y_{j+2T}, ...$ And $\hat{\sigma}^2$ is the variance of the residuals.
 
 **Seasonal average forecast:** simply report predicted value for a new $y_t$ with $t>n$ as the average of all observations in the same period $y_{t-T}, y_{t-2T}, y_{t-3T}, ...$
 
