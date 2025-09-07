@@ -69,7 +69,7 @@ Some examples of a stationary time series are:
 
 ### Examples
 
-I got this example from the following useful [link](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php). The Wiki [page](https://en.wikipedia.org/wiki/Stationary_process) on stationary processes also seems useful. Consider a random process (time series) $\{y_t, t \in \R\}$ defined by $y_t = \cos(t+U)$ where $U \sim \text{U}(0,2\pi)$. This is a stationary in the weak sense. To see why, we first show the expected value is independent of time.
+I got this example from the following useful [link](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php). The Wiki [page](https://en.wikipedia.org/wiki/Stationary_process) on stationary processes also seems useful. Consider a random process (time series) $\{y_t, t \in \mathbb{R}\}$ defined by $y_t = \cos(t+U)$ where $U \sim \text{U}(0,2\pi)$. This is a stationary in the weak sense. To see why, we first show the expected value is independent of time.
 
 $E[y_t]=E[\cos(t+U)] = \frac{1}{2\pi}\int^{2\pi}_0 \cos(t+u)\, du = 0$ for all $t$.
 
@@ -77,6 +77,10 @@ The covariance we want to compute is just $E[y_t y_{t+\tau}] = E[\cos(t+U)\cos(t
 
 $$
 \cos(t+U)\cos(t+\tau+U) = \frac{1}{2}\cos(2t+\tau + 2U) + \frac{1}{2}\cos(t+\tau+U-(t+U))=\frac{1}{2}\cos(2t+\tau + 2U)+\frac{1}{2}\cos(\tau).
+$$
+
+$$
+=\frac{1}{2}\cos(2t+\tau + 2U)+\frac{1}{2}\cos(\tau).
 $$
 
 So the expected value above is computed as an integral. But also, the second term above does not depend on $U$ and so the integral of the 2nd term is just itself. So we have
@@ -91,7 +95,7 @@ If we have a weak sense stationary process, let $R_Y(\tau) = E[y_t y_{t-\tau}] =
 
 Note that $R_Y(0) = E[y^2_t]$. Also, $R_Y(-\tau) = R_Y(\tau)$ so this function is an **even** function.
 
-Lastly, by Cauchy-Schwarz, $|E[XY]|^2 \leq E[X^2]E[Y^2]$; with equality if and only if $X=\alpha Y$. Letting $X=y_t, Y=y_{t-\tau}$, we obtain that $|R_Y(\tau)|^2 = |E[y_t y_{t-\tau}]|^2 \leq E[y^2_t]E[y^2_{t-\tau}] = R_Y(0)R_Y(0)$. Hence, $|R_Y(\tau)|\leq R_Y(0)$. Thus, $0$ is a maximum of $R_Y(\tau)$. Note that if we then add $-\mu^2$, this only vertically translates the function so the covariance will have these properties: it is even and takes its maximum at $\tau = 0$; i.e. where there is no lag. Which is what we would want: $y_{t_1}$ and $y_{t_2}$ should be more correlated when $t_1$ and $t_2$ are close and possibly not very correlated when they are far apart. Either way, the highest the correlation can be is when $t_1 = t_2$.
+Lastly, by Cauchy-Schwarz, $\|E[XY]\|^2 \leq E[X^2]E[Y^2]$; with equality if and only if $X=\alpha Y$. Letting $X=y_t, Y=y_{t-\tau}$, we obtain that $\|R_Y(\tau)\|^2 = \|E[y_t y_{t-\tau}]\|^2 \leq E[y^2_t]E[y^2_{t-\tau}] = R_Y(0)R_Y(0)$. Hence, $\|R_Y(\tau)\|\leq R_Y(0)$. Thus, $0$ is a maximum of $R_Y(\tau)$. Note that if we then add $-\mu^2$, this only vertically translates the function so the covariance will have these properties: it is even and takes its maximum at $\tau = 0$; i.e. where there is no lag. Which is what we would want: $y_{t_1}$ and $y_{t_2}$ should be more correlated when $t_1$ and $t_2$ are close and possibly not very correlated when they are far apart. Either way, the highest the correlation can be is when $t_1 = t_2$.
 
 Also, if $X_t,Y_t$ are both WSS and their joint correlation function is only dependent on lag, then $Z_t := X_t + Y_t$ is also WSS.
 
@@ -104,7 +108,7 @@ Below, we'll mention how trends and seasonality imply non-stationarity. Mathemat
 
 ### Bochner's Theorem
 
-**Definition:** A function $f:\mathbb {R} \to \mathbb{C}$ is called **positive semi-definite** if for all real numbers $x_1,...,x_n$ the $n \times n$ matrix $A=\left(a_{ij}\right)_{i,j=1,...,n}$ where $a_{ij}=f(x_i-x_j)$ is a positive semi-definite matrix.
+**Definition:** A function $f:\mathbb {R} \to \mathbb{C}$ is called **positive semi-definite** if for all real numbers $x_1,...,x_n$ the $n \times n$ matrix $A=\left(a_{ij}\right)\_{i,j=1,...,n}$ where $a_{ij}=f(x_i-x_j)$ is a positive semi-definite matrix.
 
 **Theorem (Bochner):** A a continuous function $f$ on $\mathbb{R}$ with $f(0)=1$ is positive-definite if and only if there exists a probability measure $\mu$ on $\mathbb{R}$ such that $f(t)=\int_{\mathbb{R}} e^{-2\pi i\xi t}\,d\mu (\xi )$.
 
@@ -133,7 +137,7 @@ $y_t​=\phi_1​y_{t-1}​+\phi_2 ​y_{t2}​+...+ ϕ_p ​y_{t-p}​ + \epsil
 As usual, $\epsilon_t$​ represents a white noise error term, and $\phi_j$​ are the parameters of the model. To analyze the model's stationarity properties, we form the **characteristic equation** by replacing the lag operator $L$ where $L^ky_t​=y_{t-k}​$ with a variable $z$. So for the model above, the corresponding characteristic equation is:
 $1-\phi_1​z-\phi_2 ​z^2-...-\phi_p ​z^p=0$. We say the polynomial on the left is the **characteristic polynomial.**
 
-**Definition:** A **unit root** exists when a time series model, such as an autoregressive (AR) model, has a characteristic equation with a root equal to 1. We could also study roots $r$ such that $|r|=1$ but these lead to other kinds of behavior such as oscillations.
+**Definition:** A **unit root** exists when a time series model, such as an autoregressive (AR) model, has a characteristic equation with a root equal to 1. We could also study roots $r$ such that $\|r\|=1$ but these lead to other kinds of behavior such as oscillations.
 
 For example, in a simple AR(1) process defined as $y_t​=\phi y_{t-1}​+\epsilon_t​$, the characteristic equation is $1-\phi z=0$. If $\phi=1$, the series has a unit root. For an AR(2) model $y_t​=\phi_1​ y_{t-1}​ + \phi_2​ y_{t-2}​+\epsilon_t$​, the characteristic equation becomes $1−\phi_1 ​z- \phi_2 ​z^2=0$.
 
