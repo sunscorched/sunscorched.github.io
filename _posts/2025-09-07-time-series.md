@@ -14,7 +14,7 @@ A **time series** is a sequence of data points $(\vec{x}_1, y_1), (\vec{x}_2, y_
 
 ### Baseline Models
 
-**Gaussian white noise model:** We hypothesize a data generating process of the form: $f(t) = \mu + \epsilon_t$with $\mu$ as some constant and $\epsilon_t \sim \operatorname{NID}(0,\sigma^2)$. In this context we can call our error terms "Gaussian white noise."
+**Gaussian white noise model:** We hypothesize a data generating process of the form: $f(t) = \mu + \epsilon_t$with $\mu$ as some constant and $\epsilon_t \sim \text{NID}(0,\sigma^2)$. In this context we can call our error terms "Gaussian white noise."
 
 The MLE fitted model will have $\hat{\mu} = \displaystyle \frac{1}{n}\sum_{i=1}^n y_i$, and $\hat{\sigma}^2 = \displaystyle \frac{1}{n} \sum_{i=1}^n (y - \hat{\mu})^2$.
 
@@ -23,23 +23,23 @@ The MLE fitted model will have $\hat{\mu} = \displaystyle \frac{1}{n}\sum_{i=1}^
 **Note:** for this estimate to be "good", we need the assumption that the $y_t$ are independent and identically distributed.
 
 
-**Gaussian Random Walk:** we model the process as $y_t = y_{t-1} + \epsilon_t$ where $\epsilon_t \sim \operatorname{NID}(0,\sigma^2)$. We fit this model by computing $\hat{\sigma}^2 = \frac{1}{n} \displaystyle \sum_1^n (y_t - y_{t-1})^2$. 
+**Gaussian Random Walk:** we model the process as $y_t = y_{t-1} + \epsilon_t$ where $\epsilon_t \sim \text{NID}(0,\sigma^2)$. We fit this model by computing $\hat{\sigma}^2 = \frac{1}{n} \displaystyle \sum_1^n (y_t - y_{t-1})^2$. 
 
 **Naive forecast:** just set $y_t = y_n$ for $t>n$.  In other words, we just predict the last observed value!
 
-**Linear trend:** just assume that the time series is a linear function of time plus some random noise, i.e.: $f(t) = \beta_0 + \beta_1 t + \epsilon_t$ where $\beta_0, \beta_1 \in \mathbb{R}$ and $\epsilon_t \sim \operatorname{NID}(0,\sigma^2)$ is Gaussian white noise error term. TO fit the model, estimate $\beta_0, \ \beta_1$ with a linear regression model using the time point as the feature you are regressing on. **Linear trend forecast":** Our forecast simply predicts $y_t = \beta_0 + \beta_1 t$ for $t>n$.
+**Linear trend:** just assume that the time series is a linear function of time plus some random noise, i.e.: $f(t) = \beta_0 + \beta_1 t + \epsilon_t$ where $\beta_0, \beta_1 \in \mathbb{R}$ and $\epsilon_t \sim \text{NID}(0,\sigma^2)$ is Gaussian white noise error term. TO fit the model, estimate $\beta_0, \ \beta_1$ with a linear regression model using the time point as the feature you are regressing on. **Linear trend forecast":** Our forecast simply predicts $y_t = \beta_0 + \beta_1 t$ for $t>n$.
 
 **Seasonal average model:** assume that each "season" is independently following a Gaussian white noise model, where each season has a different mean but a common variance. For season $j = 0,1,2,..., T-1$ let $D_{t,j}$ be a dummy variable with $D_{t,j} = \begin{cases} 1 & \textrm{ if } t \equiv j \mod T\\ 0 & \textrm{ else} \end{cases}$ 
 
 Then our statistical model is 
 $y_t = \epsilon_t + \sum_0^{T-1} \beta_j D_{t,j}$
-$\epsilon_t \sim \operatorname{NID}(0,\sigma^2)$ 
+$\epsilon_t \sim \text{NID}(0,\sigma^2)$ 
 
 The MLE fit model has $\hat{\beta}_j$ as the mean value for the season, in other words the average of $y_{j}, y_{j+T}, y_{j+2T}, ...$ And $\hat{\sigma}^2$ is the variance of the residuals.
 
 **Seasonal average forecast:** simply report predicted value for a new $y_t$ with $t>n$ as the average of all observations in the same period $y_{t-T}, y_{t-2T}, y_{t-3T}, ...$
 
-**Seasonal random walk:** we suppose each season is independently following a Gaussian random walk with the same variance. In other words we have $y_t = y_{t-T} + \epsilon_t, \epsilon_t \sim \operatorname{NID}(0,\sigma^2)$.
+**Seasonal random walk:** we suppose each season is independently following a Gaussian random walk with the same variance. In other words we have $y_t = y_{t-T} + \epsilon_t, \epsilon_t \sim \text{NID}(0,\sigma^2)$.
 We fit this model by computing $\hat{\sigma}^2 = \frac{1}{n - T} \displaystyle \sum_{T+1}^n (y_t - y_{t-T})^2$. **Seasonal naive prediction:** we predict $y_t$ to be the corresponding value from the most recently observed season.
 
 ### Stationarity
@@ -49,9 +49,9 @@ So far, our regression analysis has taken the form: $Y = f(X) + \epsilon$. This 
 * $\epsilon$ has mean $0$ and constant variance, but we don't know the distribution (which may or may not depend on $X$).
 * $\epsilon$ is normally distributed with mean $0$, constant variance, and is independent of $X$.
 
-We need to believe that _something_ about the relationship between $X$ and $Y$ doesn't change in order to get started with regression modeling. We have to adjust this story a bit for time series.  Let's stick with a time series $y_t$ without any covariates. Then our best hope is that $F(t, y_{t}, y_{t-1}, y_{t-2}, \dots) = \epsilon_t$ is somehow "invariant".  For instance we might be happy if we could determine that $y_t = \sin(t) + 0.5 y_{t-1} + \epsilon_t, \epsilon_t \sim \operatorname{NID}(0, \sigma^2)$. 
+We need to believe that _something_ about the relationship between $X$ and $Y$ doesn't change in order to get started with regression modeling. We have to adjust this story a bit for time series.  Let's stick with a time series $y_t$ without any covariates. Then our best hope is that $F(t, y_{t}, y_{t-1}, y_{t-2}, \dots) = \epsilon_t$ is somehow "invariant".  For instance we might be happy if we could determine that $y_t = \sin(t) + 0.5 y_{t-1} + \epsilon_t, \epsilon_t \sim \text{NID}(0, \sigma^2)$. 
 
-In this case the joint distribution between $y_t$ and $y_{t-1}$ is invariant under translation. We might also be happy if we could determine that $y_t = 3 + 5t + \epsilon_t, \epsilon_t - 0.5 \epsilon_{t-1} \sim \operatorname{U}[-1,1]$. We'll discuss (weak) stationarity below but neither example is (weak) stationary.
+In this case the joint distribution between $y_t$ and $y_{t-1}$ is invariant under translation. We might also be happy if we could determine that $y_t = 3 + 5t + \epsilon_t, \epsilon_t - 0.5 \epsilon_{t-1} \sim \text{U}[-1,1]$. We'll discuss (weak) stationarity below but neither example is (weak) stationary.
 
 This would also result in a joint distribution between $y_t$ and $y_{t-1}$ which is invariant under translation, but with consecutive error terms correlated in an interesting way. Our goal in time series modeling is thus to find a relation $F(t, y_{t}, y_{t-1}, y_{t-2}, \dots) = \epsilon_t $$ which makes the joint distribution of the $\epsilon_t$'s "invariant" under translation.  This notion is formalized by the concept of **stationarity**. Our work is complicated by the fact that we only get to see one version of history:  we cannot "reroll the tapes".  So we generally only have access to one realization of this data generating process:  only one observation of $y_0$, $y_1$, $y_2$, ... etc.  This is one thing that makes time series modeling such a difficult task!
 
@@ -62,8 +62,8 @@ Further if $n=2$ the joint distribution of $y_{t_1}$ and $y_{t_2}$ only depends 
 
 Some examples of a stationary time series are: 
 - White noise
-- A moving average process, i.e. $y_{t} = \beta_0 \epsilon_{t} + \beta_1 \epsilon_{t-1} + \beta_2 \epsilon_{t-2} + \dots + \beta_q \epsilon_{t-q}$ with the $\epsilon \sim \operatorname{NID}(0, \sigma^2)$.
-- An autoregressive process, i.e. $y_{t} = \beta_0 y_{t-1} + \beta_1 y_{t-2} + \beta_2 y_{t-3} + \dots + \beta_q y_{t-q-1} + \epsilon_t$ with the $\epsilon \sim \operatorname{NID}(0, \sigma^2)$.
+- A moving average process, i.e. $y_{t} = \beta_0 \epsilon_{t} + \beta_1 \epsilon_{t-1} + \beta_2 \epsilon_{t-2} + \dots + \beta_q \epsilon_{t-q}$ with the $\epsilon \sim \text{NID}(0, \sigma^2)$.
+- An autoregressive process, i.e. $y_{t} = \beta_0 y_{t-1} + \beta_1 y_{t-2} + \beta_2 y_{t-3} + \dots + \beta_q y_{t-q-1} + \epsilon_t$ with the $\epsilon \sim \text{NID}(0, \sigma^2)$.
 
 **Note:** These last two examples are only stationary for certain values of $\beta$.
 
@@ -110,14 +110,14 @@ Below, we'll mention how trends and seasonality imply non-stationarity. Mathemat
 
 Bochner's theorem can be used to describe the serial correlation of certain type of time series. Let's work discretely as there is also a discrete version for Bochner which is essentially the same statement as above but we work on $S^1$ instead of $\mathbb{R}$.
 
-Anyways, a sequence of random variables $\{f_{n}\}$ of mean 0 is a (wide-sense) stationary time series if the covariance $\operatorname{Cov}(f_n,f_m)$ only depends on $n-m$ (as we've said above). The function $g(n-m)=\operatorname{Cov}(f_n,f_m)$ is called the autocovariance function of the time series. By the mean zero assumption, $g(n-m)=\langle f_n,f_m\rangle$ where this inner product is just $L^2(\mathbb{R})$ but we can think of it as a Hilbert space of random variables with finite 2nd moments. It is then immediate that $g$ is a positive-definite function on the integers $\mathbb{Z}$ as that's how inner products behave. By Bochner's theorem, there exists a unique positive measure $\mu$ on $[0,1]$ such that the autocovariance $g(k)=\int^1_0 e^{-2\pi ikx}\,d\mu (x)$.
+Anyways, a sequence of random variables $\{f_{n}\}$ of mean 0 is a (wide-sense) stationary time series if the covariance $\text{Cov}(f_n,f_m)$ only depends on $n-m$ (as we've said above). The function $g(n-m)=\text{Cov}(f_n,f_m)$ is called the autocovariance function of the time series. By the mean zero assumption, $g(n-m)=\langle f_n,f_m\rangle$ where this inner product is just $L^2(\mathbb{R})$ but we can think of it as a Hilbert space of random variables with finite 2nd moments. It is then immediate that $g$ is a positive-definite function on the integers $\mathbb{Z}$ as that's how inner products behave. By Bochner's theorem, there exists a unique positive measure $\mu$ on $[0,1]$ such that the autocovariance $g(k)=\int^1_0 e^{-2\pi ikx}\,d\mu (x)$.
 
 
 ### Autocorrelation 
 The **autocorrelation** of a time series is essentially the correlation of that time series with its future observations placed at different lags. In particular, the autocorrelation of a time series at lag $k$ is given by: 
-$r_k = \operatorname{Corr}(y_{t+k},y_t)=\frac{\operatorname{Cov}(y_{t+k},y_{t})}{\operatorname{StDev}(y_{t+k})\operatorname{StDev}(y_{t})}$
+$r_k = \text{Corr}(y_{t+k},y_t)=\frac{\text{Cov}(y_{t+k},y_{t})}{\text{StDev}(y_{t+k})\text{StDev}(y_{t})}$
 
-If the time series is stationary, then $\operatorname{StDev}(y_{t+k}) = \operatorname{StDev}(y_{t})$, so their product is just the variance $\operatorname{Var}(y_t)$. In this case we can use 
+If the time series is stationary, then $\text{StDev}(y_{t+k}) = \text{StDev}(y_{t})$, so their product is just the variance $\text{Var}(y_t)$. In this case we can use 
 $\hat{r}_k = \frac{\displaystyle\sum_{t=1}^{n-k} \left(y_t - \overline{y}\right) \left(y_{t+k} - \overline{y} \right)}{\displaystyle\sum_{t=1}^n \left(y_t - \overline{y}\right)^2}$ 
 
 as the sample statistic where $n$ is the last observation of the time series.
