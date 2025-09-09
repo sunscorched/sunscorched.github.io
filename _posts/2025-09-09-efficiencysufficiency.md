@@ -42,7 +42,7 @@ Thus, we can now compute the efficiency of the method-of-moments estimator to th
 
 **Remark:** Being unbiased, the mean squared error is simply the variance since the biased term goes away. An unbiased estimate which achieves this lower bound is called **efficient.**
 
-**Proof:** Let $Z = \sum^n\_{i=1} \partial_\theta \log(f(X_i\|\theta)) = \sum^n \dfrac{\partial_\theta f(X_i\|\theta)}{f(X_i\|\theta)}$. The expected value $E[Z]=0$. Also, by definition, the correlation of two variables is their covariance divided by the squareroot of the product of their variances and this is always $\leq 1$. So $\text{Cov}^2(Z,T)\leq V(Z)V(T)$. We also know that $I(\theta) = V[\partial_\theta \log f]$ by definition and so $V(Z) = nI(\theta)$.
+**Proof:** Let $Z = \sum^n\_{i=1} \partial_\theta \log(f(X_i\|\theta)) = \sum^n \dfrac{\partial_\theta f(X_i\|\theta)}{f(X_i\|\theta)}$. Elsewhere in my blog posts, I showed that the expected value $E[Z]=0$. Also, by definition, the correlation of two variables is their covariance divided by the squareroot of the product of their variances and this is always $\leq 1$. So $\text{Cov}^2(Z,T)\leq V(Z)V(T)$. We also know that $I(\theta) = V[\partial_\theta \log f]$ by definition and so $V(Z) = nI(\theta)$.
 
 So we now want to show that the covariance $\text{Cov}(Z,T)=1$ (which is rather remarkable since $T$ can be **any** unbiased estimator). Since $E[Z]=0$, the covariance is simply
 
