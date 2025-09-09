@@ -7,9 +7,7 @@ tags:
   - statistics
 ---
 
-These are notes I made while learning about the subject from my former colleague Victor Churchill's lecture notes.
-
-**Regression** is a type of _supervised_ learning that models the relationship between one or more independent variables (**features**) and a continuous dependent variable (**target**). The goal of regression is to predict the value of the dependent variable based on the values of the independent variables. The main example we look at here is **linear regression.**
+These are notes I made while learning about the subject from my former colleague Victor Churchill's lecture notes. **Regression** is a type of _supervised_ learning that models the relationship between one or more independent variables (**features**) and a continuous dependent variable (**target**). The goal of regression is to predict the value of the dependent variable based on the values of the independent variables. The main example we look at here is **linear regression.**
 
 Before we apply linear regression to data, we need to make the following assumptions about the data.
 1. Linearity: the relationship between the feature set and target variable is linear
