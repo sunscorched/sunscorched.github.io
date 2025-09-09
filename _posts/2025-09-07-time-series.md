@@ -7,8 +7,6 @@ tags:
   - statistics
 ---
 
-### What are time series data?
-
 A **time series** is a sequence of data points $(\vec{x}_1, y_1), (\vec{x}_2, y_2), \dots (\vec{x}_t, y_t) \dots$ where $\vec{x}_t$ represents a collection of $p$ features and $y_t$ represents a numeric variable of interest at time $t$. We often assume that our time steps are evenly spaced. Depending on the model and data set we may make additional assumptions on the $\vec{x}_t$ and $y_t$. It's possible that we don't actually have the $\vec{x}_t$ (which I will lazily just write as $x_t$ from now on). For example, we might just have $y_t$ which is a count of the number of sunspots observed on the sun at a given time $t$. We could also have, say, interest rates and inflation and we want to do predictions about inflation. So the interest rates are the features $x_t$ and inflation rates are $y_t$.
 
 
