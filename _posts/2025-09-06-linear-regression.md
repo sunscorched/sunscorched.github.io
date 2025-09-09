@@ -148,9 +148,9 @@ One way to address collinearity is to use **principal component analysis** or tr
 
 In the example, there are three components since the data are in $\mathbb{R}^3$ but one of components explains the relation far more than the other two. So we could do a regression where we end up with just one feature that is a linear combination of height and weight.
 
-There are several metrics for determining the usefulness of a model. The **coefficient of determination** is $R^2 = \dfrac{s^2_y-s^2_{\hat{\epsilon}}}{s^2_y}$. This is the proportion of the sample variation in $y$ that is _explained_ by the regression model (so the part that is unexplained is from the residuals).
+There are several metrics for determining the usefulness of a model. The **coefficient of determination** is $R^2 = \dfrac{s^2\_y-s^2\_{\hat{\epsilon}}}{s^2\_y}$. This is the proportion of the sample variation in $y$ that is _explained_ by the regression model (so the part that is unexplained is from the residuals).
 
-We can also run a hypothesis test with $H_0:\beta_1=\beta_2=...=\beta_{p-1}=0$. The F-statistic $F = \dfrac{(s^2_y-s^2_{\hat{\epsilon}})/(p-1)}{s^2_y/(n-p)}$ is used for this hypothesis test.
+We can also run a hypothesis test with $H_0:\beta_1=\beta_2=...=\beta_{p-1}=0$. The F-statistic $F = \dfrac{(s^2\_y-s^2\_{\hat{\epsilon}})/(p-1)}{s^2_y/(n-p)}$ is used for this hypothesis test.
 
 Multiple linear regression can also be sensitive to outliers. For example, if we include a datapoint with the average height and weight but a very long catheter, this can shift the model quite a lot. This phenomenon is called **overfitting.** Here, the model is overly compensating the outlier when it would be better if the model ignored it or gave it less weight.
 
