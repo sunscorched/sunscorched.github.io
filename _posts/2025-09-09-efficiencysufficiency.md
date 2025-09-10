@@ -1,5 +1,5 @@
 ---
-title: 'Efficiency and Sufficiency'
+title: 'Efficiency and Sufficiency with Appendix on Muon Decay, Chirality, and Parity-Violation'
 date: 2025-09-09
 permalink: /posts/2025/09/efficiencysufficiency/
 tags:
@@ -89,7 +89,7 @@ $V(\hat{\theta}) = V(E(\hat{\theta}\|T) + E(V(\hat{\theta}\|T)) = V(\tilde{\thet
 
 The first equality $V(\hat{\theta}) = V(E(\hat{\theta}\|T)) + E(V(\hat{\theta}\|T))$ is the [law of total variance](https://en.wikipedia.org/wiki/Law_of_total_variance). For the first term, compute the conditional mean across different $T$ and see how it varies, for the second, it's the average variation across different $T$.
 
-### Appendix: Muon Decay and Parity-Violation for Weak Interactions
+### Appendix: Muon Decay, Chirality, and Parity-Violation for Weak Interactions
 
 In muon decay, the probability distribution of the emitted electron's angle, represented by the PDF $f(x\|\alpha) = (1+\alpha x)/2$ where $x = \cos\theta$, illustrates something the fundamental nature about the weak nuclear force.
 
