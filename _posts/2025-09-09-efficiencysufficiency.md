@@ -1,5 +1,5 @@
 ---
-title: 'Efficiency and Sufficiency with Appendix on Muon Decay, Chirality, and Parity-Violation'
+title: 'Efficiency and Sufficiency with an Appendix on Muon Decay, Chirality, and Parity-Violation'
 date: 2025-09-09
 permalink: /posts/2025/09/efficiencysufficiency/
 tags:
