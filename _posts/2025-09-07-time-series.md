@@ -120,7 +120,7 @@ The **autocorrelation** of a time series is essentially the correlation of that 
 $r_k = \text{Corr}(y_{t+k},y_t)=\frac{\text{Cov}(y_{t+k},y_{t})}{\text{StDev}(y_{t+k})\text{StDev}(y_{t})}$
 
 If the time series is stationary, then $\text{StDev}(y_{t+k}) = \text{StDev}(y_{t})$, so their product is just the variance $\text{Var}(y_t)$. In this case we can use 
-$\hat{r}_k = \frac{\displaystyle\sum_{t=1}^{n-k} \left(y_t - \overline{y}\right) \left(y_{t+k} - \overline{y} \right)}{\displaystyle\sum_{t=1}^n \left(y_t - \overline{y}\right)^2}$ 
+$\hat{r}\_k = \frac{\displaystyle\sum\_{t=1}^{n-k} \left(y_t - \overline{y}\right) \left(y\_{t+k} - \overline{y} \right)}{\displaystyle\sum_{t=1}^n \left(y_t - \overline{y}\right)^2}$ 
 
 as the sample statistic where $n$ is the last observation of the time series.
 
