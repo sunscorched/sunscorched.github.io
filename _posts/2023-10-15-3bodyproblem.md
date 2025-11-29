@@ -12,7 +12,7 @@ The Jacobi identity for the Poisson bracket says that if $f,g \in C^\infty(P)$ a
 
 If $(P^{2n},\omega)$ is finite-dimensional and symplectic, then "as many as possible" means $n$. (One may include $H$ itself among the conserved quantities). However there are interesting infinite-dimensional examples (e.g. Korteweg-de Vries hierarchy and its cousins or symplectic field theory) where $P$ is only Poisson and "as many as possible" means in practice an infinite number of conserved quantities. Also it is not strictly necessary for the conserved quantities to be in involution, but one can allow the Lie subalgebra of $C^\infty(P)$ that they span to be solvable but nonabelian.
 
-### The Three Body Problem
+## The Three Body Problem
 
 One of Poincaré's big claims to fame was a proof that the **planar** three-body problem is not completely integrable (found in _Les Methodes Nouvelles de Mecanique Celeste_). Specifically, Poincaré proved that besides energy, angular momentum, and linear momentum there are no other nonconstant **analytic** functions on phase space which Poisson commute with the energy. These other functions would be linear combinations of the three. His proof, or its extensions, only holds in the parameter region where one of the masses dominates the other two so it is possible that for very special masses and angular momenta/energies, the system is integrable but probably no one believes that this would be true. 
 
@@ -32,8 +32,8 @@ In this tangle, the unstable and stable manifold of some point $p$ (an orbit in 
 
 Poincaré showed that an additional conserved quantity would have to be constant along this complicated set which accumulates at $p$. Analytic functions have the property that if they're constant on a sequence of points accumulating somewhere, then the whole function is in fact, constant.
 
-### Rings of Saturn
+## Rings of Saturn
 
 To conclude, I'll like to discuss another example where these ideas of stable and unstable manifolds show up in astrophysics. The Wikipedia [article](https://en.wikipedia.org/wiki/Stable_manifold) on stable manifolds gives the rings of Saturn as an example. To paraphrase it, the gravitational tidal forces coming from Saturn are such that they flatten the debris into the equatorial plane (so contraction in one direction) even as they stretch it out in the radial direction (expanding). So mathematically, this is what a matrix of $SL(2,\mathbb{R})$ does since it has eigenvalues $\lambda,\lambda^{-1}$ and so long as their norm isn't 1, we'll have the contraction and expansion behavior.
 
-Moreover, if there are any perturbations that push particles in the rings above or below the equatorial plane, the particle will actually feel a restoring force, pushing it back into the plane. On the other hand, similar to the chaos of the planar three bodies discussed above, if one were to track the movement of particles, it would also be chaotic.
+Moreover, if there are any perturbations that push particles in the rings above or below the equatorial plane, the particle will actually feel a restoring force, pushing it back into the plane. Thus, it's not possible for a planet such as the one in the Disney movie "Treasure Planet" to have multiple rings in different equitorial planes, at least not stably over the long term. On the other hand, similar to the chaos of the planar three bodies discussed above, if one were to track the movement of particles, it would also be chaotic.
