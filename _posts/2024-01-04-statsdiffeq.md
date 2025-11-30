@@ -46,7 +46,7 @@ $$\mathcal{L}[f] = H[f] -\lambda_0(\int f(x) \, dx -1) - \lambda_1 (\int x f(x)\
 
 Next, we vary using $f+\epsilon h$ where the 0th, 1st, and 2nd moments of $h$ are all 0 so that $f+\epsilon h$ stays in the set. We find that
 
-$$\delta \mathcal{L}[f](h) = \left.\dfrac{d}{d\epsilon}\right|_{\epsilon=0} = -\int (\ln f +1)h\,dx -\lambda_0\int h\, dx - \lambda_1 \int x h\,dx -\lambda_2 \int x^2 h\, dx.$$
+$$\delta \mathcal{L}[f](h) = \left.\dfrac{d}{d\epsilon}\right|_{\epsilon=0} \mathcal{L}[f+\epsilon h] = -\int (\ln f +1)h\,dx -\lambda_0\int h\, dx - \lambda_1 \int x h\,dx -\lambda_2 \int x^2 h\, dx.$$
 
 For this to equal 0 for all the admissible $h$, we need $\ln f +1 +\lambda_0 + \lambda_1 x + \lambda_2 x^2 = 0$. For convenience, let's right that we need $ln f(x) = A + Bx + Cx^2$ or $f(x) = e^A e^{Bx} e^{Cx^2}$. Since the mean should be 0, we see that if $B \neq 0$, this would off-center the PDF to not have mean 0. So it must be that $B=0$. For the function to be integrable, we need $C<0$ and in fact, should be $-\dfrac{1}{2\sigma^2}$ so that we get the correct variance. And we'll find that $e^A = \dfrac{1}{\sqrt{2\pi}\sigma}$. In other words, $f$ is the PDF for the normal distribution with mean 0 and variance $\sigma^2$.
 
