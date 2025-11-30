@@ -34,9 +34,9 @@ And that's it! We can then use the Banach Fixed Point Theorem to get the result 
 
 ## Appendix: Entropy
 
-Note that the function $x \ln x$ is concave up on $(0,\infty)$ which may suggest to us that the functional $H[f] = -\int_\mathbb{R} f(x) \ln f(x) \, dx$ is concave. We'll use calculus of variations to check:
+Note that the function $x \ln x$ is concave up on $(0,\infty)$ which may suggest to us that the functional $H[f] = -\int_\mathbb{R} f(x) \ln f(x) \, dx$ is concave. We'll use calculus of variations to check. I'll just give the definition below and the reader may verify the calculation; we'll assume the derivative operators commute with integration.
 
-$$\delta^2 H[f] = \left. \dfrac{d^2}{d\epsilon^2} H[f+\epsilon h] \right|_{\epsilon=0} = -\int \dfrac{h^2}{f}\, dx.$$
+$$\delta^2 H[f] = \left. \dfrac{d^2}{d\epsilon^2} H[f+\epsilon h] \right|_{\epsilon=0} = -\int \dfrac{h(x)^2}{f(x)}\, dx \leq 0.$$
 
-
+So the functional is concave and hence, when restricted to a convex set, if there is a local maximum, it will be a unique global maximum. Let's figure out what our convex set is and find a local maximum. Let's work with continuous random variables with mean 0 for simplicity and variance $\sigma^2$. So if such a random variable has PDF $f$, then $\int f(x)\, dx = 1, \int x f(x)\,dx = 0, \int x^2 f(x)\, dx = \sigma^2$.
 
