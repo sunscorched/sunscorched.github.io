@@ -50,4 +50,10 @@ $$\delta \mathcal{L}[f](h) = \left.\dfrac{d}{d\epsilon}\right|_{\epsilon=0} = -\
 
 For this to equal 0 for all the admissible $h$, we need $\ln f +1 +\lambda_0 + \lambda_1 x + \lambda_2 x^2 = 0$. For convenience, let's right that we need $ln f(x) = A + Bx + Cx^2$ or $f(x) = e^A e^{Bx} e^{Cx^2}$. Since the mean should be 0, we see that if $B \neq 0$, this would off-center the PDF to not have mean 0. So it must be that $B=0$. For the function to be integrable, we need $C<0$ and in fact, should be $-\dfrac{1}{2\sigma^2}$ so that we get the correct variance. And we'll find that $e^A = \dfrac{1}{\sqrt{2\pi}\sigma}$. In other words, $f$ is the PDF for the normal distribution with mean 0 and variance $\sigma^2$.
 
-Putting things together, we have found the normal distribution $N(0,\sigma^2)$ to be a local maximum for entropy for a given variance. Since entropy is concave on the relevant convex set, we know that $N(0,\sigma^2)$ is a global maximum.
+Putting things together, we have found the normal distribution $N(0,\sigma^2)$ to be a local maximum for entropy for a given variance. Since entropy is concave on the relevant convex set, we know that $N(0,\sigma^2)$ is a global maximum. One can compute this entropy to be $\dfrac{1}{2}(1 + \ln(2\pi \sigma^2)$. Note that for small $\sigma$, the entropy is actually negative so $H$ takes values on all of $\mathbb{R}$. This is different from the entropy of discrete random variables who have entropy bounded below by 0.
+
+**Lemma:** Convolution increases entropy.
+
+**Proof:** The PDF of the sum of two random variables is the convolution of their PDFs. Let $h = f*g$. Then $h(z) = \int f(z-y)g(y)\, dy$. Now, $-\ln$ is a convex function and Jensen's Inequality tells us that for any convex function $\phi$ and random variable $X$, $\phi(E[X]) \leq E[\phi(X)]$. Thus:
+
+$$-\ln \left (\int f(z-y)g(y)\, dy \right) \leq -\int g(y) \ln(f(z-y))\, dy.$$
