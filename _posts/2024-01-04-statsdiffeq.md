@@ -36,7 +36,7 @@ And that's it! We can then use the Banach Fixed Point Theorem to get the result 
 
 Note that the function $x \ln x$ is concave up on $(0,\infty)$ which may suggest to us that the functional $H[f] = -\int_\mathbb{R} f(x) \ln f(x) \, dx$ is concave. We'll use calculus of variations to check:
 
-$$\delta^2 H[f] = \left. \dfrac{d^2}{d\epsilon^2} H[f+\epsilon h] \right|_{\epsilon=0}.$$
+$$\delta^2 H[f] = \left. \dfrac{d^2}{d\epsilon^2} H[f+\epsilon h] \right|_{\epsilon=0} = -\int \dfrac{h^2}{f}\, dx.$$
 
 
 
