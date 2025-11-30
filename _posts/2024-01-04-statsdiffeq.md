@@ -40,3 +40,6 @@ $$\delta^2 H[f] = \left. \dfrac{d^2}{d\epsilon^2} H[f+\epsilon h] \right|_{\epsi
 
 So the functional is concave and hence, when restricted to a convex set, if there is a local maximum, it will be a unique global maximum. Let's figure out what our convex set is and find a local maximum. Let's work with continuous random variables with mean 0 for simplicity and variance $\sigma^2$. So if such a random variable has PDF $f$, then $\int f(x)\, dx = 1, \int x f(x)\,dx = 0, \int x^2 f(x)\, dx = \sigma^2$.
 
+We form the Lagrangian
+
+$$\mathcal{L}[f] = H[f] -\lambda_0(\int f(x) \, dx -1) - \lambda_1 (\int x f(x)\, dx) - \lambda_2(\int x^2 f(x) \, dx - \sigma^2$$.
