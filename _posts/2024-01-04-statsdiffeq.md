@@ -42,7 +42,7 @@ So the functional is concave and hence, when restricted to a convex set, if ther
 
 Next, we form the following Lagrangian; we'll be using Lagrange multipliers to deal with optimization given some constraints.
 
-$$\mathcal{L}[f] = H[f] -\lambda_0(\int f(x) \, dx -1) - \lambda_1 (\int x f(x)\, dx) - \lambda_2(\int x^2 f(x) \, dx - \sigma^2$$.
+$$\mathcal{L}[f] = H[f] -\lambda_0\left(\int f(x) \, dx -1\right) - \lambda_1 \left(\int x f(x)\, dx \right) - \lambda_2 \left(\int x^2 f(x) \, dx - \sigma^2 \right)$$.
 
 Next, we vary using $f+\epsilon h$ where the 0th, 1st, and 2nd moments of $h$ are all 0 so that $f+\epsilon h$ stays in the set. We find that
 
