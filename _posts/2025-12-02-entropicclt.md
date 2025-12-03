@@ -32,7 +32,7 @@ For this to equal 0 for all the admissible $h$, we need $\ln f +1 +\lambda_0 + \
 
 Putting things together, we have found the normal distribution $N(0,\sigma^2)$ to be a local maximum for entropy for a given variance and mean 0. Since entropy is concave on the relevant convex set, we know that $N(0,\sigma^2)$ is a global maximum. One can compute this entropy to be $\dfrac{1}{2}(1 + \ln(2\pi \sigma^2)$. Note that for small $\sigma$, the entropy is actually negative so $H$ takes values on all of $\mathbb{R}$. This is different from the entropy of discrete random variables who have entropy bounded below by 0.
 
-**Proposition:** Let $X,Y$ be two independent random variables with densities $p,q$. It is well known the density of $X+Y$ is the convolution $p*q$. Moreover, $H[p*q]\geq \max(H[p],H[q])$.
+**Proposition:** Let $X,Y$ be two independent random variables with densities $p,q$. It is well known the density of $X+Y$ is the convolution $p\*q$. Moreover, $H[p\*q]\geq \max(H[p],H[q])$.
 
 **Proof:** We noted that $\phi(x) = x \ln x$ is a convex function (so $-\phi(x)$ is concave). Jensen's inequality tells us that for any random variable $Z$ and any convex function $\phi$, $\phi(E[Z]) \leq E[\phi(Z)]$.
 
