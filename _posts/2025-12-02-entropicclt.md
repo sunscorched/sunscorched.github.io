@@ -6,7 +6,7 @@ tags:
   - probability
   - entropy
 ---
-In this post, I'll revisit the Central Limit Theorem again, this time with a focus on entropy. I'll state a few results at the end without proof including the Berry-Esseen Theorem which tells us about the convergence of the usual Central Limit Theorem. We'll work with continuous random variables and their density functions. Recall that for a random variable $X:(\Omega,\mu) \to \R$ with density $f$, the entropy is defined as $H[f] = -\int_\Omega f(x) \ln f(x)\,d\mu$. We'll just work with $\Omega = \R$ and the usual Lebesgue measure.
+In this post, I'll revisit the Central Limit Theorem again, this time with a focus on entropy. I'll state a few results at the end without proof including the Berry-Esseen Theorem which tells us about the convergence of the usual Central Limit Theorem. We'll work with continuous random variables and their density functions. Recall that for a random variable $X:(\Omega,\mu) \to \mathbb{R}$ with density $f$, the entropy is defined as $H[f] = -\int_\Omega f(x) \ln f(x)\,d\mu$. We'll just work with $\Omega = \mathbb{R}$ and the usual Lebesgue measure.
 
 **Proposition:** Entropy is a concave functional.
 
