@@ -43,7 +43,7 @@ If we integrate both sides with respect to $x$, the left hand side is $\int \phi
 The right hand side unpacked is $\int \int \phi(p(x-y))q(y)\, dy \, dx$. By Fubini, we can switch the order of integration to integrate with respect to $x$ firt. Since $q(y)$ doesn't depend on $x$, we can move that out of the inner integral:
 $$\int q(y) \int \phi(p(x-y))\, dx \, dy.$$
 
-Using the substituion $u=x-y, du=dx$, the inner integral is just $\int \phi(p(u))\, du = -H[p]$ which is just a number. So the RHS equals $-H[p]\int q(y)\, dy$. Since $q$ is a density, then $\int q(y)\,dy =1$ so we have at the end $-H[p\*q] \leq -H[p]$ and so $H[p*q] \geq H[p]$. The same argument also shows $H[p\*q] \geq H[q]$ and hence $H[p*q]\geq \max(H[p],H[q])$. $\square$
+Using the substituion $u=x-y, du=dx$, the inner integral is just $\int \phi(p(u))\, du = -H[p]$ which is just a number. So the RHS equals $-H[p]\int q(y)\, dy$. Since $q$ is a density, then $\int q(y)\,dy =1$ so we have at the end $-H[p\*q] \leq -H[p]$ and so $H[p\*q] \geq H[p]$. The same argument also shows $H[p\*q] \geq H[q]$ and hence $H[p\*q]\geq \max(H[p],H[q])$. $\square$
 
 ## Entropic Central Limit Theorem
 
