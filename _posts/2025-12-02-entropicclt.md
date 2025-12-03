@@ -8,6 +8,8 @@ tags:
 ---
 In this post, I'll revisit the Central Limit Theorem again, this time with a focus on entropy. I'll state a few results at the end without proof including the Berry-Esseen Theorem which tells us about the convergence of the usual Central Limit Theorem. We'll work with continuous random variables and their density functions. Recall that for a random variable $X:(\Omega,\mu) \to \mathbb{R}$ with density $f$, the entropy is defined as $H[f] = -\int_\Omega f(x) \ln f(x)\,d\mu$. We'll just work with $\Omega = \mathbb{R}$ and the usual Lebesgue measure.
 
+## Entropy Fundamentals
+
 **Proposition:** Entropy is a concave functional.
 
 Note that the function $x \ln x$ is concave up on $(0,\infty)$ which may suggest to us that the functional $H[f] = -\int_\mathbb{R} f(x) \ln f(x) \, dx$ is concave. We'll use calculus of variations to check. I'll just give the definition below and the reader may verify the calculation; we'll assume the derivative operators commute with integration.
