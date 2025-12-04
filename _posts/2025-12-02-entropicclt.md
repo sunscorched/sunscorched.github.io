@@ -59,8 +59,8 @@ Observe $D(f,\phi) = \int f \log f - \int f \log \phi = -H[f] - \int f \log(\phi
 
 ## Berry–Esseen Theorem
 
-Above, we see that we have #$L^1$ convergence when we assume finite entropy for at least one standardized average. In a similar vein, if we assume finite 3rd absolute moment, we can also arrive at a theorem about the rate of convergence in the Central Limit Theorem.
+Above, we see that we have $L^1$ convergence when we assume finite entropy for at least one standardized average. In a similar vein, if we assume finite 3rd absolute moment, we can also arrive at a theorem about the rate of convergence in the Central Limit Theorem.
 
 **Theorem (Berry, Esseen):** Let $X_1, X_2, ...$ be i.i.d. random variables with $E[X_i] = 0, E[X_i^2] = \sigma^2 > 0$, and $E[\|X_i\|^3] = \rho < \infty$. Define $Y_n=\frac{1}{n}(X_1+X_2+...+X_n)$ to be the sample mean, with $F_n$ the cumulative distribution function of $\dfrac{Y_n\sqrt {n}}{\sigma}$ and $\Phi$ the cumulative distribution function of the standard normal distribution. There exists a universal $C>0$ such that for all $x$ and $n$, $\|F_n(x)-\Phi(x)\|\leq \dfrac{C\rho}{\sigma^3\sqrt{n}}$.
 
-**Remark:** So the rate of convergence is $O(n^{-1/2})$. More interestingly, the constant $C>0$ works for **any** random variable with finite 3rd absolute moment and some progress has shown that $C < 0.4748$.
+**Remark:** So the rate of convergence is $O(n^{-1/2})$; meaning, the error decreases on the order of $n^{-1/2}$. More interestingly, the constant $C>0$ works for **any** random variable with finite 3rd absolute moment and some progress has shown that $C < 0.4748$.
