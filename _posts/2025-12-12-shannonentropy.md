@@ -49,7 +49,7 @@ Let's now assume we have a function $F$ which assigns to any such measure-preser
 
 We define $F$ to be continuous if $F(f_n) \to F(f)$ whenever $f_n$ is a sequence of morphisms converging to a morphism $f$.
 
-We can also make a category $\R_+$ with a single object and morphisms are real numbers $[0,\infty)$ which compose by addition. Then a function $F$ above can be viewed as a functor if it satisfies the usual properties of functors.
+We can also make a category $\mathbb{R}_+$ with a single object and morphisms are real numbers $[0,\infty)$ which compose by addition. Then a function $F$ above can be viewed as a functor if it satisfies the usual properties of functors.
 
 **Theorem:** Suppose $F$ is any map sending morphisms in $\text{FinProb}$ to $[0,\infty)$ and that it obeys the following three axioms:
 1. Functoriality: $F(f\circ g)=F(f)+F(g)$ whenever $f,g$ composable.
@@ -60,7 +60,7 @@ Then there exists a constant $c \geq 0$ such that for any morphism $f:p \to q$ i
 
 This is quite amazing: for any map $F$ satisfying the three axioms, it automatically is a scaled version of information loss where $H(p)$ is the Shannon entropy. So in this way, Shannon entropy falls out naturally. We can extend this theorem to a category of finite measures on finite sets rather than only probability measures. In that case, if we also impose homogeneity: $F(af)=aF(f)$ for all (measure preserving) morphisms $f$ and $a \in [0,\infty)$, then Shannon entropy will again appear. The proof relies on a result of Faddeev which can be reinterpreted in operadic terms. Then Shannon entropy is not a morphism of operad algebras, but only a lax morphism.
 
-**Remark:** I don't think we need to go into it but both $\text{FinProb}$ and $\R_+$ are categories where the set of objects and also sets of morphisms can be given topologies. So these are **topological categories.** Moreover, they are both symmetric monoidal. The symmetric monoidal structure on $\text{FinProb}$ is given by disjoint union and on $\R_+$ it's the usual addition. Also, $[0,\infty)$ is a (topological) monoid and we can give $\text{FinProb}$ and $\R_+$ the structure of $[0,\infty)$-module categories.
+**Remark:** I don't think we need to go into it but both $\text{FinProb}$ and $\mathbb{R}_+$ are categories where the set of objects and also sets of morphisms can be given topologies. So these are **topological categories.** Moreover, they are both symmetric monoidal. The symmetric monoidal structure on $\text{FinProb}$ is given by disjoint union and on $\mathbb{R}_+$ it's the usual addition. Also, $[0,\infty)$ is a (topological) monoid and we can give $\text{FinProb}$ and $\mathbb{R}_+$ the structure of $[0,\infty)$-module categories.
 
 ### Appendix: Gibbs Measure
 
