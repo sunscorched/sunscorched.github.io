@@ -24,7 +24,7 @@ Now, $E[1]=1 = \log(e)$ and $E[(x-\mu)^2]$ is the variance so this works out to 
 
 However, if it's a discrete situation then $-\sum p_i \log(p_i)$ has only one term where $p_i = 1$ and the rest $p_j=0$. But $\log(1)=0$. So for Dirac delta on a discrete set, the entropy is $H=0$.
 
-### Information Gain
+## Information Gain
 
 Here is a related idea; it's not going to play a role later but is useful to know. Let's suppose we have some datapoints that are labeled either $Y=a$ or $Y=b$. These datapoints have a feature $X$ which takes on values 0 or 1. And now, let's suppose we have 10 datapoints, half are $a$, half are $b$. There are 4 $b$'s with $X=0$, and 5 $a$'s, 1 $b$ with $X=1$. 
 
@@ -32,7 +32,7 @@ In general, the **information gain** we get from studying a feature is defined a
 
 So we can think of $IG$ as telling us how much information we gained once we take $X$ into account. Before, we had no way to distinguish $a$ and $b$ by, say, their counts because they have the same counts. But since all the $a$'s have $X=1$ and most $b$'s have $X=0$, then knowing the value for $X$ helps us distinguish $a$'s from $b$'s. Indeed, suppose all $a$'s have $X=1$ and all $b$'s have $X=0$. Then $H(Y\|X)=0$ and the information gained is 1; the maximum amount because $X$ would perfectly distinguish the two labels.
 
-### A Characterization of Entropy in Terms of Information Loss
+## A Characterization of Entropy in Terms of Information Loss
 
 This section is about a paper of the same title by John Baez, Tobias Fritz, and Tom Leinster. But the ncatLab [page](https://ncatlab.org/johnbaez/show/Entropy+as+a+functor) covers more than their paper. **Caution:** This section only applies to finite probability distributions, not continuous ones.
 
@@ -62,7 +62,7 @@ This is quite amazing: for any map $F$ satisfying the three axioms, it automatic
 
 **Remark:** I don't think we need to go into it but both $\text{FinProb}$ and $\mathbb{R}\_+$ are categories where the set of objects and also sets of morphisms can be given topologies. So these are **topological categories.** Moreover, they are both symmetric monoidal. The symmetric monoidal structure on $\text{FinProb}$ is given by disjoint union and on $\mathbb{R}\_+$ it's the usual addition. Also, $[0,\infty)$ is a (topological) monoid and we can give $\text{FinProb}$ and $\mathbb{R}\_+$ the structure of $[0,\infty)$-module categories.
 
-### Appendix: Gibbs Measure
+## Appendix: Gibbs Measure
 
 Here is a bonus section. Let's suppose we're studying a physical system where a **finite** number of states are possible with index $i$, probabilities $p_i$, and energies of the state $E_i$. Now, suppose we want to maximize the entropy $S=-k\sum_i p_i \log(p_i)$ subjected to the following constraints:
 1. Normalization of probabilities: $\sum_i p_i = 1$.
