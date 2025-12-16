@@ -15,7 +15,10 @@ Consider a simple swinging pendulum. One way to describe its physical state is t
 
 In this simulation, we only have the force of gravity. We make the simplifying assumption that no energy is lost to friction. The trail left by the pendulum looks somewhat patterned at first but eventually moves chaotically and the path in the position space $T^2$ looks like scribbles. Note that when one of the rods makes a full revolution, the path in the square looks to jump from one side to the other but we mustn't forget that opposite edges should be "glued" together. It's a bit like the game of Pacman.
 
+We can also consider a spherical pendulum which is one where the bob is attached to a fixed rod but has an extra degree of freedom. The phase space for this system is $T^* S^2$. One famous example of a spherical pendulum is the Foucault pendulum. If you don't live on the equator, you can take the pendulum from its rest position, bring it to up (to gain potential energy), and then let go. You might expect it to simply swing back and forth, straight away from you and then straight back (assuming you don't move from the spot where you initially let it go). But if you watch for a while, you'll notice that the pendulum's swing precesses. This is due to the rotation of the earth! I find it immensely clever that this is an experiment to verify that the earth rotates. The higher the latitude, the more clear the precession. In the animation below, I've exaggerated the precession but this is something of what it would look like.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/foucault_pendulum.mp4" type="video/mp4">
 </video>
+
+Unlike the double pendulum animation where I plotted the position part of the phase space, here I show the velocity part. We have a vector which points in the direction of the movement of the pendulum and the length depicts the magnitude/speed of the pendulum. Note that as the pendulum moves to the limits of its reach (the point of one of the legs of the "star"), the velocity vector goes to 0. This is because the pendulum slows down and reverse direction.
