@@ -14,3 +14,8 @@ Consider a simple swinging pendulum. One way to describe its physical state is t
 </video>
 
 In this simulation, we only have the force of gravity. We make the simplifying assumption that no energy is lost to friction. The trail left by the pendulum looks somewhat patterned at first but eventually moves chaotically and the path in the position space $T^2$ looks like scribbles. Note that when one of the rods makes a full revolution, the path in the square looks to jump from one side to the other but we mustn't forget that opposite edges should be "glued" together. It's a bit like the game of Pacman.
+
+
+<video controls loop autoplay muted width="600">
+  <source src="/assets/foucault_pendulum.mp4" type="video/mp4">
+</video>
