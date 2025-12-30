@@ -20,7 +20,7 @@ This space of differentiable functions has a topology coming from a metric; let'
 
 I haven't thought too much about why we lose uniqueness if $\partial_y f$ isn't continuous but I suspect it's because we would then have to deal with a different space of functions and it might not be complete as a metric space. This does in fact happen; if we let $f(t,y) = 3y^{2/3}$, then $\partial_y f = 2y^{-1/3}$ which is not continuous. Then, the ODE $y' = 3y^{2/3}$ with $y(0) = 0$ has $y_1 \equiv 0$ and also $y_2 = t^3$ as solutions but they are evidently not equal. So the uniqueness of solutions can certainly fail when $\partial_y f$ is discontinuous on the domain of interest.
 
-Let's end with a simple example. Let $f(x) = \cos x$. By the Mean Value Theorem, for any $a,b\in \mathbb{R}$, there exists $z \in (a,b)$ such that $\dfrac{f(b)-f(a)}{b-a} = f'(z)$.
+Let's end with a simple example. Let $f(x) = \cos x$. By the Mean Value Theorem, for any $a,b\in \mathbb{R}$, there exists $z \in (a,b)$ such that $\dfrac{f(b)-f(a)}{b-a} = f'(z)$. Since $f'(x) = -\sin x$, this is bounded between $\pm 1$ and so we see that $|f(b)-f(a)| \leq |b-a|$. There are only isolated points $z$ where $f'(z) = \pm 1$ but these aren't ever realized by a pair $a,b$; it only happens as $a,b$ both approach, say, $-\pi/2$. So we have that $|f(b)-f(a)| < |b-a|$ which means $f(x) = \cos x$ is a contracting map. Thus, if we iteratively reapply $f$ to any starting $x_0 \in \mathbb{R}$, it will converge to a unique fix point satisfying the equation $\cos x = x$. Of course, we know that $x \in [-1,1]$ (the Intermediate Value Theorem tells us there exists a solution in this interval) and the solution looks to be about $0.739$.
 
 ## The Central Limit Theorem
 
