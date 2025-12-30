@@ -20,6 +20,8 @@ This space of differentiable functions has a topology coming from a metric; let'
 
 I haven't thought too much about why we lose uniqueness if $\partial_y f$ isn't continuous but I suspect it's because we would then have to deal with a different space of functions and it might not be complete as a metric space. This does in fact happen; if we let $f(t,y) = 3y^{2/3}$, then $\partial_y f = 2y^{-1/3}$ which is not continuous. Then, the ODE $y' = 3y^{2/3}$ with $y(0) = 0$ has $y_1 \equiv 0$ and also $y_2 = t^3$ as solutions but they are evidently not equal. So the uniqueness of solutions can certainly fail when $\partial_y f$ is discontinuous on the domain of interest.
 
+Let's end with a simple example. Let $f(x) = \cos x$. By the Mean Value Theorem, for any $a,b\in \mathbb{R}$, there exists $z \in (a,b)$ such that $\dfrac{f(b)-f(a)}{b-a} = f'(z)$.
+
 ## The Central Limit Theorem
 
 Let's now turn to the Central Limit Theorem (CLT) from statistics. Above, I stated a weak version of it which I'll repeat here. Suppose that $X_i$ are independent, identically distributed random variables with zero mean and variance $\sigma^2$. Then $\frac{1}{\sqrt{N}}\sum^N_{i=1}X_i \to \mathcal{N}(0,\sigma^2)$ as $N \to \infty$. Here, $\mathcal{N}(0,\sigma^2)$ means a normal distribution with mean $\mu = 0$ and variance $\sigma^2$ so the probability density function looks like $Ae^{-Bx^2}$ where $A,B$ are some constants. 
