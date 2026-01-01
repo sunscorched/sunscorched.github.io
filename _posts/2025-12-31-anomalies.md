@@ -36,9 +36,9 @@ Back to the talk. A projective symmetry/map of $\mathbb{P}(W)$ is a map that doe
 $0 \to \mathbb{C}^* \to GL(W) \to_\pi PGL(W) \to 0$.
 
 Now, if $G \to PGL(W)$ is an injective Lie group morphism, then $G$ has a faithful projective representation. Shortening notation a bit, we can use $\pi$ to pullback $G$ to $GL$ to get a faithful linear representation of a Lie group $\widetilde{G}$. Also, we shorten notation without worry because everything works in the $\infty$-dim case where $GL=\lim_{n\to \infty} GL(n)$; same for $PGL$. We get the following diagram:
-![ff4f7f7d27c0a0de7f5c9a8e7a2b46d3.png](ff4f7f7d27c0a0de7f5c9a8e7a2b46d3.png)
+![label](/files/ff4f7f7d27c0a0de7f5c9a8e7a2b46d3.png)
 Now, we may ask whether the map $\psi:G \to PGL$ lifts to a map $G \to GL$ (the diagonal green arrow). Note that if we had a splitting $G \to \widetilde{G}$ (the left green arrow), we would get a lift. Conversely, say we had a lift $\tilde{\psi}:G \to GL$ so that $\pi \circ \tilde{\psi} = \psi$. Now, we always have a set-theoretic right inverse of surjective maps so there is such a right inverse $s$. Let's give some names: we have $f:\widetilde{G} \to G$ and $\phi:\widetilde{G} \to GL$. So $\tilde{\psi}\circ f = \phi$. It's a bunch of notation so let's make a diagram.
-![85cef4374b534c10ee6ece821e78bf31.png](85cef4374b534c10ee6ece821e78bf31.png)
+![label](/files/85cef4374b534c10ee6ece821e78bf31.png)
 Then since $s$ is a splitting, $f\circ s = \text{id}_G$ and hence $\tilde{\psi} \circ f \circ s = \tilde{\psi} = \phi \circ s$. Then $\tilde{\psi}(gh) = \phi(s(gh))$; since we have some morphisms, the LHS is $\tilde{\psi}(g)\tilde{\psi}(h) = \phi(s(g))\phi(s(h)) = \phi(s(g)s(h))$. Because $\phi$ is injective, then $s(gh)=s(g)s(h)$ so the right-inverse $s$ is actually a group morphism. 
 
 **Conclusion:** We have a lift $G \to GL$ of an injective morphism $G \to PGL$ if and only there exists a splitting $s:G \to \widetilde{G}$.
@@ -60,7 +60,7 @@ For example, with $\mathbb{CP}^n$, we can act on it by $PGL(n+1,\mathbb{C})$ to 
 Anyways, when we have a model geometry, we can work in families of them as well. Let $P \to S$ be a principal $H$-bundle where we allow $S$ to be a groupoid or a stack. For example, $S = */\!/G$ would be just a single model geometry of $H$ acting on some space $X$ that is equipped with $G$-action.
 
 
-### Quantum Mechanics
+## Quantum Mechanics
 
 Let $\mathcal{H}$ be a separable Hilbert space and $\mathbb{P}\mathcal{H}$ a space of pure states. We have a Hamiltonian $H \in \text{End}(\mathcal{H})$ and a probability function $p:\mathbb{P}\mathcal{H} \times \mathbb{P}\mathcal{H} \to [0,1]$ which sends a pair of lines $(L_0,L_1) \mapsto \|\langle \psi_0,\psi_1 \rangle \|^2$ where $\psi_i \in L_i$ has unit norm. We can also compute the amplitude and in fact, that's preferable since the norm square of the amplitude is the probability.
 
@@ -101,7 +101,7 @@ We can then form a bordism category $\text{Bord}_n(\mathscr{F})$ from $\mathscr{
 
 To try and turn this into a projective story we introduce $\text{Proj}$, a category of holomorphic projective spaces and holomorphic projective maps. Let $\text{Line}$ be the category of complex lines with invertible maps. We then have functors:
 
-![a256b50521b350e25cb8a65f29567683.png](a256b50521b350e25cb8a65f29567683.png)
+![label](/files/a256b50521b350e25cb8a65f29567683.png)
 
 This is formally very much like the situation with groups. We even have a functor $\alpha$ which we interpret as an anomaly into a "shifted" category of $\text{Line}$. This $\Sigma(\text{Line})$ is a groupoid of gerbes (whatever that is). We also have $\overline{F}$ as a projective representation of the bordism category which we say is relative to $\alpha$. We can then ask about lifts of $\overline{F}$ to a functor $F$ into $\text{Vect}$. Being able to lift is, as before, equivalent to $\alpha$ being trivializable and "ratios" of trivializations correspond to invertible $n$-dim theories.
 
