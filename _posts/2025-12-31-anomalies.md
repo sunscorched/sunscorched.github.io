@@ -139,6 +139,4 @@ Now, if $\mathbb{S}$ is irreducible, $\Gamma$ exists uniquely. We may then exten
 
 For $(\mathbb{S},\Gamma,m=0)$, what is the anomaly? It comes from an $(n+1)$-dim theory which has some curvature built out of the $\widehat{A}$-genus. The lemma tells us that if the mass is nondegenerate then there is actually a trivial anomaly. The anomaly only depends on $\mathbb{S}$ up to other modules that extend to $Cl_{n-1,2}$-modules.
 
-The interpretation of this is somehow related to Atiyah-Bott-Shapiro's view that the abelian group of equivalence classes of $Cl_{n-1,1}$-modules modulo those that extend to $Cl_{n-1,2}$-modules in terms of the KO-theory spectrum. So $[\mathbb{S}] \in \pi_{2-n}(KO) \cong KO(pt)$. Then the anomaly is some lift of a map out of $M\text{Spin}$. I don't really undertand any of that but it seems intriguing.
-
-One place to learn more about Clifford algebras, Dirac operators, and K-theory is Jiahao Hu's very good [thesis](https://arxiv.org/pdf/2310.05061).
+The interpretation of this is somehow related to Atiyah-Bott-Shapiro's view that the abelian group of equivalence classes of $Cl_{n-1,1}$-modules modulo those that extend to $Cl_{n-1,2}$-modules in terms of the KO-theory spectrum. So $[\mathbb{S}] \in \pi_{2-n}(KO) \cong KO(pt)$. Then the anomaly is some lift of a map out of $M\text{Spin}$. One place to learn more about Clifford algebras, Dirac operators, and K-theory is Jiahao Hu's very good [thesis](https://arxiv.org/pdf/2310.05061).
