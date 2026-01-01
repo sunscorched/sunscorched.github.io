@@ -36,9 +36,13 @@ Back to the talk. A projective symmetry/map of $\mathbb{P}(W)$ is a map that doe
 $0 \to \mathbb{C}^\* \to GL(W) \to_\pi PGL(W) \to 0$.
 
 Now, if $G \to PGL(W)$ is an injective Lie group morphism, then $G$ has a faithful projective representation. Shortening notation a bit, we can use $\pi$ to pullback $G$ to $GL$ to get a faithful linear representation of a Lie group $\widetilde{G}$. Also, we shorten notation without worry because everything works in the $\infty$-dim case where $GL=\lim_{n\to \infty} GL(n)$; same for $PGL$. We get the following diagram:
+
 ![label](/files/ff4f7f7d27c0a0de7f5c9a8e7a2b46d3.png)
+
 Now, we may ask whether the map $\psi:G \to PGL$ lifts to a map $G \to GL$ (the diagonal green arrow). Note that if we had a splitting $G \to \widetilde{G}$ (the left green arrow), we would get a lift. Conversely, say we had a lift $\tilde{\psi}:G \to GL$ so that $\pi \circ \tilde{\psi} = \psi$. Now, we always have a set-theoretic right inverse of surjective maps so there is such a right inverse $s$. Let's give some names: we have $f:\widetilde{G} \to G$ and $\phi:\widetilde{G} \to GL$. So $\tilde{\psi}\circ f = \phi$. It's a bunch of notation so let's make a diagram.
+
 ![label](/files/85cef4374b534c10ee6ece821e78bf31.png)
+
 Then since $s$ is a splitting, $f\circ s = \text{id}_G$ and hence $\tilde{\psi} \circ f \circ s = \tilde{\psi} = \phi \circ s$. Then $\tilde{\psi}(gh) = \phi(s(gh))$; since we have some morphisms, the LHS is $\tilde{\psi}(g)\tilde{\psi}(h) = \phi(s(g))\phi(s(h)) = \phi(s(g)s(h))$. Because $\phi$ is injective, then $s(gh)=s(g)s(h)$ so the right-inverse $s$ is actually a group morphism. 
 
 **Conclusion:** We have a lift $G \to GL$ of an injective morphism $G \to PGL$ if and only there exists a splitting $s:G \to \widetilde{G}$.
@@ -49,7 +53,7 @@ So let's return to the idea of having a lift $G \to GL$ which is equivalent to t
 
 Let's study this $\alpha$ a bit more because it is this map which Freed calls an **anomaly.** From an obstruction theory standpoint, the obstructions to having a lift $G \to GL$ are cohomology classes in $H^k(G,\pi_{k-1}(\text{Fiber})) = H^k(G,\pi_{k-1}(\mathbb{C}^\*))$. The only nontrivial homotopy group is when $k=2$ so the obstruction to the lift is a cocycle that in $H^2(G,\mathbb{Z}) = [G, B\mathbb{C}^\*]$. Since we can interpret the cohomology classes in this way, we see that $\alpha$ is exactly the obstruction cocycle to lifting. I'm not sure why but Freed considers $H^2(G,\mathbb{C}^\*)$ instead. Also, he says that if $G$ is not finite (or maybe not discrete), we need to use some other cohomology, not singular cohomology. 
 
-Anyways, if we have two splittings $s,t:G \to \widetilde{G}$, then we can take their ratios $s/t:G \to \mathbb{C}^\*$; this is a **character** in representation theory. Hence, we can modify splittings by characters; i.e. the set of splittings is a torsor over characters. Now, Freed says that characters have cohomological interpretation as well; they are elements of $H^1(G,\mathbb{C}^*)$ (with the appropriate cohomology). One can think of characters as invertible linear representations. That is, a map $G \to \mathbb{C}^*$ acts on a 1-dim vector space to give a representation $L$ there is another character that gives a representation $K$ so that $L\otimes K$ is the trivial rep.
+Anyways, if we have two splittings $s,t:G \to \widetilde{G}$, then we can take their ratios $s/t:G \to \mathbb{C}^\*$; this is a **character** in representation theory. Hence, we can modify splittings by characters; i.e. the set of splittings is a torsor over characters. Now, Freed says that characters have cohomological interpretation as well; they are elements of $H^1(G,\mathbb{C}^\*)$ (with the appropriate cohomology). One can think of characters as invertible linear representations. That is, a map $G \to \mathbb{C}^\*$ acts on a 1-dim vector space to give a representation $L$ there is another character that gives a representation $K$ so that $L\otimes K$ is the trivial rep.
 
 A slogan is that in QFT, projectivity is related to $H^2(G,\mathbb{C}^\*)$ which is a shift of $H^1(G,\mathbb{C}^\*)$, the invertible linear representations.
 
@@ -110,7 +114,7 @@ Sometimes, we also have that the $n$-dim theory extends to an $(n+1)$-theory whi
 
 ## Differential Cohomology
 
-Let $h$ be any cohomology theory for CW complexes but typically it will be singular cohomology or K-theory. Then, differential cohomology refines $h$ to $\check{h}$ on smooth manifolds. For example, 1st singular cohomology $H^1(M,\mathbb{Z})$ can be thought of as maps $\phi:M \to S^1$ up to homotopy while $\check{H}^1(M,\Z)$ is just the maps, not up to homotopy. Or $H^2(M,\mathbb{Z})$ gives principal $S^1$-bundles up to isomorphism while $\check{H}^2(M,\mathbb{Z})$ gives $S^1$-connections on $S^1$-bundles up to isomorphism. This is viewed as a differential refinement.
+Let $h$ be any cohomology theory for CW complexes but typically it will be singular cohomology or K-theory. Then, differential cohomology refines $h$ to $\check{h}$ on smooth manifolds. For example, 1st singular cohomology $H^1(M,\mathbb{Z})$ can be thought of as maps $\phi:M \to S^1$ up to homotopy while $\check{H}^1(M,\mathbb{Z})$ is just the maps, not up to homotopy. Or $H^2(M,\mathbb{Z})$ gives principal $S^1$-bundles up to isomorphism while $\check{H}^2(M,\mathbb{Z})$ gives $S^1$-connections on $S^1$-bundles up to isomorphism. This is viewed as a differential refinement.
 
 We have a map $\check{H}^2(M,\mathbb{Z}) \to \Omega^2_{\text{closed}}(M)$ which is curvature and also a map to $H^2(M,\mathbb{Z})$ which is the Chern class.
 
