@@ -13,11 +13,11 @@ This is a note based on a [talk](https://www.youtube.com/watch?v=meOQXoN0QRc) by
 Anomalies might be seen as a problem to overcome but in fact, can be a feature. For example, the anomalies associated with certain symmetry breaking gives rise to the Higgs mechanism. Anomalies can become a problem if one wants to quantize since quantization is "linearization" and it's possible to have something projective that doesn't arise from vector spaces. For example, it's possible to have a bundle with $\mathbb{CP}^n$ as fiber yet, it's not a projectivization of a complex vector bundle of rank $n+1$.
 
 Freed also listed two myths and "mythbusters" for why the myths are not true:
-**Myth 1:** Anomalies are only caused by fermionic fields 
-**Mythbuster 1:** The flavor symmetry of QCD is anomalous—indeed, that anomaly involves fermions—but the anomaly persists in the effective theory of pions, which is a bosonic theory 
 
-**Myth 2:** Anomalies are only associated to symmetries
-**Mythbuster 2:** The theory of a free spinor field has an anomaly
+- **Myth 1:** Anomalies are only caused by fermionic fields 
+- **Mythbuster 1:** The flavor symmetry of QCD is anomalous—indeed, that anomaly involves fermions—but the anomaly persists in the effective theory of pions, which is a bosonic theory 
+- **Myth 2:** Anomalies are only associated to symmetries
+- **Mythbuster 2:** The theory of a free spinor field has an anomaly
 
 We'll now turn our attention to some mathematics; much of this note will be focused on math but with motivation from physics.
 
@@ -30,10 +30,10 @@ Let $W$ be a $\mathbb{C}$-vector space and $K$ be any 1-dim $\mathbb{C}$-vector 
 The converse is not true. For example, consider a map on $\mathbb{FP}^n$ which has $n+1$ fixed points where the fixed points come from linearly independent vectors $v_1,...,v_{n+1}$ on $\mathbb{F}^{n+1}$. If this map came from a linear map, then the linear map must be a diagonal map, scaling each vector $v_i$ by some $\lambda_i$. If there is another fixed point (so $n+2$ fixed points), the last fixed point represents a line spanned by, say, $w = \sum a_i v_i$ (let's assume all the $a_i \neq 0$. Since it's a fixed point, the linear map scales $w \mapsto \lambda w = \lambda \sum a_i v_i$. But also, this should be sent to $\sum a_i \lambda_i v_i$ since it's a linear map. So then $\sum a_i(\lambda-\lambda_i)v_i = 0$; because the $v_i$ form a basis, we conclude that all the coefficients are 0 and hence $\lambda_i = \lambda$. That is, the linear map would have to just be a scalar multiple of the identity and hence, induce the identity map on projective space. But of course, one can cook up maps on projective space with $n+2$ fixed points but are not the identity map. For example, on $\mathbb{CP}^1$, complex conjugation fixes $\mathbb{RP}^1$ which is infinitely many points but is not the identity map.
 
 
-### Projective Representations and Classifying Principal $\mathbb{C}^*$-Bundles
+## Projective Representations and Classifying Principal $\mathbb{C}^*$-Bundles
 
-Back to the talk. A projective symmetry/map of $\mathbb{P}(W)$ is a map that does come from a linear map on $W$ and hence, it has a $\mathbb{C}^*$-torsor of lifts to linear maps of $W$. This fact is captured by the short exact sequence:
-$0 \to \mathbb{C}^* \to GL(W) \to_\pi PGL(W) \to 0$.
+Back to the talk. A projective symmetry/map of $\mathbb{P}(W)$ is a map that does come from a linear map on $W$ and hence, it has a $\mathbb{C}^\*$-torsor of lifts to linear maps of $W$. This fact is captured by the short exact sequence:
+$0 \to \mathbb{C}^\* \to GL(W) \to_\pi PGL(W) \to 0$.
 
 Now, if $G \to PGL(W)$ is an injective Lie group morphism, then $G$ has a faithful projective representation. Shortening notation a bit, we can use $\pi$ to pullback $G$ to $GL$ to get a faithful linear representation of a Lie group $\widetilde{G}$. Also, we shorten notation without worry because everything works in the $\infty$-dim case where $GL=\lim_{n\to \infty} GL(n)$; same for $PGL$. We get the following diagram:
 ![label](/files/ff4f7f7d27c0a0de7f5c9a8e7a2b46d3.png)
@@ -43,21 +43,21 @@ Then since $s$ is a splitting, $f\circ s = \text{id}_G$ and hence $\tilde{\psi} 
 
 **Conclusion:** We have a lift $G \to GL$ of an injective morphism $G \to PGL$ if and only there exists a splitting $s:G \to \widetilde{G}$.
 
-Now, if we're just speaking topologically, both horizontal sequences can be viewed as principal $\mathbb{C}^*$ bundles and hence, there are classifying maps $\Pi:PGL \to B\mathbb{C}^*$ and $\alpha:G \to B\mathbb{C}^*$. We could have had this whole discussion about $\mathbb{C}^* \to \widetilde{G} \to G$ as a principal bundle without referencing projective representations. But if we have the faithful Lie group morphism $G \to PGL$, then $\alpha$ factors through $PGL$ as $\alpha = \Pi \circ \psi$. When $\alpha$ factors in this way, it makes sense to speak of the "projectivity" of $\alpha$ and of course, the projectivity of $\alpha$ is equivalent to having the map $\psi:G \to PGL$ which is equivalent to $\widetilde{G}$ admitting an injective morphism to $GL$ with scalars $\mathbb{C}^*$ acting by multiplication.
+Now, if we're just speaking topologically, both horizontal sequences can be viewed as principal $\mathbb{C}^\*$ bundles and hence, there are classifying maps $\Pi:PGL \to B\mathbb{C}^\*$ and $\alpha:G \to B\mathbb{C}^\*$. We could have had this whole discussion about $\mathbb{C}^\* \to \widetilde{G} \to G$ as a principal bundle without referencing projective representations. But if we have the faithful Lie group morphism $G \to PGL$, then $\alpha$ factors through $PGL$ as $\alpha = \Pi \circ \psi$. When $\alpha$ factors in this way, it makes sense to speak of the "projectivity" of $\alpha$ and of course, the projectivity of $\alpha$ is equivalent to having the map $\psi:G \to PGL$ which is equivalent to $\widetilde{G}$ admitting an injective morphism to $GL$ with scalars $\mathbb{C}^\*$ acting by multiplication.
 
 So let's return to the idea of having a lift $G \to GL$ which is equivalent to the existence of a splitting $s:G \to \widetilde{G}$. The splitting trivializes the principal bundle, giving us an isomorphism $\widetilde{G} \cong G \times \mathbb{C}^*$. This means the classifying map $\alpha$ is homotopically trivial.
 
-Let's study this $\alpha$ a bit more because it is this map which Freed calls an **anomaly.** From an obstruction theory standpoint, the obstructions to having a lift $G \to GL$ are cohomology classes in $H^k(G,\pi_{k-1}(\text{Fiber})) = H^k(G,\pi_{k-1}(\mathbb{C}^*))$. The only nontrivial homotopy group is when $k=2$ so the obstruction to the lift is a cocycle that in $H^2(G,\Z) = [G, B\mathbb{C}^*]$. Since we can interpret the cohomology classes in this way, we see that $\alpha$ is exactly the obstruction cocycle to lifting. I'm not sure why but Freed considers $H^2(G,\mathbb{C}^*)$ instead. Also, he says that if $G$ is not finite (or maybe not discrete), we need to use some other cohomology, not singular cohomology. 
+Let's study this $\alpha$ a bit more because it is this map which Freed calls an **anomaly.** From an obstruction theory standpoint, the obstructions to having a lift $G \to GL$ are cohomology classes in $H^k(G,\pi_{k-1}(\text{Fiber})) = H^k(G,\pi_{k-1}(\mathbb{C}^\*))$. The only nontrivial homotopy group is when $k=2$ so the obstruction to the lift is a cocycle that in $H^2(G,\mathbb{Z}) = [G, B\mathbb{C}^\*]$. Since we can interpret the cohomology classes in this way, we see that $\alpha$ is exactly the obstruction cocycle to lifting. I'm not sure why but Freed considers $H^2(G,\mathbb{C}^\*)$ instead. Also, he says that if $G$ is not finite (or maybe not discrete), we need to use some other cohomology, not singular cohomology. 
 
-Anyways, if we have two splittings $s,t:G \to \widetilde{G}$, then we can take their ratios $s/t:G \to \mathbb{C}^*$; this is a **character** in representation theory. Hence, we can modify splittings by characters; i.e. the set of splittings is a torsor over characters. Now, Freed says that characters have cohomological interpretation as well; they are elements of $H^1(G,\mathbb{C}^*)$ (with the appropriate cohomology). One can think of characters as invertible linear representations. That is, a map $G \to \mathbb{C}^*$ acts on a 1-dim vector space to give a representation $L$ there is another character that gives a representation $K$ so that $L\otimes K$ is the trivial rep.
+Anyways, if we have two splittings $s,t:G \to \widetilde{G}$, then we can take their ratios $s/t:G \to \mathbb{C}^\*$; this is a **character** in representation theory. Hence, we can modify splittings by characters; i.e. the set of splittings is a torsor over characters. Now, Freed says that characters have cohomological interpretation as well; they are elements of $H^1(G,\mathbb{C}^*)$ (with the appropriate cohomology). One can think of characters as invertible linear representations. That is, a map $G \to \mathbb{C}^*$ acts on a 1-dim vector space to give a representation $L$ there is another character that gives a representation $K$ so that $L\otimes K$ is the trivial rep.
 
-A slogan is that in QFT, projectivity is related to $H^2(G,\mathbb{C}^*)$ which is a shift of $H^1(G,\mathbb{C}^*)$, the invertible linear representations.
+A slogan is that in QFT, projectivity is related to $H^2(G,\mathbb{C}^\*)$ which is a shift of $H^1(G,\mathbb{C}^\*)$, the invertible linear representations.
 
 **Question:** How might we define a projective space without resorting to a linear space?
 **Answer:** Klein-Cartan say we can specify a geometry by its symmetries. Say we have a Lie group $H$ acting on $X$. We could, for example, take a right $H$-torsor $T$ and form $T \times_H X$.
 For example, with $\mathbb{CP}^n$, we can act on it by $PGL(n+1,\mathbb{C})$ to get complex geometry. Or enlarge it to a group that includes anti-holomorphic symmetries. Another option is to use $PU(n+1)$ to get Kähler structure or $PQ(n+1)$ which are isometries of the Fubini-Study metric.
 
-Anyways, when we have a model geometry, we can work in families of them as well. Let $P \to S$ be a principal $H$-bundle where we allow $S$ to be a groupoid or a stack. For example, $S = */\!/G$ would be just a single model geometry of $H$ acting on some space $X$ that is equipped with $G$-action.
+Anyways, when we have a model geometry, we can work in families of them as well. Let $P \to S$ be a principal $H$-bundle where we allow $S$ to be a groupoid or a stack. For example, $S = \*/\!/G$ would be just a single model geometry of $H$ acting on some space $X$ that is equipped with $G$-action.
 
 
 ## Quantum Mechanics
@@ -77,7 +77,7 @@ Anyways, there is a theorem which shows that Hilbert spaces aren't exactly neede
 
 We can also take families of QM systems $\mathcal{X} \to S$; this is a principal $PQ$-bundle. We can take the sequence and continue it as they do in topology: $\mathbb{T} \to Q \to PQ \to B \widetilde{\mathbb{T}} \to BQ \to BPQ...$ but I think there's some kind of twist on the circle…
 
-As in the first section, the obstructions to lifting $S \to PQ$ to $S \to Q$ lives in the homotopy fiber. So the obstructions live in $H^k(S,\pi_{k-1}(\widetilde{\mathbb{T}}))$ and the only nontrivial homotopy group here is when $k=2$ and is something in $H^2(S,\Z)$; for some reason, Freed again takes different coefficients; $H^2(S,\widetilde{\mathbb{T}})$. So then the obstruction cocycle can be reinterpreted as a map $\alpha:S \to B\widetilde{\mathbb{T}}$, the anomaly.
+As in the first section, the obstructions to lifting $S \to PQ$ to $S \to Q$ lives in the homotopy fiber. So the obstructions live in $H^k(S,\pi_{k-1}(\widetilde{\mathbb{T}}))$ and the only nontrivial homotopy group here is when $k=2$ and is something in $H^2(S,\mathbb{Z})$; for some reason, Freed again takes different coefficients; $H^2(S,\widetilde{\mathbb{T}})$. So then the obstruction cocycle can be reinterpreted as a map $\alpha:S \to B\widetilde{\mathbb{T}}$, the anomaly.
 
 If we can lift, then we have a linearization and Freed says there are "categorical torsors" (gerbes) over principal $\widetilde{\mathbb{T}}$-bundles.
 
@@ -105,14 +105,14 @@ To try and turn this into a projective story we introduce $\text{Proj}$, a categ
 
 This is formally very much like the situation with groups. We even have a functor $\alpha$ which we interpret as an anomaly into a "shifted" category of $\text{Line}$. This $\Sigma(\text{Line})$ is a groupoid of gerbes (whatever that is). We also have $\overline{F}$ as a projective representation of the bordism category which we say is relative to $\alpha$. We can then ask about lifts of $\overline{F}$ to a functor $F$ into $\text{Vect}$. Being able to lift is, as before, equivalent to $\alpha$ being trivializable and "ratios" of trivializations correspond to invertible $n$-dim theories.
 
-Sometimes, we also have that the $n$-dim theory extends to an $(n+1)$-theory which is to say that we an embedding $\text{Bord}_n(\mathscr{F}) \hookrightarrow \text{Bord}_{n+1}(\mathscr{F})$ and $\alpha$ extends to the $(n+1)$-dimension.
+Sometimes, we also have that the $n$-dim theory extends to an $(n+1)$-theory which is to say that we an embedding $\text{Bord}\_n(\mathscr{F}) \hookrightarrow \text{Bord}\_{n+1}(\mathscr{F})$ and $\alpha$ extends to the $(n+1)$-dimension.
 
 
 ## Differential Cohomology
 
-Let $h$ be any cohomology theory for CW complexes but typically it will be singular cohomology or K-theory. Then, differential cohomology refines $h$ to $\check{h}$ on smooth manifolds. For example, 1st singular cohomology $H^1(M,\Z)$ can be thought of as maps $\phi:M \to S^1$ up to homotopy while $\widecheck{H}^1(M,\Z)$ is just the maps, not up to homotopy. Or $H^2(M,\Z)$ gives principal $S^1$-bundles up to isomorphism while $\widecheck{H}^2(M,\Z)$ gives $S^1$-connections on $S^1$-bundles up to isomorphism. This is viewed as a differential refinement.
+Let $h$ be any cohomology theory for CW complexes but typically it will be singular cohomology or K-theory. Then, differential cohomology refines $h$ to $\check{h}$ on smooth manifolds. For example, 1st singular cohomology $H^1(M,\mathbb{Z})$ can be thought of as maps $\phi:M \to S^1$ up to homotopy while $\check{H}^1(M,\Z)$ is just the maps, not up to homotopy. Or $H^2(M,\mathbb{Z})$ gives principal $S^1$-bundles up to isomorphism while $\check{H}^2(M,\mathbb{Z})$ gives $S^1$-connections on $S^1$-bundles up to isomorphism. This is viewed as a differential refinement.
 
-We have a map $\widecheck{H}^2(M,\Z) \to \Omega^2_{\text{closed}}(M)$ which is curvature and also a map to $H^2(M,\Z)$ which is the Chern class.
+We have a map $\check{H}^2(M,\mathbb{Z}) \to \Omega^2_{\text{closed}}(M)$ which is curvature and also a map to $H^2(M,\mathbb{Z})$ which is the Chern class.
 
 There is some kind of discussion for generalized differential cocycles on bordisms like these maps that Freed has worked on with Mike Hopkins and Constantin Teleman. I didn't understand this.
 
