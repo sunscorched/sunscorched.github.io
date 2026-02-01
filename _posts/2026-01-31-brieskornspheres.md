@@ -7,8 +7,6 @@ tags:
   - algebraic geometry
 ---
 
-# Brieskorn Spheres
-
 Let $a = (a_1,...,a_n) \in \mathbb{N}^n$ be an $n$-tuple of positive integers; we typically want $a_k > 1$. Let $V_a = \{z_1^{a_1}+...+z_n^{a_n}=0\} \subset \mathbb{C}^n$ be the complex algebraic hypersurface with an isolated singularity at the origin and let $M_a = \{z_1^{a_1}+...+z_n^{a_n}=\delta\}$ be the Milnor fiber which is a smooth manifold for small $\delta>0$. Actually, we'll also call $M_a$ the Milnor fiber which is what I just wrote but intersected with a small ball $B^{2n}$ centered as 0. We also have $\Sigma_a = S^{2n-1}_\epsilon \cap V_a$ which is called the link of the singularity, obtained by intersecting the singular variety with a small sphere centered at 0. This link is diffeomorphic to the boundary of $M_a$. We will explain some of the ideas for showing how $\Sigma_a$ is a homotopy sphere in many cases and how one finds their oriented diffeotype. We follow this [post](https://mathoverflow.net/questions/65705/how-to-calculate-the-exact-differential-structure-of-brieskorn-variety), these [slides](https://webhomes.maths.ed.ac.uk/~v1ranick/slides/singexot.pdf), and Brieskorn's original [paper](https://webhomes.maths.ed.ac.uk/~v1ranick/papers/brieskorn.pdf).
 
 Recall that a homotopy $n$-sphere is a smooth $n$-manifold homotopy equivalent to $S^n$. For $n \neq 4$, these form finite abelian groups under connected sum and contain subgroups $bP_{n+1}$ of the homotopy $n$-spheres that bound parallelizable manifolds. [Kervaire-Milnor](https://www.uni-math.gwdg.de/schick/publ/Groups%20of%20homotopy%20spheres%20I.pdf) computed many of these groups and Brieskorn's paper implies the following:
