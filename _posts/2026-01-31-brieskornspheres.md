@@ -73,6 +73,6 @@ The two of these together give us the following theorem:
 
 **Theorem:** For $k^2 \not \equiv 1 \pmod{7}$, $M_k$ is homeomorphic to $S^7$ but not diffeomorphic to $S^7$. For $k = \pm 1$, the manifold is diffeomorphic to $S^7$.
 
-So for $k=3$, $3^2 \equiv 2 \pmod{7}$ and hence, $M^7_3$ is an exotic 7-sphere. At the time the paper was written, Milnor did not know what other $k$'s give a manifold diffeomorphic to $S^7$. For example, $k=13,15$ both satisfy $k^2 \equiv 1 \pmod{7}$ but they might not be the standard sphere. The residues of $k^2$ for odd $k=1,3,5,7,9,11,13$ is $1,2,4,0,4,2,1$ and then this repeats. 
+So for $k=3$, $3^2 \equiv 2 \pmod{7}$ and hence, $M^7_3$ is an exotic 7-sphere. At the time the paper was written, Milnor did not know what other $k$'s give a manifold diffeomorphic to $S^7$. For example, $k=13,15$ both satisfy $k^2 \equiv 1 \pmod{7}$ but they might not be the standard sphere. The residues of $k^2$ for odd $k=1,3,5,7,9,11,13$ is $1,2,4,0,4,2,1$ and then this repeats. So in fact, Milnor found three 7-manifolds homeomorphic to $S^7$ but not diffeomorphic to it.
 
 
