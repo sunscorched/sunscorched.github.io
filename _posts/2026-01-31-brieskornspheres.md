@@ -45,7 +45,7 @@ To show that this smooth manifold is not diffeomorphic to $S^7$, Milnor proved t
 
 To achieve this, lets think about general theory. $(M^7,\mu)$ be a closed, smooth 7-manifold with orientation $\mu \in H_7(M,\mathbb{Z})$ and $H^3=H^4=0$. By the work of Thom, every closed, orientable 7-manifold is the boundary of some 8-manifold. This is not true for unorientable since the unoriented cobordism ring is $\Omega^0_* \cong \mathbb{Z}/2[x_i:i \neq 2^n-1] = \mathbb{Z}/2[x_2,x_4,x_5,x_6,x_8,...]$. Observe that $x_2x_5$ is in degree 7. So $\Omega^O_7 = \mathbb{Z}/2$ though $\Omega^{SO}_7 = 0$.
 
-Anyways, let $(W,\nu)$ be an oriented 8-manifold bounding $M$; that means $\nu \in H_*(W,M)$ and $\partial \nu = \mu$. Next, we may consider a map $H^4(W,M)/\text{Tor} \to \mathbb{Z}$ by $\alpha \mapsto \langle \nu, \alpha^2 \rangle$. Because $H^3(M)=H^4(M) = 0$, the morphism $i:H^4(W,M) \to H^4(W)$ is an isomorphism and so we can pullback the 1st Pontryagin class. Let $q(W) = \langle \nu, i^*p^2_1(W) \rangle$ and let $\sigma(W)$ be the signature. Then, define $\lambda(M) = 2q(W) - \sigma(W) \pmod{7}$.
+Anyways, let $(W,\nu)$ be an oriented 8-manifold bounding $M$; that means $\nu \in H_\*(W,M)$ and $\partial \nu = \mu$. Next, we may consider a map $H^4(W,M)/\text{Tor} \to \mathbb{Z}$ by $\alpha \mapsto \langle \nu, \alpha^2 \rangle$. Because $H^3(M)=H^4(M) = 0$, the morphism $i:H^4(W,M) \to H^4(W)$ is an isomorphism and so we can pullback the 1st Pontryagin class. Let $q(W) = \langle \nu, i^*p^2_1(W) \rangle$ and let $\sigma(W)$ be the signature. Then, define $\lambda(M) = 2q(W) - \sigma(W) \pmod{7}$.
 
 **Theorem (Milnor):** $\lambda(M)$ does not depend on $W$.
 
@@ -64,7 +64,7 @@ Write $-M$ as having the opposite orientation of $M$, we see that $\nu$ would ne
 
 So what would be left to do is show that Milnor's 7-manifold has $\lambda \neq 0$. I won't do the computations; Milnor's original paper is quite short. Let $(h,j) \in \mathbb{Z} \oplus \mathbb{Z}$ and $f_{hj}:Sp(1) = S^3 \to SO(4)$ be defined by $f_{hj}(u)\cdot v = u^h v u^j$ for $v \in \mathbb{R}^4$. This gives a principal $Sp(1)$ bundle over $S^4$ which we denote as $P_{hj} \to S^4$.
 
-For each odd integer $k$, let $M^7_k$ be the total space of the principal $Sp(1)$-bundle $P_{hj}$ where $h+j=1, h-j=k$. In the example above, we have $(h,j) = (2,-1)$ and $k=3$. We have two lemmas from Milnor's paper:
+For each odd integer $k$, let $M^7\_k$ be the total space of the principal $Sp(1)$-bundle $P_{hj}$ where $h+j=1, h-j=k$. In the example above, we have $(h,j) = (2,-1)$ and $k=3$. We have two lemmas from Milnor's paper:
 
 **Lemma:** $\lambda(M_k) \equiv k^2 -1 \pmod{7}$.
 **Lemma:** $M_k$ admits a Morse function with only two critical points and hence, is homeomorphic to a sphere (Reeb lemma).
