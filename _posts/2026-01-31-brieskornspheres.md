@@ -61,9 +61,9 @@ There are other invariants like $\lambda(M)$ which are defined using a bounding 
 If there were such a manifold $W$, then $p_1=\sigma = 0$ and so $\lambda(M) = 0$.
 
 **Corollary 2:** If $\lambda(M) \not\equiv 0$, then $M$ does not admit an orientation-reversing diffeomorphism.
-Write $-M$ as having the opposite orientation of $M$, we see that $\nu$ would need to be changed to $-\nu$ and $\sigma(-W) = -\sigma(W)$. Hence, $\lambda(-M) = -\lambda(M)$. On the other hand, if there were such a diffeomorphism, $\lambda(-M) = \lambda(M)$ and hence, must be 2-torsion. Only 0 is 2-torsion mod 7.
+Write $-M$ as having the opposite orientation of $M$, we see that $\nu$ would need to be changed to $-\nu$ and $\sigma(-W) = -\sigma(W)$. Hence, $\lambda(-M) = -\lambda(M)$. On the other hand, if there were such a diffeomorphism, $\lambda(-M) = \lambda(M)$ and hence, must be 2-torsion. But only 0 is 2-torsion mod 7.
 
-Let $(h,j) \in \Z \oplus \Z$ and $f_{hj}:Sp(1) = S^3 \to SO(4)$ be defined by $f_{hj}(u)\cdot v = u^h v u^j$ for $v \in \R^4$. This gives a principal $Sp(1)$ bundle over $S^4$ which we denote as $P_{hj} \to S^4$.
+So what would be left to do is show that Milnor's 7-manifold has $\lambda \neq 0$. I won't do the computations; Milnor's original paper is quite short. Let $(h,j) \in \Z \oplus \Z$ and $f_{hj}:Sp(1) = S^3 \to SO(4)$ be defined by $f_{hj}(u)\cdot v = u^h v u^j$ for $v \in \R^4$. This gives a principal $Sp(1)$ bundle over $S^4$ which we denote as $P_{hj} \to S^4$.
 
 For each odd integer $k$, let $M^7_k$ be the total space of the principal $Sp(1)$-bundle $P_{hj}$ where $h+j=1, h-j=k$. In the example above, we have $(h,j) = (2,-1)$ and $k=3$. We have two lemmas from Milnor's paper:
 
@@ -74,6 +74,6 @@ The two of these together give us the following theorem:
 
 **Theorem:** For $k^2 \not \equiv 1 \pmod{7}$, $M_k$ is homeomorphic to $S^7$ but not diffeomorphic to $S^7$. For $k = \pm 1$, the manifold is diffeomorphic to $S^7$.
 
-So for $k=3$, $3^2 \equiv 2 \pmod{7}$ and hence, $M^7_3$ is an exotic 7-sphere. At the time the paper was written, Milnor did not know what other $k$'s give a manifold diffeomorphic to $S^7$. For example, $k=13,15$ both satisfy $k^2 \equiv 1 \pmod{7}$ but they might not be the standard sphere. The residues of $k^2$ for $k=1,3,5,7,9,11,13$ is $1,2,4,0,4,2,1$ and then this repeats.
+So for $k=3$, $3^2 \equiv 2 \pmod{7}$ and hence, $M^7_3$ is an exotic 7-sphere. At the time the paper was written, Milnor did not know what other $k$'s give a manifold diffeomorphic to $S^7$. For example, $k=13,15$ both satisfy $k^2 \equiv 1 \pmod{7}$ but they might not be the standard sphere. The residues of $k^2$ for odd $k=1,3,5,7,9,11,13$ is $1,2,4,0,4,2,1$ and then this repeats. 
 
 
