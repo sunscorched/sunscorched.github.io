@@ -4,7 +4,7 @@ date: 2023-07-04
 permalink: /posts/2023/07/moravaKtheory/
 tags:
   - algebraic topology
-  - homotopy theory
+  - stable homotopy theory
 ---
 
 I'm not a homotopy theorist but ever since the [paper](https://arxiv.org/abs/2110.14320) by Abouzaid-McLean-Smith was released which showed the power of homotopy theory towards answering questions in symplectic geometry, I've been interested in stable homotopy theory. In particular, what the role of the Morava K-theories play. Of course, the Abouzaid-Blumberg [paper](https://arxiv.org/abs/2103.01507) is an earlier application of Morava K-theory to the Arnold conjecture. In that paper, one would like to define Hamiltonian Floer theory over $\mathbb{F}_p$ but because our counts of curves ought to divide by the order of finite stabilizer groups, it is too naive to do mod $p$ counts since $p$ would not be invertible. Instead, one uses the hierarchy of generalized cohomology theories $K_p(n)$ which approximates $\mathbb{F}_p$ as $n$ gets larger. The notation here with the subscript $p$ is unconventional but I wanted to emphasize that we've fixed a prime $p$. I'll continue to do this for a while but will eventually suppress that part of the notation.
