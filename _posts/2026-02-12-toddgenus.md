@@ -8,9 +8,6 @@ tags:
   - stable homotopy theory
 ---
 
-# Complex Cobordism, Conner-Floyd Isomorphism, and the Todd Genus
-#complexgeo #stablehomotopy
-
 In my [previous blog](https://sunscorched.github.io/posts/2026/02/spin/), I wrote about the $\widehat{A}$-genus and its refinement $\alpha: \Omega^{\text{Spin}}\_\* \to KO^{-\*}$ which is a graded ring morphism. This map  comes from a $\mathbb{E}\_\infty$ ring morphism which I'll also call $\alpha:M\text{Spin} \to KO$ of ring spectra. Since we see real K-theory featured and spin manifolds, we can ask if there's any ring spectrum map which features complex K-theory and complex manifolds that then gives rise to a map of graded rings and a genus. The short answer is yes, there's a map from $MU \to KU$ which is complex cobordism to complex K-theory and the genus is the so-called Todd genus $td: \Omega^U\_\* \to KU^\*$. Here, we're dealing with stably almost complex manifolds. Complex K-theory also exhibits Bott periodicity and so $KU^* \cong \mathbb{Z}[x,x^{-1}]$ where $\deg x=2$. On the other hand, $\Omega^U_* \cong \mathbb{Z}[x_2,x_4,x_6,...,x_{2i},...]$.
 
 From the perspective of getting algebraic invariants for topological spaces, spectra are exactly that: they yield extraordinary cohomology theories. In particular, we may be interested in cohomology theories which give us a theory of Chern classes. This would mean we want classes which are invariant under pullback of functions, they make sense for Whitney sums of vector bundles, that sort of thing. With usual cohomology which satisfies the Eilenberg-Steenrod axioms, we have an additive theory where the 1st Chern class behaves well with tensor products: $c_1(L\otimes K) = c_1(L)+c_1(K)$. This is called an additive theory because it comes from the so-called additive formal group law.
