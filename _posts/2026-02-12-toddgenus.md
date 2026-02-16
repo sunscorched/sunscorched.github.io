@@ -1,5 +1,5 @@
 ---
-title: 'Complex Cobordism, Conner-Floyd Isomorphism, and the Todd Genus'
+title: 'Complex Cobordism, Landweber Exatness, and the Todd Genus'
 date: 2026-02-12
 permalink: /posts/2026/02/toddgenus/
 tags:
