@@ -49,7 +49,7 @@ For more on $MU$ and how chromatic homotopy theory aims to study these complex o
 
 ## Todd Genus
 
-Okay, but I've approached this in a very achronistic way. The first time the Todd genus was encountered, it was not definitionally viewed as this map in the Landweber exactness theorem. It was viewed simply as a number that we assign to complex manifolds. Or rather, we only need to be able to discuss Chern classes so only need stably almost complex structure. But for the purposes of the following discussion, we do actually need a complex manifold.
+Okay, but I've approached this in a very anachronistic way. The first time the Todd genus was encountered, it was not definitionally viewed as this map in the Landweber exactness theorem. It was viewed simply as a number that we assign to complex manifolds. Or rather, we only need to be able to discuss Chern classes so only need stably almost complex structure. But for the purposes of the following discussion, we do actually need a complex manifold.
 
 Let's consider a complex manifold $X$ of complex dimension $n$ with a holomorphic vector bundle $E \to X$. The **holomorphic Euler characteristic** of $E$ in sheaf cohomology is the alternating sum $\chi(X,E) = \sum^n_{q=0} (-1)^q \dim_{\mathbb{C}}H^q(X,E)$. Or instead of sheaf cohomology, think of these as cohomology groups as differential $(0,q)$-form classes. The differential in question is the Dolbeault operator $\overline{\partial}$. In particular, $H^0(X,E)$ is the space of holomorphic sections of $E$.
 
