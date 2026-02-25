@@ -13,7 +13,7 @@ We can write Maxwell's equations succinctly in terms of these objects. First, we
 1. $dF = 0$ because $d^2 = 0$.
 2. $\* d\*F = J$ where $J$ represents a current density, often depicted as $J = j\wedge dt + \rho$. In vacuum, $J=0$ and this could be rewritten just as $d \* F=0$.
 
-In a vacuum, we would set $J=0$. If we apply $d\*$ to both sides, we get $d\*J = d\*^2 d \*F = 0$ because $\^*^2 = \pm \text{Id}$ and $d^2=0$. This is equivalent to $\partial_t \rho + \nabla \cdot j = 0$. This is the **continuity equation** which represents conservation of charge since if we integrate over **any** oriented 3D domain in $\mathbb{R}^3_{xyz}$ with boundary, we’d get that the change in total charge can only occur continuously via charged particles moving past the boundary of that domain.
+In a vacuum, we would set $J=0$. If we apply $d\*$ to both sides, we get $d\*J = d\*^2 d \*F = 0$ because $\*^2 = \pm \text{Id}$ and $d^2=0$. This is equivalent to $\partial_t \rho + \nabla \cdot j = 0$. This is the **continuity equation** which represents conservation of charge since if we integrate over **any** oriented 3D domain in $\mathbb{R}^3_{xyz}$ with boundary, we’d get that the change in total charge can only occur continuously via charged particles moving past the boundary of that domain.
 
 
 ## Observed Electric and Magnetic Fields Depend on Frame of Reference
