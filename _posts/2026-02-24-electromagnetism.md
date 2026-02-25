@@ -1,5 +1,5 @@
 ---
-title: "Electromagnetism"
+title: "Electromagnetism from a Gauge Theory Perspective"
 date: 2026-02-24
 permalink: /posts/2026/02/electromagnetism/
 tags:
