@@ -79,8 +79,8 @@ What if we had a different capping disk, say $D'$? We don't want the phase shift
 
 Now, despite introducing the action which uses the potential $A$, it may seem like what we still really care about is $F=dA$ and $A$ is simply an artifact. But the Aharonov-Bohm effect demonstrates the physical reality (and not only mathematical reality) of $A$ as well as provides an example of where fiber bundles appear in "real" life. Let's write down a few physics terms.
 
-**Solenoid:** Imagine a coiled wire, like a spring.
-**Magnetic Flux:** the measurement of the total magnetic field that passes through a given surface $S$ so in short, it is an integral $\int_S A$. Again, mathematically $A$ is a connection but in physics, we'd call it the **electromagnetic potential.** The curvature $F_A$ is the **magnetic field.**
+- **Solenoid:** Imagine a coiled wire, like a spring.
+- **Magnetic Flux:** the measurement of the total magnetic field that passes through a given surface $S$ so in short, it is an integral $\int_S A$. Again, mathematically $A$ is a connection but in physics, we'd call it the **electromagnetic potential.** The curvature $F_A$ is the **magnetic field.**
 
 So consider an experiment in which a solenoid has interior magnetic flux but there is no external magnetic fields. So mathematically, we have a connection $A$ whose curvature $F_A$ vanishes outside of the solenoid; i.e. $A$ is flat. However, when we shoot a beam of electrons past the solenoid, there is an interference pattern. This indicates that there were phase shifts for the electron even though there was no magnetic field acting on them.
 
