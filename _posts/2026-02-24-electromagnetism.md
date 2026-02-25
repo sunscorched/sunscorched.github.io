@@ -36,6 +36,8 @@ Consider the operator $\delta = \*d\*$ which can be defined on any Riemannian/Lo
 
 Thus, the **Hodge Laplacian** $\Delta = (d + \delta)^2 = d\delta + \delta d$ sends $k$-forms to $k$-forms since $\delta$ lowers degree by 1 and $d$ increases degree by 1. Now what happens when we apply this to our Faraday 2-form? $\Delta F = d\delta F + \delta dF$. Since $dF = 0$, the 2nd term is 0 and the first term is $d\*d\*F = d\*J$. In vacuum where $J=0$, then $\Delta F = 0$. This $\Delta$, because of the $(-+++)$ signature, is exactly the d'Alembert wave operator $\square$.
 
+We also note that if $\*^2 F = -F$, then the eigenvalues of $\*$ are $\pm i$ and this suggests perhaps we should be working with the complexes and split the space of forms into $\pm i$-eigenspaces.
+
 
 ## Action Perspective
 
