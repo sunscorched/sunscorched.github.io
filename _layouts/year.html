@@ -17,8 +17,8 @@ Filter posts by year (GitHub Pages safe)
 {% endfor %}
 
 {%- comment -%}
-Build a sorted list of unique years from posts
-(This avoids all Liquid date/type bugs)
+Build a unique list of years that actually have posts
+Then sort newest → oldest (like a blog archive)
 {%- endcomment -%}
 {% assign year_list = "" | split: "" %}
 {% for post in site.posts %}
@@ -27,10 +27,11 @@ Build a sorted list of unique years from posts
     {% assign year_list = year_list | push: y %}
   {% endunless %}
 {% endfor %}
-{% assign year_list = year_list | sort %}
+
+{% assign year_list = year_list | sort | reverse %}
 
 {%- comment -%}
-Find index of current year
+Find current year index
 {%- endcomment -%}
 {% assign current_index = nil %}
 {% for y in year_list %}
@@ -40,30 +41,34 @@ Find index of current year
 {% endfor %}
 
 {%- comment -%}
-Arrow navigation (NO base_path — uses permalinks directly)
+Arrow navigation (newer on left, older on right)
+This matches blog UX expectations
 {%- endcomment -%}
 <div style="display:flex; justify-content:space-between; margin-top:2.5em; font-weight:600;">
+  
+  {%- comment -%} Newer year (←) {%- endcomment -%}
   {% if current_index != nil and current_index > 0 %}
-    {% assign prev_index = current_index | minus: 1 %}
-    {% assign prev_year = year_list[prev_index] %}
-    <a href="/year-archive-{{ prev_year }}/">← {{ prev_year }}</a>
+    {% assign newer_index = current_index | minus: 1 %}
+    {% assign newer_year = year_list[newer_index] %}
+    <a href="/year-archive-{{ newer_year }}/">← {{ newer_year }}</a>
   {% else %}
     <span></span>
   {% endif %}
 
+  {%- comment -%} Older year (→) {%- endcomment -%}
   {% if current_index != nil and current_index < year_list.size | minus: 1 %}
-    {% assign next_index = current_index | plus: 1 %}
-    {% assign next_year = year_list[next_index] %}
-    <a href="/year-archive-{{ next_year }}/">{{ next_year }} →</a>
+    {% assign older_index = current_index | plus: 1 %}
+    {% assign older_year = year_list[older_index] %}
+    <a href="/year-archive-{{ older_year }}/">{{ older_year }} →</a>
   {% endif %}
+
 </div>
 
 {%- comment -%}
-Optional centered year index (clean academic-blog style)
+Optional: centered year index (clean academic/blog style)
 {%- endcomment -%}
 <div style="text-align:center; margin-top:1.5em; font-size:0.95em;">
-  {% assign reversed_years = year_list | reverse %}
-  {% for y in reversed_years %}
+  {% for y in year_list %}
     {% if y == target_year %}
       <strong>{{ y }}</strong>
     {% else %}
