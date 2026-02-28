@@ -62,5 +62,17 @@ Arrow navigation between years
 </div>
 
 {%- comment -%}
-Optional: Centered year index for quick navigation (very nice UX)
-Cu
+Optional: Centered year index for quick navigation
+Current year is bolded automatically
+{%- endcomment -%}
+<div class="year-index" style="text-align:center; margin-top:1.5em; font-size:0.95em;">
+  {% assign reversed_years = year_list | reverse %}
+  {% for y in reversed_years %}
+    {% if y == target_year %}
+      <strong>{{ y }}</strong>
+    {% else %}
+      <a href="{{ base_path }}/year-archive-{{ y }}/">{{ y }}</a>
+    {% endif %}
+    {% unless forloop.last %} &nbsp;|&nbsp; {% endunless %}
+  {% endfor %}
+</div>
