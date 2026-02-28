@@ -27,3 +27,11 @@ Here are some blog posts; most of it is about mathematics, physics, statistics, 
     View older posts →
   </a>
 </p>
+
+<h3>Browse by Year</h3>
+<ul>
+{% assign years = site.posts | map: "date" | map: "date: '%Y'" | uniq | sort | reverse %}
+{% for y in years %}
+  <li><a href="{{ base_path }}/year-archive-{{ y }}/">{{ y }}</a></li>
+{% endfor %}
+</ul>
