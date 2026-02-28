@@ -3,12 +3,15 @@ layout: archive
 author_profile: true
 ---
 
-<h2 class="archive__subtitle">{{ page.year }}</h2>
-
+{%- comment -%}
+Get the year for this page as a string (Liquid-safe comparison)
+{%- endcomment -%}
 {% assign target_year = page.year | append: "" %}
 
+<h2 class="archive__subtitle">{{ target_year }}</h2>
+
 {%- comment -%}
-Filter posts by year (GitHub Pages safe)
+Filter posts by year (GitHub Pages safe using where_exp)
 {%- endcomment -%}
 {% assign posts_by_year = site.posts | where_exp: "post", "post.date | date: '%Y' == target_year" %}
 
@@ -18,7 +21,7 @@ Filter posts by year (GitHub Pages safe)
 
 {%- comment -%}
 Build a unique list of years that actually have posts
-Then sort newest → oldest (like a blog archive)
+(robust: avoids Liquid date/object comparison bugs)
 {%- endcomment -%}
 {% assign year_list = "" | split: "" %}
 {% for post in site.posts %}
@@ -28,10 +31,13 @@ Then sort newest → oldest (like a blog archive)
   {% endunless %}
 {% endfor %}
 
+{%- comment -%}
+Sort newest → oldest (typical blog archive order)
+{%- endcomment -%}
 {% assign year_list = year_list | sort | reverse %}
 
 {%- comment -%}
-Find current year index
+Find the index of the current year in the list
 {%- endcomment -%}
 {% assign current_index = nil %}
 {% for y in year_list %}
@@ -41,12 +47,15 @@ Find current year index
 {% endfor %}
 
 {%- comment -%}
-Arrow navigation (newer on left, older on right)
-This matches blog UX expectations
+Arrow navigation:
+← newer year on the left
+older year → on the right
+Uses absolute permalinks that match your site:
+https://sunscorched.github.io/year-archive-YYYY/
 {%- endcomment -%}
 <div style="display:flex; justify-content:space-between; margin-top:2.5em; font-weight:600;">
   
-  {%- comment -%} Newer year (←) {%- endcomment -%}
+  {%- comment -%} Newer year (if exists) {%- endcomment -%}
   {% if current_index != nil and current_index > 0 %}
     {% assign newer_index = current_index | minus: 1 %}
     {% assign newer_year = year_list[newer_index] %}
@@ -55,7 +64,7 @@ This matches blog UX expectations
     <span></span>
   {% endif %}
 
-  {%- comment -%} Older year (→) {%- endcomment -%}
+  {%- comment -%} Older year (if exists) {%- endcomment -%}
   {% if current_index != nil and current_index < year_list.size | minus: 1 %}
     {% assign older_index = current_index | plus: 1 %}
     {% assign older_year = year_list[older_index] %}
@@ -65,7 +74,8 @@ This matches blog UX expectations
 </div>
 
 {%- comment -%}
-Optional: centered year index (clean academic/blog style)
+Optional: centered year index for quick navigation
+(Current year is bolded)
 {%- endcomment -%}
 <div style="text-align:center; margin-top:1.5em; font-size:0.95em;">
   {% for y in year_list %}
