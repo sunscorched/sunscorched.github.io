@@ -5,41 +5,62 @@ author_profile: true
 
 {% include base_path %}
 
-<h2 class="archive__subtitle">{{ page.year }}</h2>
-
 {% assign target_year = page.year | append: "" %}
 
+<h2 class="archive__subtitle">{{ target_year }}</h2>
+
+{%- comment -%}
+Filter posts by the target year (robust for GitHub Pages + Minimal Mistakes)
+{%- endcomment -%}
 {% assign posts_by_year = site.posts | where_exp: "post", "post.date | date: '%Y' == target_year" %}
 
 {% for post in posts_by_year %}
   {% include archive-single.html %}
 {% endfor %}
 
-{% assign years = site.posts | map: "date" | uniq %}
-{% assign year_strings = "" | split: "" %}
-{% for d in years %}
-  {% assign y = d | date: "%Y" %}
-  {% assign year_strings = year_strings | push: y %}
+{%- comment -%}
+Build a clean sorted list of unique years that actually have posts
+(This avoids Liquid type issues with dates vs strings)
+{%- endcomment -%}
+{% assign year_list = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign y = post.date | date: "%Y" %}
+  {% unless year_list contains y %}
+    {% assign year_list = year_list | push: y %}
+  {% endunless %}
 {% endfor %}
-{% assign year_strings = year_strings | uniq | sort %}
 
+{% assign year_list = year_list | sort %}
+
+{%- comment -%}
+Find the index of the current year
+{%- endcomment -%}
 {% assign current_index = nil %}
-{% for y in year_strings %}
+{% for y in year_list %}
   {% if y == target_year %}
     {% assign current_index = forloop.index0 %}
   {% endif %}
 {% endfor %}
 
-<div class="year-navigation" style="display:flex; justify-content:space-between; margin-top:2em;">
-  {% if current_index and current_index > 0 %}
+{%- comment -%}
+Arrow navigation between years
+{%- endcomment -%}
+<div class="year-navigation" style="display:flex; justify-content:space-between; margin-top:2.5em; font-weight:600;">
+  {% if current_index != nil and current_index > 0 %}
     {% assign prev_index = current_index | minus: 1 %}
-    {% assign prev_year = year_strings[prev_index] %}
+    {% assign prev_year = year_list[prev_index] %}
     <a href="{{ base_path }}/year-archive-{{ prev_year }}/">← {{ prev_year }}</a>
+  {% else %}
+    <span></span>
   {% endif %}
 
-  {% if current_index and current_index < year_strings.size | minus: 1 %}
+  {% if current_index != nil and current_index < year_list.size | minus: 1 %}
     {% assign next_index = current_index | plus: 1 %}
-    {% assign next_year = year_strings[next_index] %}
+    {% assign next_year = year_list[next_index] %}
     <a href="{{ base_path }}/year-archive-{{ next_year }}/">{{ next_year }} →</a>
   {% endif %}
 </div>
+
+{%- comment -%}
+Optional: Centered year index for quick navigation (very nice UX)
+Cu
