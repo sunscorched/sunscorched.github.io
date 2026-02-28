@@ -7,9 +7,11 @@ author_profile: true
 
 <h2 class="archive__subtitle">{{ page.year }}</h2>
 
+{% assign target_year = page.year | append: "" %}
+
 {% for post in site.posts %}
   {% assign year = post.date | date: '%Y' %}
-  {% if year == page.year %}
+  {% if year == target_year %}
     {% include archive-single.html %}
   {% endif %}
 {% endfor %}
@@ -18,7 +20,7 @@ author_profile: true
 
 {% assign current_index = nil %}
 {% for y in years %}
-  {% if y == page.year %}
+  {% if y == target_year %}
     {% assign current_index = forloop.index0 %}
   {% endif %}
 {% endfor %}
