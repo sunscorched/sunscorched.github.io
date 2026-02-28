@@ -30,8 +30,22 @@ Here are some blog posts; most of it is about mathematics, physics, statistics, 
 
 <h3>Browse by Year</h3>
 <ul>
-{% assign years = site.posts | map: "date" | map: "date: '%Y'" | uniq | sort | reverse %}
+{% assign years_string = "" %}
+
+{% for post in site.posts %}
+  {% assign y = post.date | date: "%Y" %}
+  {% unless years_string contains y %}
+    {% assign years_string = years_string | append: y | append: "," %}
+  {% endunless %}
+{% endfor %}
+
+{% assign years = years_string | split: "," | sort | reverse %}
+
 {% for y in years %}
-  <li><a href="{{ base_path }}/year-archive-{{ y }}/">{{ y }}</a></li>
+  {% if y != "" %}
+    <li>
+      <a href="{{ base_path }}/year-archive-{{ y }}/">{{ y }}</a>
+    </li>
+  {% endif %}
 {% endfor %}
 </ul>
