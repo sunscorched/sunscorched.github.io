@@ -3,83 +3,72 @@ layout: archive
 author_profile: true
 ---
 
-{%- comment -%}
-Get the year for this page as a string (Liquid-safe comparison)
-{%- endcomment -%}
-{% assign target_year = page.year | append: "" %}
+{% assign target_year = page.year %}
+{% assign target_year_str = page.year | append: "" %}
 
 <h2 class="archive__subtitle">{{ target_year }}</h2>
 
 {%- comment -%}
-Filter posts by year (GitHub Pages safe using where_exp)
+Filter posts for this year (works on GitHub Pages)
 {%- endcomment -%}
-{% assign posts_by_year = site.posts | where_exp: "post", "post.date | date: '%Y' == target_year" %}
+{% assign posts_by_year = site.posts | where_exp: "post", "post.date | date: '%Y' == target_year_str" %}
 
 {% for post in posts_by_year %}
   {% include archive-single.html %}
 {% endfor %}
 
 {%- comment -%}
-Build a unique list of years that actually have posts
-(robust: avoids Liquid date/object comparison bugs)
+Check if posts exist in adjacent years
+(This avoids fragile year list logic entirely)
 {%- endcomment -%}
-{% assign year_list = "" | split: "" %}
+{% assign prev_year = target_year | minus: 1 %}
+{% assign next_year = target_year | plus: 1 %}
+
+{% assign prev_year_str = prev_year | append: "" %}
+{% assign next_year_str = next_year | append: "" %}
+
+{% assign has_prev = false %}
+{% assign has_next = false %}
+
 {% for post in site.posts %}
-  {% assign y = post.date | date: "%Y" %}
-  {% unless year_list contains y %}
-    {% assign year_list = year_list | push: y %}
-  {% endunless %}
-{% endfor %}
-
-{%- comment -%}
-Sort newest → oldest (typical blog archive order)
-{%- endcomment -%}
-{% assign year_list = year_list | sort | reverse %}
-
-{%- comment -%}
-Find the index of the current year in the list
-{%- endcomment -%}
-{% assign current_index = nil %}
-{% for y in year_list %}
-  {% if y == target_year %}
-    {% assign current_index = forloop.index0 %}
+  {% assign post_year = post.date | date: "%Y" %}
+  {% if post_year == prev_year_str %}
+    {% assign has_prev = true %}
+  {% endif %}
+  {% if post_year == next_year_str %}
+    {% assign has_next = true %}
   {% endif %}
 {% endfor %}
 
-{%- comment -%}
-Arrow navigation:
-← newer year on the left
-older year → on the right
-Uses absolute permalinks that match your site:
-https://sunscorched.github.io/year-archive-YYYY/
-{%- endcomment -%}
 <div style="display:flex; justify-content:space-between; margin-top:2.5em; font-weight:600;">
-  
-  {%- comment -%} Newer year (if exists) {%- endcomment -%}
-  {% if current_index != nil and current_index > 0 %}
-    {% assign newer_index = current_index | minus: 1 %}
-    {% assign newer_year = year_list[newer_index] %}
-    <a href="/year-archive-{{ newer_year }}/">← {{ newer_year }}</a>
-  {% else %}
-    <span></span>
-  {% endif %}
+  <div>
+    {% if has_next %}
+      <a href="/year-archive-{{ next_year }}/">← {{ next_year }}</a>
+    {% endif %}
+  </div>
 
-  {%- comment -%} Older year (if exists) {%- endcomment -%}
-  {% if current_index != nil and current_index < year_list.size | minus: 1 %}
-    {% assign older_index = current_index | plus: 1 %}
-    {% assign older_year = year_list[older_index] %}
-    <a href="/year-archive-{{ older_year }}/">{{ older_year }} →</a>
-  {% endif %}
-
+  <div>
+    {% if has_prev %}
+      <a href="/year-archive-{{ prev_year }}/">{{ prev_year }} →</a>
+    {% endif %}
+  </div>
 </div>
 
 {%- comment -%}
-Optional: centered year index for quick navigation
-(Current year is bolded)
+Optional: Clean year index (only shows years that actually have posts)
 {%- endcomment -%}
 <div style="text-align:center; margin-top:1.5em; font-size:0.95em;">
-  {% for y in year_list %}
-    {% if y == target_year %}
+  {% assign years = "" | split: "" %}
+  {% for post in site.posts %}
+    {% assign y = post.date | date: "%Y" %}
+    {% unless years contains y %}
+      {% assign years = years | push: y %}
+    {% endunless %}
+  {% endfor %}
+  {% assign years = years | sort | reverse %}
+
+  {% for y in years %}
+    {% if y == target_year_str %}
       <strong>{{ y }}</strong>
     {% else %}
       <a href="/year-archive-{{ y }}/">{{ y }}</a>
