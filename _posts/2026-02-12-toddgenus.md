@@ -17,18 +17,18 @@ From the perspective of getting algebraic invariants for topological spaces, spe
 
 Let $E$ be a multiplicative cohomology theory; i.e. comes from a ring spectrum. We say that $E$ is **even** if its homotopy groups vanish in odd degrees and is **periodic** if $E^*(pt)$ contains an invertible element of degree 2. Of course, $KU$ satisfies both of these.
 
-Let $E$ be an even periodic cohomology theory. One can then show that $E^\*(\mathbb{CP}^\infty) \cong E^\*(pt)[\![t]\!]$ and $t$ is a choice of a cohomology class in degree 0 (could be in degree 2 but the periodicity allows us to treat it as any even degree we like). Let $L \to X$ be a complex line bundle classified by $f:X \to \mathbb{CP}^\infty$. Then, we may define $c_1^E(L) :=f^*(t) \in E^0(X)$. In other words, we get a theory of Chern classes for $E$! We often call such spectra $E$ to be complex oriented theories.
+Let $E$ be an even periodic cohomology theory. One can then show that $E^\*(\mathbb{CP}^\infty) \cong E^\*(pt)[[t]]$ and $t$ is a choice of a cohomology class in degree 0 (could be in degree 2 but the periodicity allows us to treat it as any even degree we like). Let $L \to X$ be a complex line bundle classified by $f:X \to \mathbb{CP}^\infty$. Then, we may define $c_1^E(L) :=f^*(t) \in E^0(X)$. In other words, we get a theory of Chern classes for $E$! We often call such spectra $E$ to be complex oriented theories.
 
 Of course, for singular cohomology, the Chern classes are additive when we tensor line bundles. But for example, in $KU$, $c^{KU}_1(L) = [L]-1$ and it satisfies $c_1^{KU}(L_0 \otimes L_1)+1 = (c^{KU}_1(L_0)+1)(c^{KU}_1(L_1)+1)$ and so $c_1^{KU}(L_0 \otimes L_1) = c^{KU}_1(L_0) + c^{KU}_1(L_1) + c^{KU}_1(L_0)\cdot c^{KU}_1(L_1)$ (the multiplicative formal group law). 
 
-For general even periodic $E$, we don't expect either the additive or multiplicative formulae to hold but we do expect there to be some formula $c_1^E(L_0 \otimes L_1) = F(c^{KU}_1(L_0),c^{KU}_1(L_1))$ where $F$ is a formal power series in two variables. This follows from examining $E^*(\mathbb{CP}^\infty \times \mathbb{CP}^\infty) \cong E^\*(pt)[\![t_1,t_2]\!]$.
+For general even periodic $E$, we don't expect either the additive or multiplicative formulae to hold but we do expect there to be some formula $c_1^E(L_0 \otimes L_1) = F(c^{KU}_1(L_0),c^{KU}_1(L_1))$ where $F$ is a formal power series in two variables. This follows from examining $E^*(\mathbb{CP}^\infty \times \mathbb{CP}^\infty) \cong E^\*(pt)[[t_1,t_2]]$.
 
 So from studying this, we see that the power series $F$ satisfies some properties.
 1. $F(0,t)=t$
 2. $F(t_1,t_2)=F(t_2,t_1)$ because tensor product is commutative.
 3. $F(t_0,F(t_1,t_2))=F(F(t_0,t_1),t_2)$ because tensor product is associative up to isomorphism.
 
-If $R$ is a ring, then a **formal group law** is $F \in R[\![x,y]\!]$ satisfying these three identities. We say that $F,F'$ are **strict isomorphic** if we have a change of coordinates $g$ that sends $t \mapsto t+a_2t^2+a_3t^3+...$ so that $F'(x,y)=g^{-1}(F(g(x),g(y)))$; this $g$ itself is also a formal power series. When they're strict isomorphic, we say they have the same **formal group.**
+If $R$ is a ring, then a **formal group law** is $F \in R[[x,y]]$ satisfying these three identities. We say that $F,F'$ are **strict isomorphic** if we have a change of coordinates $g$ that sends $t \mapsto t+a_2t^2+a_3t^3+...$ so that $F'(x,y)=g^{-1}(F(g(x),g(y)))$; this $g$ itself is also a formal power series. When they're strict isomorphic, we say they have the same **formal group.**
 
 Of course, we also have Quillen's theorem which says that complex cobordism $MU$ has $\pi_\* MU \cong L$, the Lazard ring which is the universal ring for formal group laws. Put another way, for an FGL $F$ over a ring $R$, there is a morphism $\phi:\pi_\* MU \cong L \to R$ so that $\phi F_{MU}=F$.
 
