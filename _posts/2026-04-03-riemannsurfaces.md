@@ -118,7 +118,8 @@ Now, given four distinct points on the Riemann sphere $z_j$, the cross-ratio $\c
 
 **Proof:** A real number if a complex number whose angle (aka argument) is one of $0, \pi$. Note that $\arg(zw) = \arg(z)+\arg(w)$ and $\arg(1/z) = -\arg(z)$. Now, to understand $\arg((z_3-z_1)/(z_2-z_1))$, we can think of the transformation $z \mapsto z-z_1$ as centering at $z_1$. We thus see that the argument is of the oriented $\angle z_3 z_1 z_2$, call this $\alpha$. Similarly, if we invert the other term of the cross ratio, we see $\arg((z_2-z_4)/(z_3-z_4)$ is the oriented angle $z_2 z_4 z_3$, call it $\beta$. So the argument of the cross-ratio is $\alpha-\beta$ and so the cross-ratio is real if and only if $\alpha-\beta = k\pi$.
 
-Three points describe a circle so let's consider a circle containing $z_2, z_4$ since those show up in both the angles above and also contains $z_1$. 
+Three points describe a circle so let's consider a circle containing $z_2, z_4$ since those show up in both the angles above and also contains $z_1$.
+
 **Case 1:** $\alpha=\beta$. Let's draw a chord between $z_2,z_4$ which then divides the circle into a major and minor arc. When $z_1$ is on the major arc, then the inscribed angle theorem says the angle $\alpha$ is half of the angle formed between $z_2,z_4$ and the center of the circle. We can move $z_1$ around on the major arc and the angle will still remain as $\alpha$. It is only by shifting off the circle that $\alpha$ would change. Thus, we see that $z_4$ must also be on the circle because $\alpha=\beta$. If $z_1$ is on the minor arc, then so would $z_4$ in the case that $\alpha=\beta$.
 
 **Case 2:** $\beta = \alpha \pm \pi$. In this case, one of $z_1,z_4$ is on the major arc and the other is on the minor arc. The inscribed angle theorem says that $\alpha,\beta$ differ by $\pi$.
