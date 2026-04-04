@@ -81,11 +81,13 @@ For the open disk, in order to give better descriptions of the automorphisms of 
 Say we have an elliptic map which fixes interior point $a$. We can use the automorphism $(z-a)(1-\bar{a}z)$ and conjugate the elliptic map by it to get a map that fixes the origin. The Schwarz Lemma once again tells us that this is a rotation. So elliptic maps are like rotations around some fixed point $a$. Interestingly, if we depict this in the Poincaré disk, circles are rotated around the center point $a$ and they will look like Euclidean circles. However, it will not look like $a$ is at their center in the Euclidean sense. The only center point where Euclidean and hyperbolic circles coincide is for $a=0$. Note that in the picture, a line $L_1$ is mapped to another geodesic $L_2$.
 
 ![label](/files/f9c7cc84e1abdc4925ef05384637f5b5.png)
-*From _Visual Complex Analysis_ by Tristan Needham*
+
+*From Visual Complex Analysis by Tristan Needham*
 
 For parabolic maps, we identify $\overline{D}$ with the closed upper half plane and treat the single fixed boundary point as the point at $\infty$. The only elements of $PSL(2,\mathbb{R})$ which do not have interior fixed points are of the form $aw+b$ with $a>0$; without interior fixed points, then in fact $a=1$. So parabolic maps on the disk correspond simply to horizontal translation of the upper half plane. If the map fixes two boundary points, we can take those points to be 0 and $\infty$ in $\partial \mathbb{H}$ and the map is simply of the form $w \mapsto aw$.
 
 ![label](/files/7d21401d5504d0f2a914c500b9451940.png)
+
 *Parabolic and Hyperbolic Automorphisms of the Disk*
 
 In the left picture above, we have a parabolic map where an h-line $L_1$ is mapped to another h-line $L_2$. Horocycles are circles tangent to $A$ and they are each invariant under the parabolic map. They are also orthogonal to the h-lines that eminate from $A$. In the right picture, we have a hyperbolic map that fixes two boundary points. There is a single bolded hyperbolic line between them that is invariant and we see once again that lines are mapped to lines ($L_1 \to L_2$). We also see certain arcs of circles which are invariant; those arcs are not h-lines.
