@@ -94,7 +94,10 @@ For parabolic maps, we identify $\overline{D}$ with the closed upper half plane 
 
 In the left picture above, we have a parabolic map where an h-line $L_1$ is mapped to another h-line $L_2$. Horocycles are circles tangent to $A$ and they are each invariant under the parabolic map. They are also orthogonal to the h-lines that eminate from $A$. In the right picture, we have a hyperbolic map that fixes two boundary points. There is a single bolded hyperbolic line between them that is invariant and we see once again that lines are mapped to lines ($L_1 \to L_2$). We also see certain arcs of circles which are invariant; those arcs are not h-lines.
 
-Interestingly, the area of hyperbolic triangles are determined by their angles. Thus, there is no way to enlarge a triangle's area while preserving its angles; i.e. there are no similarity transformations which are not isometries. This is very different from Euclidean geometry where we can easy enlarge a triangle and still maintain its angles.
+Interestingly, the area of hyperbolic triangles are determined by their angles. Thus, there is no way to enlarge a triangle's area while preserving its angles; i.e. there are no similarity transformations which are not isometries. This is very different from Euclidean geometry where we can easy enlarge a triangle and still maintain its angles. If the angles are $\alpha,\beta,\gamma$, the area is computed as $\pi - (\alpha+\beta+\gamma)$. Below, we have ideal triangles whose vertices are at the boundary and so their areas are all $\pi$. There are elements of $PSL(2,\mathbb{R})$ which maps any three points on the boundary to any other three points; i.e. these triangles are all congruent.
+
+![label](/files/ea8b037aca562a95a62c72a966536240.png)
+
 
 The parabolic maps are useful as we can use them to build Riemann surfaces with punctures. Above, I mentioned Fuchsian groups; we just need a Fuchsian group $\Gamma$ with some parabolic maps and $D/\Gamma$ will be a Riemann surface with punctures which are also called cusps. We should not simply delete a point from an already made Riemann surface as that would lead to a space with incomplete metric since we can reach the deletion in finite time. But if we use the parabolic map, then the ideal point is "infinitely" far away. In a way, all of these cusps are locally the same.
 
