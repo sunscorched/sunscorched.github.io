@@ -26,7 +26,7 @@ Now, a Riemann surface $X$ is a topological space which is locally conformally h
 
 In how I named these three, it's not altogether a trivial matter to see that $\widehat{\mathbb{C}} \cong \mathbb{CP}^1$ and I won't really be using the algebraic geometry term as much. For $\mathbb{C}$, I will refer to it as a complex line.
 
-From a geometric point of view, the Riemann sphere admits a metric of positive scalar curvature, the complex line admits a flat metric, and the disk admits a metric of negative scalar curvature called the Poincaré metric which has constant Gaussian curvature $-1$. In fact, there's more to this. 
+For a geometric point of view, recall that for a 2-manifold $S$, scalar curvature is twice that of the Gaussian curvature $K:S \to \mathbb{R}$. The Riemann sphere admits a metric of positive scalar curvature, the complex line admits a flat metric, and the disk admits a metric of negative scalar curvature called the Poincaré metric which has constant Gaussian curvature $-1$. In fact, there's more to this. 
 
 **Theorem:** Every Riemann surface $S$ is conformally isomorphic to a quotient $\tilde{S}/\Gamma$ where $\tilde{S}$ is one of these three Riemann surfaces. The quotient is by the action of a group $\Gamma \cong \pi_1(S)$ acting freely, properly discontinuously, by conformal automorphisms on $\tilde{S}$.
 
