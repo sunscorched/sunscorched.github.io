@@ -131,3 +131,9 @@ Three points describe a circle so let's consider a circle containing $z_2, z_4$ 
 For showing that Möbius transformations send circles/lines to circles/lines, say our four points are on a circle/line and let $T$ be the unique transformation sending $z_1,z_2,z_4$ to $0,1,\infty$ and so we know the cross-ratio of the four points is simply equal to $T(z_3)$. But this needs to be a real number by what we said above so $T(z_3)$ is also on the real line; the four points have been sent to $\mathbb{R}\cup \infty$ (circle of infinite radius). Let $S$ be the transformation sending $0,1,\infty$ to some points $w_1,w_2,w_4$. Then $S \circ T$ sends $z_1,z_2,z_4 \mapsto w_1,w_2,w_4$ and since this preserves cross ratio, the circle that $z_1,z_2,z_4$ is on is sent to another circle; $z_3$ is sent to some $w_3$ on the image circle. $\square$
 
 Also, if we have two distinct points $z_1,z_2$, there is exactly one involution in $PSL(2,\mathbb{C})$ with these as fixed points. A second involution with fixed points $z_1',z_2'$ commutes with the first if and only if $\chi(z_1,z_2,z_1',z_2')=1/2$. By the above claim, this means that all four of the points lie on the same line/circle.
+
+Here are some free, online applets for exploring Möbius transformations and also the Poincaré disk.
+1. [Möbius transformations](https://iris.joshua-becker.com/lab/mobius-transform/) in $\mathbb{C}$
+2. [Stereographic projection](https://www.geogebra.org/m/GhaSJw3t) from $\widehat{\mathbb{C}}$
+3. [Poincaré disk](https://bjlkeng.io/js/poincare_disk.html)
+4. [Tilings](https://www.malinc.se/noneuclidean/en/poincaretiling.php#interactive-hyperbolic-tiling-in-the-poincar-disc) of the Poincaré disk
