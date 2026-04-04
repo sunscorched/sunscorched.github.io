@@ -28,7 +28,7 @@ In how I named these three, it's not altogether a trivial matter to see that $\w
 
 From a geometric point of view, the Riemann sphere admits a metric of positive scalar curvature, the complex line admits a flat metric, and the disk admits a metric of negative scalar curvature called the Poincaré metric which has constant Gaussian curvature $-1$. In fact, there's more to this. 
 
-**Theorem:** Every Riemann surface is a quotient of one of these three Riemann surfaces by the action of a discrete group, acting properly discontinuously. That means, every Riemann surface admits a covering map coming from one of these three spaces.
+**Theorem:** Every Riemann surface $S$ is conformally isomorphic to a quotient $\tilde{S}/\Gamma$ where $\tilde{S}$ is one of these three Riemann surfaces. The quotient is by the action of a group $\Gamma \cong \pi_1(S)$ acting freely, properly discontinuously, by conformal automorphisms on $\tilde{S}$.
 
 A Riemann surface can typically be described by the number of punctures $n$ that it has and the genus $g$. If $2g+n \geq 3$, then it is covered by the open disk $D$. The topology of Riemann surfaces covered by the complex line or open disk are rather simple in the sense that they have no nontrivial higher homotopy groups, only fundamental groups and the ones covered by the open disk have nonabelian fundamental groups while those covered by $\mathbb{C}$ have abelian fundamental groups.
 
