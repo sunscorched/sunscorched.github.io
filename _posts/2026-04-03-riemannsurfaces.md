@@ -141,6 +141,9 @@ As an example of the above, we can send points of the form $z=x+ki$ to $1/z$ whi
 
 ![labels](/files/960b6125a2ff54c4aca46dddbfbb9c2d.png)
 
+Here's a picture where we invert an equilateral triangular grid instead; all the circles intersect at angles of $\pi/3$.
+
+![labels](/files/f4863363d51cb9fb578e1aca85f8125a.png)
 
 Also, if we have two distinct points $z_1,z_2$, there is exactly one involution in $PSL(2,\mathbb{C})$ with these as fixed points. A second involution with fixed points $z_1',z_2'$ commutes with the first if and only if $\chi(z_1,z_2,z_1',z_2')=1/2$. By the above claim, this means that all four of the points lie on the same line/circle.
 
