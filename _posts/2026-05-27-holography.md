@@ -34,6 +34,7 @@ Let's be more precise and give some definitions. The **visual metric** $\nu_x$ o
 **Example:** If we just let $g$ be the round metric itself, then 0 belongs to all the horocycles because the visual metric looks like the round metric only from the origin. So all the horocycles are just spheres of half the radius of the 3-ball which are tangent to the 3-ball. The Epstein map is trivial in this case, sending $S^2 \to 0$. If we scale the round metric by $e^{2t}$, then the sphere centered around the origin of radius $t$ which is the Epstein surface.
 
 So to recap, we have two worlds that correspond to each other:
+
 | Complex Structure on $\partial_\infty M$ | Convex cocompact hyperbolic structure on $M$ |
 | -------- | -------- |
 | Metric $g$ on $\partial_\infty M$ compatible with complex structure   | Epstein map/truncation $Ep_g:\partial_\infty M \to M$   |
