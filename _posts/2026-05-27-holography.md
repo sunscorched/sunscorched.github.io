@@ -1,0 +1,72 @@
+---
+title: "Holography from a Geometric Perspective"
+date: 2026-05-27
+permalink: /posts/2026/05/holography/
+tags:
+  - physics
+  - hyperbolic geometry
+---
+
+At the Simons Collaboration 2026 meeting on quantum field theory, Yilin Wang gave a [talk](https://www.youtube.com/watch?v=_Bpvgf5ykS4) with the title above. She focused on the 1+1 and 2+1 dimension cases. Broadly, the **holographic principle** gives a correspondence between quantum gravity on $M$ and conformal/quantum field theory on $\partial M$. $M$ is typically a conformally compact Einstein manifold.
+
+To begin, let's recall that the unit disk $D^2$ can be given a unique hyperbolic metric which is isometric to the upper half plane $\mathbb{H}^2 = \{x+iy: y >0\}$ and the metric in this model can be written as $ds^2 = \dfrac{dx^2+dy^2}{y^2}$. Note that there is a scaling term but otherwise, this is similar to the Euclidean metric. In particular, angles are measured in the same way, whether we use the Euclidean or hyperbolic metric. The isometries of this metric are exactly the conformal maps (angle preserving maps) $D^2 \to D^2$ which can be described by $PSL(2,\R) \cong SO(2,1)$. We have that $PSL(2,\R)$ naturally acts on $\mathbb{RP}^1$ which we can view as the boundary of $D^2$. Or alternatively, there's a complex structure on $D$ and the conformal maps are exactly the holomorphic maps.
+
+Similarly, for 3-dimensions, we have $\mathbb{H}^3 = \{(z,y) \in \mathbb{C}\times \mathbb{R}_+ \}$ with metric $ds^2 = \dfrac{\|dz\|^2+dy^2}{y^2}$. The isometries are isomorphic to $PSL(2,\mathbb{C})\cong SO(3,1)$ which naturally act on $\mathbb{CP}^1$. In this way, we can think of $\mathbb{H}^3$ as determining a conformal structure on $\partial \mathbb{H}^3 =S^2$ since what blows up as we go to the boundary, are lengths, but angles are preserved. In the opposite direction, each element of $PSL(2,\mathbb{C})$ (which acts on $S^2$) extends to an isometry on $\mathbb{H}^3$. Recall that elements of $PSL(2,\mathbb{C})$ are called Möbius transformations.
+
+A **Kleinian group** is a subgroup $\Gamma \subset PSL(2,\mathbb{C})$ such that $\mathbb{H}^3/\Gamma = M$ is a hyperbolic 3-manifold. A **Fuchsian group** is a subgroup $\Gamma \subset PSL(2,\mathbb{R})$ such that $\mathbb{H}^2/\Gamma = \Sigma$ is a hyperbolic 2-manifold.
+
+### Fuchsian and Quasi-Fuchsian Manifolds
+
+Let's suppose $\Gamma \subset PSL(2,\mathbb{R})$ is a Fuchsian group. Since this group also sits inside of $PSL(2,\mathbb{C})$, we can think of it as acting on $S^2$ which has a $S^1 = \mathbb{RP}^1$ inside of it and the sphere is split into two disks if we remove that circle, call them $D_+,D_-$. The action of $\Gamma$ preserves the two disks and also the $S^1$ as sets. We can also take any point in $S^2$ not on this $S^1$ and consider its orbit set under the action of $\Gamma$. Many of the points in the orbit will accumulate along the $S^1$. To see why, just focus on one of the disks. Many of the elements of $\Gamma$ send $z$ towards the boundary of the disk.
+
+By extending the action of $\Gamma$ to $\mathbb{H}^3$, we then get $M := \mathbb{H}^3/\Gamma \cong \Sigma \times (0,1)$. Thinking of $\mathbb{H}^3$ as modeled on a ball, we have a disk with boundary on $S^1$ that slices straight through the ball. The geodesices are typically arcs of circles that intersect the boundary orthogonally but in this case, the geodesics lying in this slice are straight lines in the Euclidean sense. Now, any geodesic connecting two points on the surface travels through 3-space but in the case of this slice, the connecting geodesics of pairs of points on the surface are also all confined to the surface. This is what we call a **totally geodesic surface** or alternatively, a **geodesically convex** surface. The quotient of this slice then gives a totally geodesic surface inside of $\Sigma \times (0,1)$. As such, we call it a convex cocompact complete hyperbolic manifold. The **convex compact** just means we have a compact set which is geodesically convex.
+
+We can now imagine deforming that $S^1$ to some Jordan curve which is really just an embedding of $S^1 \hookrightarrow S^2$. It will still split the sphere into two disks $D_\pm$. So if we have a group $\Gamma \subset PSL(2,\mathbb{C})$ and the orbits of points accumulate on this Jordan curve, we'll call $\Gamma$ a **quasi-Fuchsian** group. It will still preserve $D_\pm$ and $\mathbb{H}^3/\Gamma$ will be, topologically, $\Sigma \times (0,1)$. So the ends of this manifold at infinity are $\Sigma_+$ and $\Sigma_-$ but they won't necessarily have the same conformal structure. We won't have a totally geodesic surface like before but we can take the geodesic convex hull of the Jordan curve and still get a compact geodesically convex set. We'll call convex co-compact hyperbolic structures on $M$ to be quasi-Fuchsian structures.
+
+**Theorem (Bers, simultaneous uniformization):** All the quasi-Fuchsian structures on $M:=\Sigma \times (0,1)$ are in bijection with the product of Teichmuller spaces $\text{Teich}(\Sigma)\times \text{Teich}(\Sigma) \cong \mathbb{R}^{6g-6}$. We can interpret this as giving a bijection between hyperbolic structures on $M$ and complex structures on the boundary at infinity $\partial_\infty M$.
+
+Let's suppose we have a quasi-Fuchsian manifold $M$. We have conformal structure on $\partial_\infty M$; how do we then add structure to the interior of $M$? Well, the conformal structure gives us a class of metrics; remember that a metric $g$ is conformally equivalent to $e^{2f}g$ where $f$ is a function on the manifold. A **horocycle** is a sphere tangent to a point $x \in \partial_\infty M$ and is perpendicular to all geodesics. There's a way for defining a unique horocycle to each $x \in \partial_\infty M$, given the metric $g$. There exists a surface called an Epstein surface (named after Charles Epstein) which is tangent to all these horocycles. It turns out that the renormalized volume enclosed by this surface is equal to the Einstein-Hilbert action of $M$; more on this later.
+
+If we scale the metric $g$ to $e^{2t}g$, the horocycles shrink. We can flow along a geodesic from the tangency point of the Epstein surface to the horocycle by a distance $t$. What we'll find is that we land on the tangency point for the Epstein surface for $e^{2t}g$.  This gives us an equidistant foliation of the 3-ball and as $t \to \infty$, the leaves of the foliation converge to the boundary at infinity $S^2$. The leaves have induced metric $I_t$ which if we scale properly, we have $4e^{-2t}I_t \to g$ as $t \to \infty$.
+
+Let's be more precise and give some definitions. The **visual metric** $\nu_x$ on $S^2$ from a point $x \in \mathbb{H}^3$ is meant to give the measure of things as "seen from $x$." If $x$ is the origin, then $\nu_x$ is the round metric on $S^2$. If $x$ is some other point, then $\nu_x$ is the pullback of the round metric by some isometry of $\mathbb{H}^3$ that sends $x$ to the origin. Now let $y \in S^2$. Then $H_y(g_y) = \{x \in \mathbb{H}^3:\nu_x(y) = g_y\}$. That is, we have all the points in the 3-ball such that the visual metric from those points looks like the metric of $g$ at point $y$. A formula can be written in terms of $g$ and its first derivatives (as a tensor). The Epstein map from the boundary into the interior (the bulk) sends a point $y$ to the point of tangency between the horocycle passing through $y$ and the Epstein hypersurface. We call this a **truncation** because we can cut off at the Epstein surface instead of going all the way to the boundary at infinity.
+
+**Example:** If we just let $g$ be the round metric itself, then 0 belongs to all the horocycles because the visual metric looks like the round metric only from the origin. So all the horocycles are just spheres of half the radius of the 3-ball which are tangent to the 3-ball. The Epstein map is trivial in this case, sending $S^2 \to 0$. If we scale the round metric by $e^{2t}$, then the sphere centered around the origin of radius $t$ which is the Epstein surface.
+
+So to recap, we have two worlds that correspond to each other:
+| Complex Structure on $\partial_\infty M$ | Convex cocompact hyperbolic structure on $M$ |
+| -------- | -------- |
+| Metric $g$ on $\partial_\infty M$ compatible with complex structure   | Epstein map/truncation $Ep_g:\partial_\infty M \to M$   |
+| Family of metrics $e^{2t}g, t\in \mathbb{R}$   | Family of Epstein surfaces parametrized by $\mathbb{R}$ which form a foliation for large $t$ near $\partial_\infty M$   |
+
+Now, in the quasi-Fuchsian case, the manifold $M$ is built from the universal cover $\mathbb{H}^3$ which has an Epstein surface in this universal cover which we can view as split into two surfaces along the Jordan curve. Those two pieces descend to two surfaces Epstein surfaces and the region between them is denoted $N$ which has finite volume. On either end, we have surfaces with metrics $g_\pm$. The **renormalized volume** of $N$ is $W(N):= \text{vol}(N)-\frac{1}{2}\int_{\partial N} H\, da$. The first volume term is actually equal to the Einstein-Hilbert action for the metric and the second is an integral of the mean curvature. The second term is called the Gibbon-Hawking-York term. If we scale by $t$, we'll get a region $N_t$ and $W(N_t) = W(N) + \pi \chi(\partial M)t$. That is, this renormalized volume scales linearly in $t$. If we were to reach the boundary at infinity by letting $t \to \infty$, we'd have infinite volume. This is why we call it a renormalized volume. To be hand-wavy, renormalization deals with problemtic infinities in QFT and returns sensible, interpretable finite quantities. Keep in mind the $W(N)$ depends on $g_\pm$.
+
+An interesting result is due to Krasnov-Schlenker and Takhtajan-Teo, separately. If we fix $g_-$ and allow $g_+$ to vary among different comformal classes, we may for simplicity, say that it varies among hyperbolic metrics since there is a unique one in each conformal class. So it's varying in the Teichmuller space. This gives us a function from the Teichmuller space to $\R$ and is in fact, a Kähler potential for the Weil-Petersson metric that is on the Teichmuller space.
+
+Other than quasi-Fuchsian cases, we also have Schottky manifolds which only have one conformal boundary component. There are infinitely many ways to fill a Riemann surface to make a hyperbolic 3-manifold (similar to how the Epstein surfaces fill up the quasi-Fuchsian case). One way to do this is pick curves on the surface so that if we remove them, we're left with only pairs-of-pants. If the surface were filled in, the curves would be compressible to a point (null homotopic). The way in which the compression happens is what gives different kinds of hyperbolic structures. Maldacena conjuectures there's always exists a Schottky filling so that the renormalized volume is negative.
+
+Yilin Wang and collaborators have also studied Lorentzian anti-de-Sitter space in which many of these same notions can be defined. They found a way to represent the renormalized volume in terms of some integral with the wave operator $\square$.
+
+## Loewner Energy
+
+Suppose we have a Jordan curve $\gamma$ in $\mathbb{C}\cup \infty$ and $f$ is a map from the unit disk to the inside of the curve-call the region $D$-while $g$ is a map to the outside of it-call the region $D'$. Suppose that $f,g$ are both twice differentiable. Then the Loewner energy is defined as $I^L(\gamma) = \frac{1}{\pi}\int_D \|f''/f'\|^2 dz^2 + \int_{D'}\|g''/g'\|dz^2 + 4 \log\|f'(0)/g'(\infty)\|$. This quantity is nonnegative and is 0 exactly when $\gamma$ is a circle. It is also invariant under $PSL(2,\mathbb{C})$ action. The quantity is finite if and only if $\gamma$ belongs to a so-called Weil-Petersson class.
+
+There is a measure one can put on the distribution of simple loops called the SLE loop measure. It's useful to string theorists and it turns out that if we consider a ratio of $\epsilon$-neighborhoors of the curve $\gamma$ to that of standard $S^1$, then as $\epsilon \to 0$, the ratio converges to the exponential of some quantity easily expressible in terms of $I^L(\gamma)$. In a sense, this looks like an action for SLE.
+
+
+## 1+1 Dimensions
+
+Let $\phi:S^1 \to S^1$ be a 3-times differentiable function. Let $S[\phi] = \phi'''/\phi' - \frac{3}{2}(\phi''/\phi')^2$. The Schwarzian action is $I_s(\phi) = \int^{2\pi}_0 S[\phi](e^{i\theta}) e^{2i\theta}\, d\theta$. It turns out that the integrand is always real valued so this action lands in $\mathbb{R}$. A kind of field theory can be built from this action. It turns out $S[\phi]=0$ if and only if $\phi$ is a Möbius transform on $\mathbb{RP}^1 = S^1$ and the Schwarzian action is invariant under post-composing $\phi$ with a $PSL(2,\mathbb{R})$ map or pre-composing with a rotation.
+
+If we use $g:=\phi_*d \theta$  as a metric on $S^1$, we can do similar constructions as above to get Epstein curves and it turns out their signed length (or equivalently, the signed area they enclose) is equal to $I_s(\phi)$. As above, we can scale the metric; let's scale by $e^t$. Then the length of the Epstein curve is $2\pi \sinh(t) + e^{-t}I_s(\phi)$. The isoperimetric inequality in $\mathbb{H}^2$ shows that the Schwarzian is always nonnegative and is 0 for Möbius transformations.
+
+Moreover, the derivative of the Loewner energy is some multiple of the Schwarzian action for a $\phi$ that maps $\gamma$ to $S^1$.
+
+
+## Other Results
+
+The universal Teichmuller space can be described as a space of quasi-circles (closed Jordan curves in $\mathbb{C}$) modulo Möbius transformations. Takhtajan-Teo defined a Weil-Petersson metric on this space that makes it a disconnected Hilbert manifold. One of the components is the closure of smooth curves; the curves in this component are called Weil-Petersson.
+
+**Theorem (Chris Bishop, 2020):** A curve $\gamma$ is Weil-Petersson if and only if $\gamma$ bounds a minimal disk in $\mathbb{H}^3$ with finite total curvature. This is equivalent to the disk having finite renormalized area.
+
+**Note:** I remember going to his Zoom talk on this and I think Takhtajan, at the end of the talk, informed Bishop that he had proved or at least made major contributions towards some conjecture in mathematical physics.
