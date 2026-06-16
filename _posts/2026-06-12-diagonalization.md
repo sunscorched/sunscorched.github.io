@@ -7,7 +7,7 @@ tags:
   - gauge theory
 ---
 
-For the month of May, I planned to write a series of posts about some spectacular applications of moduli spaces. Alas, I was delayed but here is the first in the series, about Donaldon's work on instantons and the Diagonalization Theorem which he proved in his thesis and was awred the Fields Medal. See Freed-Uhlenbeck or Nabler's survey on the subject. I will also discuss some corollaries such as the existence of exotic $\mathbb{R}^4$s and further aspects of Donaldson theory.
+For the month of May, I planned to write a series of posts about some spectacular applications of moduli spaces. Of course, there are many applications of moduli spaces which amount to constructing the space and then integrating in order to produce certain counts or algebro-topological invariants like certain cohomology classes. However, I wanted to write about direct uses of moduli spaces. Alas, I was delayed but here is the first in the series, about Donaldon's work on instantons and the Diagonalization Theorem which he proved in his thesis and was awarded the Fields Medal. See Freed-Uhlenbeck or Nabler's survey on the subject. I will also discuss some corollaries such as the existence of exotic $\mathbb{R}^4$s and further aspects of Donaldson theory.
 
 **Theorem (Donaldson, 1983):** Let $M$ be a compact, simply connected, oriented smooth 4-manifold with positive definite intersection form $Q$. Then $Q \simeq \bigoplus^m (1)$ over $\mathbb{Z}$. Here, $m$ is half the number of solutions $\alpha$ to $Q(\alpha,\alpha) = -1$.
 
