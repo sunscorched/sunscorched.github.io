@@ -1,5 +1,5 @@
 ---
-title: "Note on Abouzaid: _Framed Bordism and Lagrangian Embeddings of Exotic Spheres_"
+title: "Note on _Framed Bordism and Lagrangian Embeddings of Exotic Spheres_ by Abouzaid"
 date: 2026-06-15
 permalink: /posts/2026/06/lagexospheres/
 tags:
