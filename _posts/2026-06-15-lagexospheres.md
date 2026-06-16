@@ -1,10 +1,11 @@
 ---
-title: "Note on _Framed Bordism and Lagrangian Embeddings of Exotic Spheres_"
+title: "Note on Abouzaid: _Framed Bordism and Lagrangian Embeddings of Exotic Spheres_"
 date: 2026-06-15
 permalink: /posts/2026/06/lagexospheres/
 tags:
   - symplectic geometry
   - exotic spheres
+  - moduli spaces
 ---
 
 This is a second post in a series on direct uses of moduli spaces. It is mainly notes on the 2011 [paper](https://arxiv.org/pdf/0812.4781.pdf) mentioned in the title by Mohammed Abouzaid. Recall that every smooth manifold $M$ embeds as an exact Lagrangian submanifold into its own cotangent bundle $T^\*M$; just use the zero section or the differential of any smooth function. However, an interesting question we may ask is whether a homotopy sphere $\Sigma^n$ embeds as a Lagrangian (may be non-exact) into the cotangent bundle for the standard sphere $T^* S^n$. By the Whitney trick, there is no obstruction to a **smooth** embedding of exotic $n$-spheres into $T^\*S^n$.
