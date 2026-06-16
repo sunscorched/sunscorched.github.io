@@ -1,5 +1,5 @@
 ---
-title: 'Donaldson's Diagonalization Theorem'
+title: "Donaldson's Diagonalization Theorem"
 date: 2026-06-16
 permalink: /posts/2026/06/diagonalization/
 tags:
