@@ -5,6 +5,7 @@ permalink: /posts/2026/06/diagonalization/
 tags:
   - 4-manifolds
   - gauge theory
+  - moduli spaces
 ---
 
 For the month of May, I planned to write a series of posts about some spectacular applications of moduli spaces. Of course, there are many applications of moduli spaces which amount to constructing the space and then integrating in order to produce certain counts or algebro-topological invariants like certain cohomology classes. However, I wanted to write about direct uses of moduli spaces. Alas, I was delayed but here is the first in the series, about Donaldon's work on instantons and the Diagonalization Theorem which he proved in his thesis and was awarded the Fields Medal. See Freed-Uhlenbeck or Nabler's survey on the subject. I will also discuss some corollaries such as the existence of exotic $\mathbb{R}^4$s and further aspects of Donaldson theory.
