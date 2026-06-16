@@ -7,7 +7,7 @@ tags:
   - exotic spheres
 ---
 
-These are some notes on the [paper](https://arxiv.org/pdf/0812.4781.pdf) mentioned in the title by Mohammed Abouzaid. Recall that every smooth manifold $M$ embeds as an exact Lagrangian submanifold into its own cotangent bundle $T^\*M$; just use the zero section. However, an interesting question we may ask is whether a homotopy sphere $\Sigma^n$ embeds as a Lagrangian (may be non-exact) into the cotangent bundle for the standard sphere $T^* S^n$. By the Whitney trick, there is no obstruction to a **smooth** embedding of exotic $n$-spheres into $T^\*S^n$.
+These are some notes on the 2011 [paper](https://arxiv.org/pdf/0812.4781.pdf) mentioned in the title by Mohammed Abouzaid. Recall that every smooth manifold $M$ embeds as an exact Lagrangian submanifold into its own cotangent bundle $T^\*M$; just use the zero section. However, an interesting question we may ask is whether a homotopy sphere $\Sigma^n$ embeds as a Lagrangian (may be non-exact) into the cotangent bundle for the standard sphere $T^* S^n$. By the Whitney trick, there is no obstruction to a **smooth** embedding of exotic $n$-spheres into $T^\*S^n$.
 
 **Main Theorem:** Every homotopy sphere $\Sigma^{4k+1}$ which embeds as a Lagrangian in $T^\*S^{4k+1}$ must bound a compact parallelizable manifold.
 
