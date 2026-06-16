@@ -1,6 +1,6 @@
 ---
 title: "Donaldson's Diagonalization Theorem"
-date: 2026-06-16
+date: 2026-06-12
 permalink: /posts/2026/06/diagonalization/
 tags:
   - 4-manifolds
