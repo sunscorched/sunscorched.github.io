@@ -67,3 +67,9 @@ An earlier result by Abouzaid-Smith showed that in the plumbing $T^\*S^n \\#\_{p
 
 **Addendum:** By Cieliebak-Eliashberg (lemma 11.2), any symplectomorphism between Liouville domains of finite type (i.e. have compact skeleton), can be smoothly isotoped to an exact symplectomorphism. In fact, looking at the proof, it seems that it is isotopic through symplectomorphisms.
 Hence, since cotangent bundles of closed manifolds are finite type, we can change the question above to ask: "Are there distinct homotopy spheres $\Sigma,\Sigma'$ such that their cotangent bundles are symplectomorphic?" If there is, we can make it an exact symplectomorphism.
+
+I'll end with one last theorem of Ekholm-Kragh-Smith.
+
+**Theorem:** Let $n \geq 6$ be even and $\phi:S^n \to S^n$ be a diffeomorphism that can be used to glue two $D^{n+1}$ along their boundary in order to form an exotic $(n+1)$-sphere $\Sigma_\phi$ that does not bound a parallelizable manifold. Let $\iota:S^n \to T^\* S^n$ be the 0-section inclusion. Then $\iota$ and $\iota \circ \phi$ are not Hamiltonian isotopic as maps.
+
+**Remark:** The Nearby Lagrangian Conjecture is about Lagrangians being Hamiltonian isotopic as submanifolds. Here, we have a theorem which shows the conjecture would be false if it were a statement about maps.
