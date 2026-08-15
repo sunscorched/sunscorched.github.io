@@ -43,8 +43,8 @@ The RHS is defined everywhere other than $s=1$, not just when the real part is g
 
 Near $s=0$, the function looks like $\dfrac{\zeta'(0)}{\zeta(0)}\cdot \dfrac{1}{s}$ so $\dfrac{\zeta'(0)}{\zeta(0)} = \ln(2\pi)$ is the residue. For $s=1$, the residue is $-x$. At the trivial zeros $s=-2k$, one can find them to be $-\dfrac{x^{-2k}}{2k}$. The sum of all of those, by a Taylor series, is $\dfrac{1}{2}\ln(1-x^{-2})$. Let $\rho$ represent nontrivial zeros. The sum of the residues for all of those is $\sum_\rho \dfrac{x^\rho}{\rho}$. So in summary,
 
-$$
+\[
 \psi(x) = x - \sum_\rho \dfrac{x^\rho}{\rho} - \dfrac{1}{2}\ln(1-x^{-2}) -\ln(2\pi).
-$$
+\]
 
 If we assume the Riemann Hypothesis, then the $\rho = \dfrac{1}{2}\pm i\gamma$. Introducing and then expanding exponentials gives some sines and cosines. We find that $\psi(x) \approx x- 2\sqrt{x}\sum_{\gamma > 0} \dfrac{\sin(\gamma \ln x)}{\gamma}-\ln(2\pi)$ if the Riemann Hypothesis is true.
