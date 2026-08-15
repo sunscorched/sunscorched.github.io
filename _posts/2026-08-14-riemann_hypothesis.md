@@ -5,6 +5,7 @@ permalink: /posts/2026/08/rimann_hypothesis/
 tags:
   - analytic number theory
   - AI
+---
 
 Anthropic [announced](https://www.anthropic.com/research/riemann-zeta?utm_source=tldrai) that their latest model has made progress on the Riemann hypothesis. I'll give enough background on the hypothesis to understand the result and its importance (but not the argument). Much of this is based on [Terence Tao's blog](https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/) and also this [video](https://www.youtube.com/watch?v=9vs0OpmcjXY).
 
