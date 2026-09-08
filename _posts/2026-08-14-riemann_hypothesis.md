@@ -1,7 +1,7 @@
 ---
 title: 'The Riemann Hypothesis and Claude'
 date: 2026-08-14
-permalink: /posts/2026/08/rimann_hypothesis/
+permalink: /posts/2026/08/riemann_hypothesis/
 tags:
   - analytic number theory
   - AI
