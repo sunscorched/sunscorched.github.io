@@ -19,9 +19,11 @@ Modular arithmetic gets us infinitely many examples of circles with zero rationa
 
 **Proposition:** For circles defined by $x^2+y^2=d$, if $d \equiv 3 \pmod{4}$, there are no rational points. For the $d$ in which there exists one rational point, then there are in fact infinitely many rational points.
 
+Note that this proposition does not tell us whether, for example, $d=21 \equiv 1 \pmod{4}$ gives rational points on the associated circle. But as we'll later see, $d=3\cdot 7$ and each of these prime factors is 3 mod 4. Moreover, there is an odd number of each factor which means the associated circle has no rational points.
+
 ## Gaussian Integers $\mathbb{Z}[i]$
 
-We want to strengthen the above proposition and we'll do so by visiting the Gaussian integers $\mathbb{Z}[i]$ which are of the form $a+bi$ where $a,b \in \mathbb{Z}$ and $i^2 = -1$. This ring has a (squared) norm $N(a+bi)=a^2+b^2$ and it is multiplicative; i.e. $N(xy)=N(x)N(y)$.
+So we want to strengthen the above proposition and we'll do so by visiting the Gaussian integers $\mathbb{Z}[i]$ which are of the form $a+bi$ where $a,b \in \mathbb{Z}$ and $i^2 = -1$. This ring has a (squared) norm $N(a+bi)=a^2+b^2$ and it is multiplicative; i.e. $N(xy)=N(x)N(y)$.
 
 If $p$ is prime in $\mathbb{Z}$; i.e. cannot factor nontrivially, it isn't necessarily prime in $\mathbb{Z}[i]$. For example, $5 = (1+2i)(1-2i)$. Indeed, let $p \equiv 1 \pmod{4}$ and let $G= (\mathbb{Z}/p)^\times$ be the multiplicative group of elements coprime to $p$ (which are all integers less than $p$). This group has order $p-1 = 4k+1-1 = 4k$.
 
