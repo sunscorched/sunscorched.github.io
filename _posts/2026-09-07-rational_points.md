@@ -25,7 +25,7 @@ Note that this proposition does not tell us whether, for example, $d=21 \equiv 1
 
 So we want to strengthen the above proposition and we'll do so by visiting the Gaussian integers $\mathbb{Z}[i]$ which are of the form $a+bi$ where $a,b \in \mathbb{Z}$ and $i^2 = -1$. This ring has a (squared) norm $N(a+bi)=a^2+b^2$ and it is multiplicative; i.e. $N(xy)=N(x)N(y)$.
 
-If $p$ is prime in $\mathbb{Z}$; i.e. cannot factor nontrivially, it isn't necessarily prime in $\mathbb{Z}[i]$. For example, $5 = (1+2i)(1-2i)$. Indeed, let $p \equiv 1 \pmod{4}$ and let $G= (\mathbb{Z}/p)^\times$ be the multiplicative group of elements coprime to $p$ (which are all integers less than $p$). This group has order $p-1 = 4k+1-1 = 4k$.
+If $p$ is prime in $\mathbb{Z}$; i.e. cannot factor nontrivially, it isn't necessarily prime in $\mathbb{Z}[i]$. For example, $5 = (1+2i)(1-2i)$ and $2 = i(1-i)^2$ also factors and in fact, is so-called, ramified. Indeed, let $p \equiv 1 \pmod{4}$ and let $G= (\mathbb{Z}/p)^\times$ be the multiplicative group of elements coprime to $p$ (which are all integers less than $p$). This group has order $p-1 = 4k+1-1 = 4k$.
 
 **Lemma:** For any finite field $F = \mathbb{F}_q$ where $q=p^n$, the multiplicative group of units is a cyclic group.
 
