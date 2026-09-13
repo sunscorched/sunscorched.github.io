@@ -40,7 +40,7 @@ If instead $p\equiv 3 \pmod{4}$, could it factor in $\mathbb{Z}[i]$? Suppose it 
 
 Let's go back to the question of which $d \in \mathbb{N}$ are such that we have rational solutions to $x^2+y^2=d$. In the context of $\mathbb{Z}[i]$, we want to find $x+yi$ so that its norm is $d$. If $d$ contains a prime factor $p \equiv 3 \pmod{4}$, then we can write $d=p^kq$ here $q$ are the other factors and $k$ is a power.
 
-So then $p$ must divide the product $(x+yi)(x-yi)$. Because $p$ is a prime in $\mathbb{Z}[i]$, if $p$ divides a product, **it must divide one of the factors** (that's what it means to be prime). If $p$ divides $x+yi$, then $p$ must divide both $x$ and $y$ and hence, also $x-yi$. So then, if $x+yi$ is divisible by $p^\ell$ for some $\ell$, then $x^2+y^2$ must be divisible by $p^{2\ell}$. 
+So then $p$ must divide the product $(x+yi)(x-yi)$. Because $p$ is a prime in $\mathbb{Z}[i]$, if $p$ divides a product, **it must divide one of the factors** (that's what it means to be prime). If $p$ divides $x+yi$, then $p$ must divide both $x$ and $y$ and hence, also $x-yi$. So then, if $x+yi$ is divisible by $p^\ell$ for some $\ell$, then $x^2+y^2$ must be divisible by $p^{2\ell}$. So the $k$ mentioned above is even: $k=2\ell$.
 
 To summarize, if we want solutions to $x^2+y^2=d$ and we have that $p \equiv 3 \pmod{4}$ is a prime factor of $d$, this forces there to be an even number of $p$ factors in $d$.
 
