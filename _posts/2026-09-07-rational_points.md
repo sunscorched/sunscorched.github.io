@@ -44,10 +44,9 @@ So then $p$ must divide the product $(x+yi)(x-yi)$. Because $p$ is a prime in $\
 
 To summarize, if we want solutions to $x^2+y^2=d$ and we have that $p \equiv 3 \pmod{4}$ is a prime factor of $d$, this forces there to be an even number of $p$ factors in $d$.
 
-To move to rational solutions of $x^2+y^2=d$, if $x=a/c, y=b/c$, then $a^2+b^2=dc^2$. Now, a **valuation** $v_p$ counts the number of time $p$ divides a number. Clearly, $v_p(ac)=v_p(a)+v_p(c)$. For rational values, we can extend via $v_p(a/c)=v_p(a)-v_p(c)$. So applying it to the equation above, we have:
-$v_p(a^2+b^2) = v_p(d)+v_p(c^2)$.
+To move to rational solutions of $x^2+y^2=d$, if $x=a/c, y=b/c$, then $a^2+b^2=dc^2$. Since $c^2$ is, well, a square, then if $p \equiv 3 \pmod{4}$ divides it, it must divide $c$ and hence, $c^2$ has an even number of factors of $p$. We've argued that the left hand side must have an even number of factors of $p$ as well. So this forces $d$ to have an even number of factors of $p$.
 
-The left hand side is even as we argued and if $p$ divides $c^2$, it must divide $c$ itself. So $v_p(c^2)$ is also even. Hence, $v_p(d)$ must be even. In conclusion:
+This can be codified with a **valuation** $v_p$ which counts the number of time $p$ divides a number. Clearly, $v_p(ac)=v_p(a)+v_p(c)$. For rational values, we can extend via $v_p(a/c)=v_p(a)-v_p(c)$. So applying it to the equation above, we have: $v_p(a^2+b^2) = v_p(d)+v_p(c^2)$. So then:
 
 **Proposition:** If there are rational solutions to $x^2+y^2=d$, then for every prime factor $p \equiv 3 \pmod{4}$, it must divide $d$ an even number of times.
 
