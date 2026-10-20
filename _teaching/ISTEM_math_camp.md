@@ -13,9 +13,9 @@ I was a teacher for the [I-STEM](https://www.stonybrook.edu/istem/) High School 
 Topics
 ======
 * Graph Theory - Eulerian and Hamiltonian Circuits and Error-Correcting Codes
-* Introduction [Complex Number Theory](..files/complex_numbers.pdf) - Fundamental Theorem of Algebra and Polynomial Equations
+* Introduction [Complex Number Theory](../files/complex_numbers.pdf) - Fundamental Theorem of Algebra and Polynomial Equations
 * A Counting Problem using Complex Numbers and a Discrete Fourier Transform
 * Hamiltonian Mechanics
 * Introduction to Group Theory and Symmetries
-* [The Pigeonhole Principle](..files/pigeonhole_puzzles.pdf)
+* [The Pigeonhole Principle](../files/pigeonhole_puzzles.pdf)
 * Mathematics of Origami: Hexaflexagons
