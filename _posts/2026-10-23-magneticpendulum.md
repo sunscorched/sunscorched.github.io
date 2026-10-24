@@ -22,13 +22,12 @@ Here is an animation with many initial positions for the pendulum. Note that som
   <source src="/assets/magnetic_pendulum_many.mp4" type="video/mp4">
 </video>
 
-Here is a graphic showing the basins of attraction. That is, we color the plane with three colors. A particular point $p$ in the plane is given the color corresponding to the magnet that the pendulum eventually is attracted to if it begins at point $p$. There are points which would not be given a color as the forces perfectly balance out. For example, the exact barycenter of the three magnets is one such point.
+Here is a graphic showing the basins of attraction. That is, we color the plane with three colors. A particular point $p$ in the plane is given the color corresponding to the magnet that the pendulum eventually is attracted to if it begins at point $p$. There are points which would not be given a color as the forces perfectly balance out. For example, the exact barycenter of the three magnets is one such point. One can see that there are fractal-like patterns at play.
 
 ![label](/files/magnetic_pendulum_basins.png)
 
-Here is another image of higher fidelity in Zenzicubic's [video](https://www.youtube.com/watch?v=oVNr5wPHuTs&t=12s). The colors are different and the configuration is rotated by 30 degrees but one can see some similarities to the image I generated. One thing of note is that in my image with the three largest basins, in each one there are two pockets of other colors. In this higher fidelity image
+Here is another image of higher fidelity in Zenzicubic's [video](https://www.youtube.com/watch?v=oVNr5wPHuTs&t=12s). The colors are different and the configuration is rotated by 30 degrees but one can see some similarities to the image I generated. One thing of note is that in my image with the three largest basins, in each one there are two pockets of other colors. In this higher fidelity image, there's more detail to those pockets and we actually see a mix of two colors surrounded by the third color of the larger basin.
 
 ![label](/files/magnetic_pendulum_basins2.png)
-
 
 One can make the system more interesting by having larger/smaller magnets placed in different configurations and also giving the pendulum an initial push. We can also add more magnets and change the length of the string.
