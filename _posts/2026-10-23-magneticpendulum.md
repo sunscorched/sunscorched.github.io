@@ -23,4 +23,4 @@ Here is an animation with many initial positions. Note that some of them are clo
 
 Here is a graphic showing the basins of attraction.
 
-![label](/files/magneticpendulum_basins.png)
+![label](/files/magnetic_pendulum_basins.png)
