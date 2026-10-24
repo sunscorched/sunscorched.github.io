@@ -1,5 +1,5 @@
 ---
-title: 'Magnetic Pendulum and Basins of Attraction'
+title: 'A Magnetic Pendulum and Basins of Attraction'
 date: 2026-10-23
 permalink: /posts/2025/12/magneticpendulum/
 tags:
