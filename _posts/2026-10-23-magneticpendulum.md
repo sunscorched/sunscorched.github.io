@@ -26,4 +26,9 @@ There are many better rendered images but here is a graphic showing the basins o
 
 ![label](/files/magnetic_pendulum_basins.png)
 
+Here is another image of higher fidelity in Zenzicubic's [video](https://www.youtube.com/watch?v=oVNr5wPHuTs&t=12s).
+
+![label](/files/magnetic_pendulum_basins2.png)
+
+
 One can make the system more interesting by having larger/smaller magnets placed in different configurations and also giving the pendulum an initial push. We can also add more magnets and change the length of the string.
