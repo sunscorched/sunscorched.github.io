@@ -16,7 +16,7 @@ It can be great fun to animate the dynamics as has been done many times on YouTu
   <source src="/assets/magnetic_pendulum_single.mp4" type="video/mp4">
 </video>
 
-Here is an animation with several initial positions for the pendulum. The playback speed of the videos can be slowed down to help track a specific point's trajectory. Note that some of the points start out close to each other but end up attracted to different magnets. Indeed, this is an example of a **chaotic system** since small deviations in initial conditions can lead to drastically different paths and final results.
+Here is an animation with several initial positions for the pendulum. The playback speed of the videos can be slowed down to help track a specific point's trajectory. Note that some of the points start out close to each other but end up attracted to different magnets. Indeed, this is an example of a **chaotic system** since small deviations in initial conditions can lead to drastically different paths and final results; cf. animation of the chaos of the [double pendulum](https://sunscorched.github.io/posts/2025/12/phasespace/).
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/magnetic_pendulum_many.mp4" type="video/mp4">
