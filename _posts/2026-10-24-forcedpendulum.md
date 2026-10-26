@@ -28,7 +28,9 @@ Below is an animation with 20 different initial conditions that eventually look 
   <source src="/assets/driven_pendulum_20.mp4" type="video/mp4">
 </video>
 
-The animation below is the exact same system but we now wrap the angle $\theta$ so that the phase space is $T^* S^1$.
+In this first animation, we can see that eventually some of the pendula do more full rotations around the axis than others. The overall shape of the curves do suggest that there is something "quasi-periodic" happening to the pendula but it's definitely not truly periodic even if the forcing term is periodic.
+
+The animation below is the exact same system but we now wrap the angle $\theta$ so that the phase space is $T^* S^1$. We have the angles lie in $[-\pi, \pi)$.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/driven_pendulum_20wrapped.mp4" type="video/mp4">
