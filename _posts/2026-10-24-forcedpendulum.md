@@ -1,10 +1,9 @@
 ---
-title: 'A Magnetic Pendulum and Basins of Attraction'
+title: 'A Pendulum with Forcing and Damping'
 date: 2026-10-24
-permalink: /posts/2026/10/magneticpendulum/
+permalink: /posts/2026/10/forcedpendulum/
 tags:
   - classical mechanics
-  - electromagnetism
   - dynamical systems
 ---
 
