@@ -20,13 +20,13 @@ $$\begin{aligned}
 +F\cos(\omega_d t)
 \end{aligned}$$
 
-The usefulness of writing this as a 1st order system is that we can study the critical points and using linear algebra and eigenvalues get a local picture of what happens in the phase space around the critical points.
+The usefulness of writing this as a 1st order system is that we can study the critical points and using linear algebra and eigenvalues get a local picture of what happens in the phase space around the critical points. As it turns out, small differences in initial conditions can eventually lead to drastic differences. Below is an animation with 20 different initial conditions that eventually look very different. This first animation does **not** use $S^1 \times \mathbb{R}$ as the phase space but rather "unrolls" the $\theta$ parameter so that the phase space is $\mathbb{R}^2$. This way, we can see how many times the pendula spin around.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/driven_pendulum_20.mp4" type="video/mp4">
 </video>
 
-
+The animation below is the exact same system but we now wrap the angle $\theta$.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/driven_pendulum_20wrapped.mp4" type="video/mp4">
