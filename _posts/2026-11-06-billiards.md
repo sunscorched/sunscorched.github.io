@@ -39,3 +39,7 @@ And here is one for a regular hexagon.
 </video>
 
 I've been choosing polygons that give tilings of the plane but we don't have to do so. There's no problem with the reflected images overlapping with each other in the visualization, so long as its understood that there's not "real" overlap in the actual dynamical system. But one could also define a topological space of the unfolding to form a Riemann surface.
+
+Now, there is something interesting about the examples I've given. For a square, reflections in its sides generate a square grid. Each tile is an image of the original square under a unique affine isometry (once we fix the initial tile). For an equilateral triangle, reflections in the three sides generate the familiar triangular tiling. Again, the reflection group acts simply transitively on the tiles: each tile is reached by a unique group element.
+
+This uniqueness is what makes the unfolding particularly clean. Every point in the plane belongs to a unique tile interior, and the corresponding reflection tells us exactly how to fold it back. But now, for a hexagon, different sequences of reflections from an initial tile can produce the same geometric tile. So we have a nontrivial stabilizer: the action on the set of geometric tiles is not simply transitive. This does not invalidate the unfolding but it is a subtly that impacts the study.
