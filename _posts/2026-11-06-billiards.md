@@ -10,13 +10,13 @@ tags:
 
 Of course, one could track the trajectory via careful angle measurements and precisely drawn diagrams. But there is a useful method called **unfolding.** When the ball hits the edge, we reflect the whole table across that edge. The outgoing trajectory also gets reflected and thus, in the unfolded diagram, the trajectory is simply a straight line. You can work out the angles to convince yourself that the trajectory would be a straight line.
 
-Let's begin with a simple example of a square billiard table. Note that whenever the ball bounces on the left, there is a crossing of the square on the right.
+Let's begin with a simple example of a square billiard table. Note that whenever the ball bounces on the left, there is wall-crossing on the right.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/square_billiards.mp4" type="video/mp4">
 </video>
 
-In this square grid
+In this square grid, let's suppose it has side length normalized to 1. If the starting coordinates of the ball are rational and the slope of the trajectory is also rational, then the trajectory will eventually lead the ball to its starting point. These are called **periodic** trajectories. Below is one such example 
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/periodic_billiards.mp4" type="video/mp4">
