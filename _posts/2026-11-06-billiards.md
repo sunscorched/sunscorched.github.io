@@ -24,10 +24,16 @@ In this square grid, let's suppose it has side length normalized to 1. If the st
 
 For any triangle where all of its angles are acute, we can drop an altitude line from each vertex; i.e. the line which forms a right angle when it intersects the opposite side. We can then form an inscribed triangle out of those intersection points (the base of the altitudes). This triangle is called the orthic triangle and gives us a 3-bounce trajectory. The question of finding periodic trajectories is not easy. In fact, up until June 2026, it was not even known if every triangle has a periodic trajectory. There is a [preprint](https://arxiv.org/abs/2606.10102) claiming that every polygon has at least one periodic orbit.
 
+Of course, the unfolding principle works for other kinds of tables as well. Here is an equilateral triangle as a billiards table.
+
 <video controls loop autoplay muted width="600">
   <source src="/assets/triangle_billiards.mp4" type="video/mp4">
 </video>
 
+And here is one for a regular hexagon.
+
 <video controls loop autoplay muted width="600">
   <source src="/assets/hexagon_billiards.mp4" type="video/mp4">
 </video>
+
+I've been choosing polygons that give tilings of the plane but we don't have to do so. There's no problem with the reflected images overlapping with each other in the visualization, so long as its understood that there's not "real" overlap in the actual dynamical system. But one could also define a topological space of the unfolding to form a Riemann surface.
