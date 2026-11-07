@@ -82,3 +82,31 @@ This theorem is equivalent to how the recurrence theorem was stated above. The "
 - the dynamics are deterministic
 
 In such systems, the Poincaré recurrence theorem still holds and there are an abundance of "almost periodic" trajectories.
+
+## A rational billiard flow is uniquely ergodic in almost every direction
+
+There are a few definitions of a **translation surface.** A hands-on definition is to begin with a collection of polygons in the Euclidean plane; they need not be convex. The only rule is that every edge must be paired with a parallel edge of the same length. We can then glue each edge to the edge it is paired with. There are different ways to glue but since we’re in the Euclidean plane, there exist translations; these are the maps we use for gluing. Formally, we are defining an equivalence relation on the union of the polygons, call it $P$.
+
+The result is a topological space $X = P/\sim$ which we’ll assume is connected. In fact, $X$ will be a compact, orientable 2-manifold. Under the equivalence, some of the vertices of $P$ will be identified. Let $x \in X$ be the image of a vertex. There is a neighborhood $U_x$ of $x$ whose preimage is a union of circular sectors. We can measure the angles of those sectors. It turns out that they will sum to a multiple of $2\pi$. If the angle is larger than $2\pi$, then we say that $x$ is a **singularity**.
+
+An alternative way to define a translation surface is that we want a compact Riemann surface with a meromorphic differential 1-form $\omega$ on it. The form is holomorphic away from the singularities and at a singular point with angle $2\pi(k+1)$, the order of the pole of $\omega$ is $k$. This kind of form is also often called an abelian differential.
+
+Note that away from the singularities, there is a vertical flow; one can just walk “north” on $P$ and then when an edge is reached, use the identification to “teleport.” One can also multiple the abelian differential by $e^{i\theta}$ for some angle $\theta$ and thus, rotate the flow. In this way, we can ask some dynamical questions. such as whether there are periodic trajectories of this flow or whether there are trajectories that uniformly fill up the space $X$. I’ll make this more precise in a moment.
+
+But first, let’s consider a concrete class of polygons, the ones where its angles are all rational multiples of $\pi$. In such a setting, if we have a billiard moving in some initial direction determined by an angle $\theta_0$, the possible directions its trajectory can take is finite. In fact, take all the angles which are rational multiples of $\pi$ and divide by $\pi$ so we just have rational numbers. If $N$ is the least common multiple of the denominators of all the rational numbers, the number of possible directions of the trajectory is $2N$.
+
+Similar to how we unfolded for a single trajectory above, we now unfold by reflecting across all the edges. More precisely, we have reflections across each edge and they generate a group. We apply this group to the original rational polygon; this gives $2N$ copies of the polygon. Moreover, we’ve created parallel edge pairs of the same length so we can form a translation surface as described above.
+
+Back to the idea of “uniformly fill up.” Start with a finite measure space $X$ with measure $\mu$. For convenience, say we normalize the total measure of $X$ to be 1. For each positive real $t$, we have a family of measurable functions $T_t:X \to X$ such that for positive $s,t$, $T_{s+t} = T_s\circ T_t$. A family of flows satisfies this axiom. We say that this family **ergodic** if each $T_t$ preserves $\mu$ and the following condition holds: for any measureable set $A$, if for all $t >0$, we have that $T^{-1}_t(A) \subset A$, then either $A$ has measure 0 or 1. We say that the family $T$ is uniquely ergodic if there is only one $T$-invariant Borel probability measure on $X$.
+
+A consequence of being ergodic is Birkhoff’s theorem which roughly says that the time average of a function $f$ on the orbit converges to the space average of $f$. More precisely, take any member of the family $T$; for convenience, I’ll just call it $T$. Let $f:X \to \mathbb{R}$ be an integrable function. Then for almost every point $x \in X$, we have
+
+$$\lim_{k \to \infty} \dfrac{1}{k+1}\sum^k_{i=0} f(T^i(x)) =\int_X f \, d\mu$$
+
+For example, say $A$ has measure 0.1 and $f$ is 1 on $A$ and 0 otherwise. For a point $x$, we can look at where it moves under iterations of $T$. If it lands in $A$, then $f$ would indicate this with 1. The theorem tells us that for a large number of iterates, about 10% of the time, they land in $A$ since $A$ has 10% of the total measure. Since we could take any set $A$ with positive measure and its indicator function for $f$, this shows that under many iterates, most points would visit every set in proportion to its measure.
+
+Brought into the context of billiards, if the billiard flow were ergodic, this would mean most trajectories bring the ball through any given (measurable) region and do so in proportion to the measure of the region. A theorem from 1986 tells us this is, in fact, the case for rational polygons. Or rather, somewhat stronger:
+
+**Theorem (Kerchhoff-Masur-Smillie):** For every translation surface (which includes every rational polygon), and for almost every angle $\theta \in S^1$, the flow in the direction $\theta$ is uniquely ergodic.
+
+I won't discuss the proof but here is a short [note](https://lipn.univ-paris13.fr/~monteil/papiers/fichiers/kms.pdf) on the theorem.
