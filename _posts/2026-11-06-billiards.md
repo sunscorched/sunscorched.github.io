@@ -16,7 +16,7 @@ Let's begin with a simple example of a square billiard table. Note that whenever
   <source src="/assets/square_billiards.mp4" type="video/mp4">
 </video>
 
-In this square grid, let's suppose it has side length normalized to 1. If the starting coordinates of the ball are rational and the slope of the trajectory is also rational, then the trajectory will eventually lead the ball to its starting point. These are called **periodic** trajectories and are defined not just for a square table but any polygon. Below is one such example. In the unfolded plane, it's rather easy to see if a trajectory is periodic by seeing if the line passes through the same point (after accounting for reflections).
+In this square grid, let's suppose it has side length normalized to 1. If the starting coordinates of the ball are rational and the slope of the trajectory is also rational, then the trajectory will eventually lead the ball to its starting point. These are **periodic** trajectories; trajectories that eventually return to their starting point and direction of travel, and hence, will trace the same path again. Periodic trajectories are defined not just for a square table but any polygon or even tables with curved edges. Below is an example of a periodic trajectory. It returns to its starting point more than once but the first time it does, it is not moving in the initial direction of travel. In the unfolded plane, it's rather easy to see if a trajectory is periodic by seeing if the line passes through the same point (after accounting for reflections).
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/periodic_billiards.mp4" type="video/mp4">
