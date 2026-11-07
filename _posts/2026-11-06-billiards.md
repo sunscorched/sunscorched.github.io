@@ -16,11 +16,13 @@ Let's begin with a simple example of a square billiard table. Note that whenever
   <source src="/assets/square_billiards.mp4" type="video/mp4">
 </video>
 
-In this square grid, let's suppose it has side length normalized to 1. If the starting coordinates of the ball are rational and the slope of the trajectory is also rational, then the trajectory will eventually lead the ball to its starting point. These are called **periodic** trajectories. Below is one such example 
+In this square grid, let's suppose it has side length normalized to 1. If the starting coordinates of the ball are rational and the slope of the trajectory is also rational, then the trajectory will eventually lead the ball to its starting point. These are called **periodic** trajectories. Below is one such example.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/periodic_billiards.mp4" type="video/mp4">
 </video>
+
+For any triangle where all of its angles are acute, we can drop an altitude line from each vertex; i.e. the line which forms a right angle when it intersects the opposite side. We can then form an inscribed triangle out of those intersection points (the base of the altitudes). This triangle is called the orthic triangle and gives us a 3-bounce trajectory. The question of finding periodic trajectories is not easy. In fact, it is not even known if every triangle has a periodic trajectory.
 
 <video controls loop autoplay muted width="600">
   <source src="/assets/triangle_billiards.mp4" type="video/mp4">
