@@ -54,8 +54,7 @@ And the group they generate are transformations of the type $(x,y) \mapsto (\eps
 
 The equilateral triangle is a bit trickier but still simple to show the action is also free. But it's not the case for a hexagon. Take a regular hexagon centered at the origin in the complex plane with vertices on the 6th roots of unity $e^{k\pi i/3}$ for $k=0,...,5$. Label the vertices as $v_0,...,v_5$ and let $r_j$ be the reflection across the line containing the side from $v_j$ to $v_{j+1}$ where the indices are taken modulo 6. Then the element $g=r_3 \circ r_1 \circ r_2 \circ r_0$ is not the identity; it's a counterclockwise rotation in the plane by $2\pi/3$. However, $g(P)=P$.
 
-
-This does not invalidate the unfolding but it is an interesting subtly. If we try to fold the tiles back to get the trajectory and we only use the geometric location of the end tile, we can run into the issue of choosing the wrong way back to the initial tile. What we get could be the wrong trajectory, even disconnected line segments.
+This does not invalidate the unfolding for the hexagon but it is an interesting subtly. If we try to fold the tiles back to get the trajectory and we only use the geometric location of the end tile, we can run into the issue of choosing the wrong way back to the initial tile. What we get could be the wrong trajectory, even disconnected line segments.
 
 ## The Poincaré Recurrence Theorem
 
