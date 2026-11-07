@@ -60,7 +60,7 @@ If we make a change of coordinates, we can compute the derivative of $T$ which, 
 
 **Theorem:** Let $U \subset \Omega$ be any set with positive measure. There exists a point $p$ and a positive integer $n$ such that $T^n(p) \in U$. That is, after $n$ iterations, $p$ is mapped back into $U$.
 
-The proof is simple. Pick any positive $N$. Since the map $T$ is area preserving, then the union of $T(U), T^2(U),..., T^N(U)$ is at most $N$ times the area of $U$. If $N$ is very large, then there must be overlap since the area of the polygon is finite, equal to a constant times its perimeter. So there are numbers $0<j<k<N$ such that $T^j(U)\cap T^k(U)$ has positive area. If we apply the inverse map to this set $j$ times, we then will get the set $U \cap T^{k-j}(U)$ which will have the same positive area which means there is a point $p \in U$ such that T^n(p) \in U$ as well where $n=k-j$. $\square$
+The proof is simple. Pick any positive $N$. Since the map $T$ is area preserving, then the union of $T(U), T^2(U),..., T^N(U)$ is at most $N$ times the area of $U$. If $N$ is very large, then there must be overlap since the area of the polygon is finite, equal to a constant times its perimeter. So there are numbers $0<j<k<N$ such that $T^j(U)\cap T^k(U)$ has positive area. If we apply the inverse map to this set $j$ times, we then will get the set $U \cap T^{k-j}(U)$ which will have the same positive area which means there is a point $p \in U$ such that $T^n(p) \in U$ as well where $n=k-j$. $\square$
 
 This theorem is equivalent to how the recurrence theorem was stated above. The "arbitrarily close" concept is captured in making $U$ have as small of positive area as we like.
 
