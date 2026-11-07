@@ -22,7 +22,7 @@ In this square grid, let's suppose it has side length normalized to 1. If the st
   <source src="/assets/periodic_billiards.mp4" type="video/mp4">
 </video>
 
-For any triangle where all of its angles are acute, we can drop an altitude line from each vertex; i.e. the line which forms a right angle when it intersects the opposite side. We can then form an inscribed triangle out of those intersection points (the base of the altitudes). This triangle is called the orthic triangle and gives us a 3-bounce trajectory. It should be pointed out that not all periodic orbits need to form a "loop". Some periodic orbits in right triangles, for example, simply reverse direction. So the image of the trajectory is a path that does not close up to form a loop.
+For any triangle where all of its angles are acute, we can drop an altitude line from each vertex; i.e. the line which forms a right angle when it intersects the opposite side. We can then form an inscribed triangle out of those intersection points (the base of the altitudes). This triangle is called the orthic or Fagano triangle and gives us a 3-bounce trajectory. It should be pointed out that not all periodic orbits need to form a "loop". Some periodic orbits in right triangles, for example, simply reverse direction. So the image of the trajectory is a path that does not close up to form a loop.
 
 The question of finding periodic trajectories is not easy. In fact, up until June 2026, it was not even known if every triangle has a periodic trajectory. There is a [preprint](https://arxiv.org/abs/2606.10102) claiming that every polygon has at least one periodic orbit.
 
