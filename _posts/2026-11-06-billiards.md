@@ -139,4 +139,6 @@ The 2015 Annals paper of Eskin-Mirzakhani-Mohammadi have several theorems. One o
 
 So under a rather natural group action on the moduli space, the closure of the orbit is not arbitrary but has a lot of structure. A natural question one can ask is, "How does the dynamics on a moduli space of translation surfaces relate to dynamics on a particular translation surface?" For example, if we're looking at a particular straightline trajectory on a translation surface; e.g. a trajectory for a polygonal billiards table, and this trajectory is space-filling, we can rotate it to be "vertical" and then apply the Teichmüller flow mentioned earlier. It contracts the surface vertically while expanding it horizontally. In this way, we **renormalize** the flow.
 
+Now, in the previous section, we However, with Eskin-Mirzakhani-Mohammadi's theorem, we can know the orbit closure of the
+
 
