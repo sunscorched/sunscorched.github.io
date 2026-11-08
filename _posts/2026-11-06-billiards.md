@@ -38,7 +38,7 @@ And here is one for a regular hexagon.
   <source src="/assets/hexagon_billiards.mp4" type="video/mp4">
 </video>
 
-Below are two images of periodic orbits that are similar looking. The starting positions for the two are only slightly different while the starting direction for each is $\pi/6$. In other words, within the unfolding, we just translated the trajectory segment. For that reason, we know that the two orbits (after making one cycle) have the same length. Thus, if we find a periodic orbit, it may live in a 1-parameter family of periodic orbits that all have the same length.
+Below are two images of periodic orbits that are similar looking. The starting positions for the two are only slightly different while the starting direction for each is $\pi/6$. In other words, within the unfolding, we just translated the trajectory segment. For that reason, we know that the two orbits (after making one cycle) have the same length. Thus, if we find a periodic orbit, it may live in a 1-parameter family of periodic orbits that all have the same length. For this example with the hexagon, if we shift the starting position up (maintain the $x$-coordinate), the trajectory will go into a vertex and we won't define its continuation. But if we move higher, then the periodic orbit will be rather boring; just bouncing between two opposite walls. So there can be quite a sharp qualitative difference when we move past a vertex.
 
 ![label](/files/4394293104d2483e070493e55010e15a.png)
 
