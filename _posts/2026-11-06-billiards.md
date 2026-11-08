@@ -141,7 +141,7 @@ So under a rather natural group action on the moduli space, the closure of the o
 
 Now, in the previous section, we have a theorem for all translation surfaces and almost all directions. However, many theorems in the field of billiards are stated as "almost all translation surfaces." So given a specific translation surface, it wasn't easy to deduce its properties.
 
-For example, we've been avoiding having trajectories going into the corners of the billiards table or the conical singularities of the translation surfaces. But we could wonder how many straightline trajectories between singularities---these are called saddle connections---exist for a given $(X,\omega)$ of length at most $L$. And also ask how the number grows as $L \to \infty$. One can show that the growth is quadratic, roughly $cL^2$ for some constant $c$ but it's not easy to determine what $c$ is.
+For example, we've been avoiding having trajectories going into the corners of the billiards table or the conical singularities of the translation surfaces. But we could wonder how many straightline trajectories between singularities-these are called saddle connections-exist for a given $(X,\omega)$ of length at most $L$. And also ask how the number grows as $L \to \infty$. One can show that the growth is quadratic, roughly $cL^2$ for some constant $c$ but it's not easy to determine what $c$ is.
 
 However, with Eskin-Mirzakhani-Mohammadi's theorem, we know the orbit closure of the surface is an affine invariant submanifold that carries a finite invariant volume form. Work of Eskin-Masur show that the constant $c$ is proportional to the volume of the orbit closure. The proportion constant is calculated from the configuration of the singularities.
 
