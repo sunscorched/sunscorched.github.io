@@ -58,7 +58,7 @@ This does not invalidate the unfolding for the hexagon but it is an interesting 
 
 ## The Poincaré Recurrence Theorem
 
-Let me end with a theorem of Poincaré.
+Let me start this section with a theorem of Poincaré.
 
 **Theorem:** Inside any polygon $P$, choose any point and any direction. There exists a billiards trajectory whose starting position and direction are arbitrarily close to the ones chosen, and which after some amount of bounces, returns to a position and direction arbitrarily close to the ones chosen.
 
@@ -87,7 +87,7 @@ In such systems, the Poincaré recurrence theorem still holds and there are an a
 
 There are a few definitions of a **translation surface.** A hands-on definition is to begin with a collection of polygons in the Euclidean plane; they need not be convex. The only rule is that every edge must be paired with a parallel edge of the same length. We can then glue each edge to the edge it is paired with. There are different ways to glue but since we’re in the Euclidean plane, there exist translations: these are the maps we use for gluing. Formally, we are defining an equivalence relation on the union of the polygons, call it $P$.
 
-The result is a topological space $X = P/\sim$ which we’ll assume is connected. In fact, $X$ will be a compact, orientable 2-manifold. Under the equivalence, some of the vertices of $P$ will be identified. Let $x \in X$ be the image of a vertex. There is a neighborhood $U_x$ of $x$ whose preimage is a union of circular sectors. We can measure the angles of those sectors. It turns out that they will sum to a multiple of $2\pi$. If the angle is larger than $2\pi$, then we say that $x$ is a **singularity**.
+The result is a topological space $X = P/\sim$ which we’ll assume is connected (otherwise, study the components individually). In fact, $X$ will be a compact, orientable 2-manifold. Under the equivalence, some of the vertices of $P$ will be identified. Let $x \in X$ be the image of a vertex. There is a neighborhood $U_x$ of $x$ whose preimage is a union of circular sectors. We can measure the angles of those sectors. It turns out that they will sum to a multiple of $2\pi$. If the angle is larger than $2\pi$, then we say that $x$ is a **singularity**.
 
 An alternative way to define a translation surface is that we want a compact Riemann surface with a meromorphic differential 1-form $\omega$ on it. The form is holomorphic away from the singularities and at a singular point with angle $2\pi(k+1)$, the order of the pole of $\omega$ is $k$. This kind of form is also often called an abelian differential.
 
