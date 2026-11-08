@@ -85,7 +85,7 @@ In such systems, the Poincaré recurrence theorem still holds and there are an a
 
 ## A rational billiard flow is uniquely ergodic in almost every direction
 
-There are a few definitions of a **translation surface.** A hands-on definition is to begin with a collection of polygons in the Euclidean plane; they need not be convex. The only rule is that every edge must be paired with a parallel edge of the same length. We can then glue each edge to the edge it is paired with. There are different ways to glue but since we’re in the Euclidean plane, there exist translations; these are the maps we use for gluing. Formally, we are defining an equivalence relation on the union of the polygons, call it $P$.
+There are a few definitions of a **translation surface.** A hands-on definition is to begin with a collection of polygons in the Euclidean plane; they need not be convex. The only rule is that every edge must be paired with a parallel edge of the same length. We can then glue each edge to the edge it is paired with. There are different ways to glue but since we’re in the Euclidean plane, there exist translations: these are the maps we use for gluing. Formally, we are defining an equivalence relation on the union of the polygons, call it $P$.
 
 The result is a topological space $X = P/\sim$ which we’ll assume is connected. In fact, $X$ will be a compact, orientable 2-manifold. Under the equivalence, some of the vertices of $P$ will be identified. Let $x \in X$ be the image of a vertex. There is a neighborhood $U_x$ of $x$ whose preimage is a union of circular sectors. We can measure the angles of those sectors. It turns out that they will sum to a multiple of $2\pi$. If the angle is larger than $2\pi$, then we say that $x$ is a **singularity**.
 
