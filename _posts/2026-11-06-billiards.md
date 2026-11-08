@@ -123,7 +123,7 @@ $$\begin{pmatrix} e^t & 0 \\ 0 & e^{-t} \end{pmatrix}, \begin{pmatrix} 1& s \\ 0
 
 **Nota bene:** It is somewhat amusing that each translation surface has its own dynamics but when we form a space of translation surfaces, that space too, has rich dynamics.
 
-The moduli space $\mathcal{H}(\alpha)$ also has some natural coordinates. For a translation surface $(X,\omega)$, integration of $\omega$ along closed loops that generate the homology $H_1(X,\mathbb{Z})$ gives complex numbers called **absolute periods.** Similarly, we can also integrate along paths connecting the $n$ singularities to get **relative periods.** Together, we get $2g+n+1$ numbers for $(X,\omega)$. Veech and Masur proved that the map sending translation surfaces to periods is a local homeomorphism. This gives us local coordinates.
+The moduli space $\mathcal{H}(\alpha)$ also has some natural coordinates. For a translation surface $(X,\omega)$, integration of $\omega$ along closed loops that generate the homology $H_1(X,\mathbb{Z})$ gives complex numbers called **absolute periods.** Similarly, we can also integrate along paths connecting the $n$ singularities to get **relative periods.** Together, we get $2g+n+1$ numbers for $(X,\omega)$. Veech and Masur proved that the map sending translation surfaces to periods is a local homeomorphism and thus, we obtain local coordinates.
 
 Let $\mathcal{H}_1(\alpha)$ be the subset of translation surfaces with area 1. For any subset $N$ of these area 1 translation surfaces, let $\mathbb{R}N = \{(X,t\omega): (X,\omega) \in N, t\in \mathbb{R}\}$. That is, we just scale the abelian differentials.
 
@@ -133,6 +133,8 @@ Also, recall that the **support** of a measure is the largest closed subset wher
 1. The support of $\nu_1$ is an immersed submanifold and the self-intersection set is closed and of $\nu$-measure 0. If $f:S \to \mathcal{H}_1(\alpha)$ is the immersion, then each point of $S$ has a neighborhood $U$ such that $\mathbb{R}f(U)$ is locally given by complex linear subspace defined over $\mathbb{R}$ in the period coordinates.
 2. Let $\nu$ be the measure supported on $\mathbb{R}f(S)$; i.e. scale the immersed submanifold. So $d\nu = d\nu_1da$. Then each point in $S$ has a neighborhood $U$ such that the restriction of $\nu$ to $\mathbb{R}f(U)$ is an affine linear measure in the period coordinates on $\mathbb{R}f(U)$, i.e. it is (up to normalization) the restriction of the Lebesgue measure to the subspace $\mathbb{R}f(U)$.
 
-The 2015 paper of Eskin-Mirzakhani-Mohammadi have several theorems. One of them is about orbit closures under $SL(2,\mathbb{R})$ action or the action of $P$ which is the subgroup of these matrices with 0 in the lower left corner.
+The 2015 Annals paper of Eskin-Mirzakhani-Mohammadi have several theorems. One of them is about orbit closures under $SL(2,\mathbb{R})$ action or the action of $P$ which is the subgroup of these matrices with 0 in the lower left corner.
 
 **Theorem (Eskin-Mirzakhani-Mohammadi):** Let $x\in \mathcal{H}_1(\alpha)$. Then the closures of the orbits under $P$ and $SL(2,\mathbb{R})$ action are the same and moreover, is an affine invariant submanifold. That is, it admits an affine measure $\nu_1$ as defined above.
+
+So under a rather natural group action on the moduli space, the closure of the orbit is not arbitrary but has a lot of structure.
