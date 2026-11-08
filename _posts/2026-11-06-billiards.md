@@ -139,6 +139,10 @@ The 2015 Annals paper of Eskin-Mirzakhani-Mohammadi have several theorems. One o
 
 So under a rather natural group action on the moduli space, the closure of the orbit is not arbitrary but has a lot of structure. A natural question one can ask is, "How does the dynamics on a moduli space of translation surfaces relate to dynamics on a particular translation surface?" For example, if we're looking at a particular straightline trajectory on a translation surface; e.g. a trajectory for a polygonal billiards table, and this trajectory is space-filling, we can rotate it to be "vertical" and then apply the Teichmüller flow mentioned earlier. It contracts the surface vertically while expanding it horizontally. In this way, we **renormalize** the flow.
 
-Now, in the previous section, we However, with Eskin-Mirzakhani-Mohammadi's theorem, we can know the orbit closure of the
+Now, in the previous section, we have a theorem for all translation surfaces and almost all directions. However, many theorems in the field of billiards are stated as "almost all translation surfaces." So given a specific translation surface, it wasn't easy to deduce its properties.
+
+For example, we've been avoiding having trajectories going into the corners of the billiards table or the conical singularities of the translation surfaces. But we could wonder how many straightline trajectories between singularities---these are called saddle connections---exist for a given $(X,\omega)$ of length at most $L$. And also ask how the number grows as $L \to \infty$. One can show that the growth is quadratic, roughly $cL^2$ for some constant $c$ but it's not easy to determine what $c$ is.
+
+However, with Eskin-Mirzakhani-Mohammadi's theorem, we can know the orbit closure of the
 
 
