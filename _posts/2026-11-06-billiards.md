@@ -40,9 +40,9 @@ And here is one for a regular hexagon.
 
 Below are two images of periodic orbits that are similar looking. The starting positions for the two are only slightly different while the starting direction for each is $\pi/6$. In other words, within the unfolding, we just translated the trajectory segment. For that reason, we know that the two orbits (after making one cycle) have the same length. Thus, if we find a periodic orbit, it may live in a 1-parameter family of periodic orbits that all have the same length.
 
-![label](/files/magnetic_pendulum_basins.png)
+![label](/files/4394293104d2483e070493e55010e15a.png)
 
-![label](/files/magnetic_pendulum_basins.png)
+![label](/files/0521b0e0fc5c1c79fa1191e585a4c4d8.png)
 
 I've been choosing polygons that give tilings of the plane but we don't have to do so. There's no problem with the reflected images overlapping with each other in the visualization, so long as its understood that there's not "real" overlap in the actual dynamical system. For example, when can make examples using non-convex polygon. The unfolding can still be done and we could define a topological space from the unfolding which would form a Riemann surface.
 
