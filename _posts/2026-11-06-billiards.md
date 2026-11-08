@@ -1,5 +1,5 @@
 ---
-title: 'Mathematical Polygonal Billiards'
+title: 'Polygonal Billiards, Translation Surfaces, and Dynamics on their Moduli'
 date: 2026-11-06
 permalink: /posts/2026/11/billiards/
 tags:
