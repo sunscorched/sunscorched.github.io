@@ -137,4 +137,6 @@ The 2015 Annals paper of Eskin-Mirzakhani-Mohammadi have several theorems. One o
 
 **Theorem (Eskin-Mirzakhani-Mohammadi):** Let $x\in \mathcal{H}_1(\alpha)$. Then the closures of the orbits under $P$ and $SL(2,\mathbb{R})$ action are the same and moreover, is an affine invariant submanifold. That is, it admits an affine measure $\nu_1$ as defined above.
 
-So under a rather natural group action on the moduli space, the closure of the orbit is not arbitrary but has a lot of structure.
+So under a rather natural group action on the moduli space, the closure of the orbit is not arbitrary but has a lot of structure. A natural question one can ask is, "How does the dynamics on a moduli space of translation surfaces relate to dynamics on a particular translation surface?" For example, if we're looking at a particular straightline trajectory on a translation surface; e.g. a trajectory for a polygonal billiards table, and this trajectory is space-filling, we can rotate it to be "vertical" and then apply the Teichmüller flow mentioned earlier. It contracts the surface vertically while expanding it horizontally. In this way, we **renormalize** the flow.
+
+
