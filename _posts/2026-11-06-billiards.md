@@ -44,6 +44,13 @@ Below are two images of periodic orbits that are similar looking. The starting p
 
 ![label](/files/0521b0e0fc5c1c79fa1191e585a4c4d8.png)
 
+Here are two other examples that live in a 1-parameter family:
+
+![label](/files/f7263f1d07483257f0946622fc7766b5.png)
+
+![label](/files/dfbea8a6edbd8f274f7c114427304118.png)
+
+
 I've been choosing polygons that give tilings of the plane but we don't have to do so. There's no problem with the reflected images overlapping with each other in the visualization, so long as its understood that there's not "real" overlap in the actual dynamical system. For example, when can make examples using non-convex polygon. The unfolding can still be done and we could define a topological space from the unfolding which would form a Riemann surface.
 
 ## Group Actions
