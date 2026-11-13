@@ -204,4 +204,6 @@ On the other hand, $\angle B'CO = \angle B'A'O$. Similar to the above, we see $\
 
 ![label](/files/02c89156cfa41b877745f08ca773f74e.png)
 
+Here is an example of an unfolding from Coxeter and Greitzer's _Geometry Revisited._ The triangle ABC is an acute triangle with orthic triangle drawn in dashed lines and an arbitrary triangle inscribed with dotted lines. In order to prove that the orthic triangle is the triangle of minimal perimeter among all inscribed triangles, we can do an unfolding of the triangle to get 6 copies of it. The unfolding of the orthic triangle is a straight line but any other inscribed triangle will be a piecewise linear path that will certainly not be any shorter.
 
+![label](/files/55784740b70021181d50e3499816efdc.png)
