@@ -1,7 +1,7 @@
 ---
 title: "Single Variable Complex Analysis: Riemann Surfaces and Automorphisms"
 date: 2026-04-03
-permalink: /posts/2026/03/riemannsurfaces/
+permalink: /posts/2026/04/riemannsurfaces/
 tags:
   - complex analysis
   - differential geometry
