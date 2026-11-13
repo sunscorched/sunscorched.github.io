@@ -163,3 +163,45 @@ Another example is related to the theorem from the previous section. We know tha
 I'll end with another result that predates EMM. In 1989, Veech showed that if the $SL(2,\mathbb{R})$-orbit of $(X,\omega)$ it already closed (so no need to take the orbit closure), then there is a strict dichotomy. For a given $\theta \in S^1$, either it is completely periodic; i.e. every single trajectory in that direction is periodic, or it is uniquely ergodic. There is no mix of the two. In the case of being completely periodic, the trajectories form loops that foliate the surface.
 
 As a concluding note, we often see dictionaries in math between two frameworks. For example, the Fatou-Sullivan dictionary connects the Kleinian groups and holomorphic dynamics. In the case of polygonal billiards, there is a dictionary between dynamics on particular translation surfaces versus dynamics on a moduli space of translation surfaces.
+
+## Appendix: The orthic triangle of an acute triangle is a periodic orbit
+
+Ultimately, we want to prove the title of this section but this is also an opportunity to get reacquainted with some plane Euclidean geometry.
+
+**Definition:** The **perpendicular bisector** of a line segment is simply a line perpendicular to the line segment that cuts the segment into two equal length halves; i.e bisects it.
+
+**Lemma:** Given any triangle, the three perpendicular bisectors of the sides all in one point (not necessarily contained in the triangle). This point is called the **circumcenter.**
+
+**Proof:** For convenience, label the vertices A, B, C. The bisectors of AB and AC must intersect somewhere since they are not parallel. All points on a perpendicular bisector are equidistant to the endpoints of the line segment that is bisected. Moreover, they are the only points equidistance to both of the endpoints. So the intersection point is the same distance from A as it is to B and also the same distance to A as it is to C. By the transitive property, it is the same distance to B as it is to C which means it must lie on the perpendicular bisector of BC as well. $\square$
+
+**Definition:** Pick a vertex of a triangle and call the opposite side, the base. The **altitude** corresponding to the vertex is the line segment which drops from the vertex to the base (or a line extending the base). It is perpendicular to the base. 
+
+**Lemma:** The three altitudes of a triangle all intersect in one point (not necessarily contained in the triangle). This point is called the **orthocenter.**
+
+**Proof:** Label the vertices A, B, C, again for convenience. For each edge, draw a line through the vertex opposite to it that is parallel to the edge. The three lines intersect to form a larger triangle in which the original triangle is inscribed. Because the lines are parallel to the original edges, we get three parallelograms. Pick two of the parallelograms that side BC. Because they are parallelograms, the opposite sides to BC of each parallelogram have the same length. But this shows that vertex A sits at the midpoint of the side of the larger triangle. A perpendicular bisector of that larger line segment is also perpendicular to side BC. In other words, the perpendicular bisector of the larger triangle contains the altitude of our original triangle. The same is true for the other two sides. We know the perpendicular bisectors all intersect by the first lemma above. Thus, the circumcenter of the larger triangle is the orthocenter of the original triangle. $\square$
+
+**Note:** For a triangle with all interior angles less than $\pi/2$, the circumcenter and orthocenter are inside the triangle. Given a right triangle, both of these lie on the perimeter and if the triangle has an obtuse angle, both lie outside of the triangle.
+
+**Definition:** Fix two distinct points on a circle, call them $a$ and $b$. Let the longer arc of the circle connecting $a$ to $b$ be the **major arc** and the other is the **minor arc.** If $a,b$ lie on a diameter of the circle, then we'll say that both are major arcs. 
+
+**Lemma (Central Angle Theorem):** As above, fix two distinct points on a circle, call them $a$ and $b$. Let $\phi$ be the angle formed by drawing line segments from $a$ and $b$ to the center of the circle, called the **central angle.** Let $z$ be any point on the major arc of the circle. Then the angle formed by drawing lines from $z$ to $a$ and $z$ to $b$ is equal to $\phi/2$. If $z$ is on the minor arc, then the angle formed is $\pi - \phi/2$.
+
+**Proof:** For convenience, we'll assume the circle is the unit circle in the complex plane. Let $\theta$ be the angle we want to show is half of the central angle. Then $z-b$ and $z-a$ gives us the vectors coming from the origin and a directed angle from $z-a$ to $z-b$ is $\theta = \arg\left(\dfrac{z-b}{z-a}\right)$. For convenience, let $w$ be the fraction. Observe that the complex conjugate $\bar{w}$ is $\dfrac{\bar{z}-\bar{b}}{\bar{z}-\bar{a}}$. Since each of $a,b,z$ are all on the unit circle, their complex conjugates are equal to their multiplicative inverse. For example, $\bar{z}=1/z$. If we substitute those in and then clear denominators by multiplying the top and bottom by $abz$, we arrive at $\bar{w}=\dfrac{ab-az}{ab-bz} = \dfrac{a}{b}w$.
+
+On the other hand, $\arg(\bar{w})=-\arg(w)$ modulo $2\pi$. So applying the argument to both sides, we get $-\arg(w) = \arg(a/b) + \arg(w)$. Rearranging, we get $2\theta = 2\arg(w) = -\arg(a/b) = \arg(b/a)$. The last equality reminds us we're working with directed angles. So we see that $2\theta \equiv \arg(b/a) \pmod{2\pi}$. If we divide by 2, we'll see where the $\pi$ comes into play. The take away is that $\arg(b/a)$ is fixed even though $\theta$ may vary. $\square$
+
+A corollary of this theorem is Thale's Theorem where $a,b$ lie on a diameter. In this case, a point $z$ on the circle then gives us a right triangle with vertices $a,b,z$.
+
+**Definition:** A **cyclic quadrilateral** is a quadrilateral whose vertices all lie on a circle.
+
+Recall that the orthic triangle is formed from the altitudes of an acute triangle.
+
+**Proposition:** The orthic triangle gives a periodic orbit of an acute triangle. That is, the incoming and outgoing angles are equal.
+
+**Proof:** Below is a drawing of an acute triangle $ABC$. Two of the altitudes are dotted lines but the one from $A$ is left as a bolder line for visual impact. Let $A',B',C'$ be the base of each altitude and let $O$ be the orthocenter. I've drawn two circles which show that quadrilaterals $A'BC'O$ and $A'CB'O$ are cyclic. Using the Central Angle Theorem, we may conclude that $\angle C'BO = \angle C'A'O$. Indeed, $\angle C'BO = \angle ABB'$ Now, triangle $ABB'$ is a right triangle and hence, $\angle C'BO =\angle C'A'O= \pi/2 - A$.
+
+On the other hand, $\angle B'CO = \angle B'A'O$. Similar to the above, we see $\angle B'CO = \angle ACC'$ and triangle $ACC'$ is a right triangle. So $\angle B'CO = \angle B'A'O = \pi/2 -A$ as well. This proves that the incoming and outgoing angles match. We can repeat this argument for all three altitudes. $\square$
+
+![label](/files/02c89156cfa41b877745f08ca773f74e.png)
+
+
