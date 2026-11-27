@@ -56,7 +56,11 @@ A **Dirichlet character** of period $N$ is a function on integers $\chi:\mathbb{
 
 Note that $\chi(1)=\chi(\pm 1)^2$ so $\chi(1)=1$ while $\chi(-1)$ could be $-1$ or $+1$. Also, $\gcd(0,N)=N$ so $\chi(0)=0$. A simple example is the constant character $\chi \equiv 1$. Another is:
 
-$$\chi_0(m) = \begin{cases} 0, & \gcd(m,N) > 1 \\ 1, & \gcd(m,N)=1\end{cases}$$
+$$\chi_0(m) = 
+\begin{cases}
+0 & \gcd(m,N) > 1 \\ 
+1 & \gcd(m,N)=1
+\end{cases}$$
 
 If $\phi$ is the Euler totient function, recall that $x^{\phi(N)} \equiv 1 \pmod{N}$ when $\gcd(x,N)=1$. Let $m$ be such that $\gcd(m,N) = 1$. So $\chi(m)^{\phi(N)}=\chi(m^{\phi(N)})=\chi(1) = 1$ which means $\chi(m)$ must be a root of unity.
 
