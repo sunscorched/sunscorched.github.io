@@ -58,7 +58,7 @@ Note that $\chi(1)=\chi(\pm 1)^2$ so $\chi(1)=1$ while $\chi(-1)$ could be $-1$ 
 
 $$\chi_0(m) = 
 \begin{cases}
-0 & \gcd(m,N) > 1 \\ 
+0 & \gcd(m,N) > 1 \\\\
 1 & \gcd(m,N)=1
 \end{cases}$$
 
